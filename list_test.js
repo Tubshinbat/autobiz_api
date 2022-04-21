@@ -41,7 +41,7 @@ const mainFunc = async (url) => {
 
 const gogo = async () => {
   let start_page = 1;
-  while (start_page < 3) {
+  while (start_page < 4000) {
     const url =
       "https://www.beforward.jp/stocklist/make=/model=/mfg_year_from=/mfg_year_to=/showmore=/veh_type=/steering=/sortkey=n/keyword=/kmode=and/page=" +
       start_page;
