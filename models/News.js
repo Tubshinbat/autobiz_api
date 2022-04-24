@@ -18,30 +18,19 @@ const NewsSchema = new mongoose.Schema({
   },
 
   slug: String,
-  mn: {
-    name: {
-      type: String,
-      trim: true,
-    },
-    details: {
-      type: String,
-    },
-    shortDetails: {
-      type: String,
-    },
-  },
 
-  eng: {
-    name: {
-      type: String,
-      trim: true,
-    },
-    details: {
-      type: String,
-    },
-    shortDetails: {
-      type: String,
-    },
+  name: {
+    type: String,
+    trim: true,
+    required: true,
+    unique: true,
+  },
+  details: {
+    type: String,
+    trim: true,
+  },
+  shortDetails: {
+    type: String,
   },
 
   type: {
@@ -68,9 +57,7 @@ const NewsSchema = new mongoose.Schema({
       ref: "NewsCategory",
     },
   ],
-  tags: {
-    type: [String],
-  },
+
   views: {
     type: Number,
     default: 0,
@@ -94,14 +81,12 @@ const NewsSchema = new mongoose.Schema({
 });
 
 NewsSchema.pre("save", function (next) {
-  if (this.mn.name) this.slug = slugify(this.mn.name);
-  if (this.eng.name) this.slug = slugify(this.eng.name);
+  this.slug = slugify(this.name);
   next();
 });
 
 NewsSchema.pre("findByIdAndUpdate", function (next) {
-  if (this.mn.name !== null) this.slug = slugify(this.mn.name);
-  if (this.eng.name !== null) this.slug = slugify(this.eng.name);
+  this.slug = slugify(this.name);
   next();
 });
 

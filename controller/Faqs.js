@@ -4,16 +4,6 @@ const asyncHandler = require("express-async-handler");
 
 exports.createFaq = asyncHandler(async (req, res, next) => {
   req.body.createUser = req.userId;
-  const language = req.cookies.language;
-  const { question, answer } = req.body;
-
-  ["question", "answer"].map((el) => delete req.body[el]);
-
-  req.body[language] = {
-    question,
-    answer,
-  };
-
   const faq = await Faq.create(req.body);
 
   res.status(200).json({
@@ -23,16 +13,8 @@ exports.createFaq = asyncHandler(async (req, res, next) => {
 });
 
 exports.updateFaq = asyncHandler(async (req, res) => {
-  const language = req.cookies.language || "mn";
-  const { question, answer } = req.body;
-  ["question", "answer"].map((el) => delete req.body[el]);
-
-  req.body[language] = {
-    question,
-    answer,
-  };
-
   let faq = await Faq.findById(req.params.id);
+
   if (!faq) throw new MyError("Тухайн асуулт хариулт олдсонгүй", 404);
 
   req.body.updateAt = new Date();

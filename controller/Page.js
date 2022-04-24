@@ -11,19 +11,10 @@ exports.createPage = asyncHandler(async (req, res) => {
   const files = req.files;
   let fileNames;
 
-  const language = req.cookies.language || "mn";
-  const { name, pageInfo } = req.body;
-  ["name", "pageInfo"].map((el) => delete req.body[el]);
-
-  req.body[language] = {
-    name,
-    pageInfo,
-  };
-
   let page = await SitePage.create(req.body);
 
   if (files) {
-    if (files.pictures.length >= 2) {
+    if (files.pictures.length > 1) {
       fileNames = await multImages(files, "page");
     } else {
       fileNames = await fileUpload(files.pictures, "page");
@@ -49,15 +40,14 @@ exports.createPage = asyncHandler(async (req, res) => {
 
 exports.getPages = asyncHandler(async (req, res, next) => {
   const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 10;
+  const limit = parseInt(req.query.limit) || 25;
   let sort = req.query.sort || { createAt: -1 };
 
   let status = req.query.status || "null";
   const name = req.query.name || "";
   const menu = req.query.menu;
-  const admissionActive = req.query.admissionActive || null;
-  let nameSearch = {};
 
+  let nameSearch = {};
   if (name === "" || name === null || name === undefined) {
     nameSearch = { $regex: ".*" + ".*" };
   } else {
@@ -86,15 +76,7 @@ exports.getPages = asyncHandler(async (req, res, next) => {
   if (status != "null") {
     query.where("status").equals(status);
   }
-  if (
-    admissionActive !== null &&
-    admissionActive !== "null" &&
-    admissionActive !== undefined &&
-    admissionActive !== "undefined"
-  ) {
-    query.where("admissionActive").equals(admissionActive);
-    query.populate("");
-  }
+
   if (menu != "null" && menu != undefined && menu != "undefined") {
     query.where("menu").in(menu);
   }

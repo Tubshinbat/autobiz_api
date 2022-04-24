@@ -7,15 +7,29 @@ const UserSchema = new mongoose.Schema({
   status: {
     type: Boolean,
     enum: [true, false],
-    required: [true, "Төлөв сонгоно уу"],
-    default: false,
+    default: true,
   },
 
-  name: {
+  role: {
     type: String,
-    required: [true, "Хэрэглэгчинй нэрийг оруулна уу"],
-    minlength: [1, "Нэр 1 үсэгнээс бүтэхгүй болно."],
+    required: [true, "Хэрэглэгчийн эрхийг сонгоно уу"],
+    enum: ["user", "operator", "admin"],
+    default: "user",
+  },
+
+  lastname: {
+    type: String,
+  },
+
+  firstname: {
+    type: String,
+  },
+
+  username: {
+    type: String,
     trim: true,
+    required: [true, "Хэрэглэгчинй нэрийг оруулна уу"],
+    minlength: [1, "Таны оруулсан нэр буруу байна."],
   },
 
   email: {
@@ -29,11 +43,11 @@ const UserSchema = new mongoose.Schema({
     ],
   },
 
-  avatar: {
-    type: String,
+  oldUserLogin: {
+    type: Boolean,
   },
 
-  phoneCode: {
+  oldPassword: {
     type: String,
   },
 
@@ -43,16 +57,32 @@ const UserSchema = new mongoose.Schema({
     unique: true,
   },
 
-  sex: {
+  image: {
     type: String,
-    enum: ["male", "female", "other"],
   },
 
-  role: {
+  gender: {
     type: String,
-    required: [true, "Хэрэглэгчийн эрхийг сонгоно уу"],
-    enum: ["user", "operator", "admin"],
-    default: "user",
+    enum: ["male", "female", "other"],
+    default: "other",
+  },
+  age: {
+    type: Number,
+  },
+
+  city: {
+    type: String,
+  },
+
+  district: {
+    type: String,
+  },
+
+  address: {
+    type: String,
+  },
+  wallet: {
+    type: Number,
   },
 
   password: {
@@ -119,7 +149,6 @@ UserSchema.methods.generatePasswordChangeToken = function () {
     .digest("hex");
 
   this.resetPasswordExpire = Date.now() + 10 * 60 * 1000;
-
   return resetToken;
 };
 

@@ -8,59 +8,26 @@ const PageSchema = new mongoose.Schema({
     default: false,
   },
 
-  listAdmissionActive: {
-    type: Boolean,
-    enum: [true, false],
-    default: false,
-  },
-
   listActive: {
     type: Boolean,
     enum: [true, false],
     default: false,
   },
 
-  admissionActive: {
-    type: Boolean,
-    enum: [true, false],
-    default: false,
-  },
-
-  admissionLink: {
+  name: {
     type: String,
+    required: [true, "Хуудасны нэрийг оруулна уу"],
   },
 
-  eng: {
-    name: {
-      type: String,
-    },
-
-    pageInfo: {
-      type: String,
-    },
-  },
-
-  mn: {
-    name: {
-      type: String,
-    },
-
-    pageInfo: {
-      type: String,
-    },
+  pageInfo: {
+    type: String,
+    required: [true, "Хуудасны дэлгэрэнгүй мэдээллийг оруулна уу"],
   },
 
   menu: [
     {
       type: mongoose.Schema.ObjectId,
       ref: "Menu",
-    },
-  ],
-
-  position: [
-    {
-      type: mongoose.Schema.ObjectId,
-      ref: "Position",
     },
   ],
 

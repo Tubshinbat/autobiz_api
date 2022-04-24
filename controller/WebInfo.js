@@ -4,18 +4,6 @@ const asyncHandler = require("express-async-handler");
 const { fileUpload, imageDelete } = require("../lib/photoUpload");
 
 exports.createWebInfo = asyncHandler(async (req, res, next) => {
-  const name = req.body.name;
-  const address = req.body.address;
-  const siteInfo = req.body.siteInfo;
-  const policy = req.body.policy;
-  const lang = req.cookies.language || "mn";
-  req.body[lang] = {
-    name,
-    address,
-    siteInfo,
-    policy,
-  };
-
   const files = req.files;
   let logo = "";
   let whiteLogo = "";
@@ -34,8 +22,8 @@ exports.createWebInfo = asyncHandler(async (req, res, next) => {
     );
   }
 
-  req.body[lang].logo = logo.fileName;
-  req.body[lang].whiteLogo = whiteLogo.fileName || "";
+  req.body.logo = logo.fileName;
+  req.body.whiteLogo = whiteLogo.fileName || "";
   req.body.updateUser = req.userId;
 
   ["logo", "whiteLogo", "name", "address", "siteInfo", "policy"].forEach(
@@ -66,12 +54,9 @@ exports.getWebinfo = asyncHandler(async (req, res, next) => {
 exports.updateWebInfo = asyncHandler(async (req, res, next) => {
   const files = req.files;
 
-  console.log(req.body);
-
   let logo = req.body.logo;
   let whiteLogo = req.body.whiteLogo;
-  let oldLogo = req.body.logo;
-  let oldWhiteLogo = req.body.whiteLogo;
+
   let newLogo = "";
   let newWhiteLogo = "";
 
@@ -102,20 +87,8 @@ exports.updateWebInfo = asyncHandler(async (req, res, next) => {
     (el) => delete req.body[el]
   );
 
-  lang === "eng" ? delete req.body.mn : delete req.body.eng;
-
-  req.body[lang] = {
-    name,
-    address,
-    siteInfo,
-    policy,
-  };
-
-  req.body[lang].logo = logo;
-  req.body[lang].whiteLogo = whiteLogo || "";
-
-  console.log(files);
-  console.log(req.body);
+  req.body.logo = logo;
+  req.body.whiteLogo = whiteLogo || "";
 
   const webInfo = await WebInfo.findByIdAndUpdate(req.params.id, req.body, {
     new: true,

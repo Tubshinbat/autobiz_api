@@ -8,6 +8,7 @@ const paginate = require("../utils/paginate");
 const sharp = require("sharp");
 const fs = require("fs");
 const { fileUpload, imageDelete } = require("../lib/photoUpload");
+var md5 = require("md5");
 
 // Register
 exports.register = asyncHandler(async (req, res, next) => {
@@ -23,9 +24,39 @@ exports.register = asyncHandler(async (req, res, next) => {
   });
 });
 
+exports.oldUserCheck = asyncHandler(async (req, res, next) => {
+  let { email, password } = req.body;
+  let is_old = false;
+  // Оролтыгоо шалгана
+  if (!email || !password)
+    throw new MyError("Имэйл болон нууц үгээ дамжуулна уу", 400);
+
+  // Тухайн хэрэглэгчийг хайна
+  const user = await User.findOne({ email }).select("+password");
+
+  if (!user) {
+    throw new MyError("Имэйл болон нууц үгээ зөв оруулна уу", 401);
+  }
+
+  const ok = user.oldPassword === md5(password);
+
+  if (!ok) {
+    throw new MyError("Имэйл болон нууц үгээ зөв оруулна уу", 402);
+  } else {
+    is_old = true;
+  }
+
+  res.status(200).cookie("uatoken", token, cookieOption).json({
+    success: true,
+    is_old,
+    user,
+  });
+});
+
 exports.login = asyncHandler(async (req, res, next) => {
   let { email, password } = req.body;
   email = email.toLowerCase();
+
   // Оролтыгоо шалгана
   if (!email || !password)
     throw new MyError("Имэйл болон нууц үгээ дамжуулна уу", 400);

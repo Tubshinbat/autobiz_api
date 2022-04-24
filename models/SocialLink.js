@@ -3,10 +3,13 @@ const mongoose = require("mongoose");
 const SocialLinksSchema = new mongoose.Schema({
   name: {
     type: String,
+    trim: true,
     required: [true, "Сошиал сувгийн нэр"],
   },
+
   link: {
     type: String,
+    trim: true,
     required: [true, "Сошиал сувгийн холбоос"],
   },
 

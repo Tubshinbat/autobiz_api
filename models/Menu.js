@@ -20,15 +20,8 @@ const MenuSchema = new mongoose.Schema({
     default: false,
   },
 
-  mn: {
-    name: {
-      type: String,
-    },
-  },
-  eng: {
-    name: {
-      type: String,
-    },
+  name: {
+    type: String,
   },
 
   direct: {
@@ -49,7 +42,7 @@ const MenuSchema = new mongoose.Schema({
 
   model: {
     type: String,
-    enum: ["news", "employee", "contact"],
+    enum: ["news", "product", "beproduct", "faq"],
   },
 
   position: {
@@ -77,8 +70,7 @@ const MenuSchema = new mongoose.Schema({
 
 MenuSchema.pre("save", function (next) {
   const date = Date.now();
-  if (this.mn.name) this.slug = slugify(this.mn.name) + date;
-  if (this.eng.name) this.slug = slugify(this.eng.name) + date;
+  this.slug = slugify(this.name) + date;
   next();
 });
 

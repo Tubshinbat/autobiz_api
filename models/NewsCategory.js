@@ -9,28 +9,13 @@ const NewsCategorySchema = new mongoose.Schema({
     default: true,
   },
 
-  mn: {
-    type: {
-      name: {
-        type: String,
-      },
-    },
-    default: {},
-  },
-
-  eng: {
-    type: {
-      name: {
-        type: String,
-      },
-    },
-    default: {},
+  name: {
+    type: String,
+    trim: true,
+    required: [true, "Ангилалын нэрийг оруулна уу"],
   },
 
   slug: {
-    type: String,
-  },
-  parentId: {
     type: String,
   },
 
@@ -53,14 +38,12 @@ const NewsCategorySchema = new mongoose.Schema({
 });
 
 NewsCategorySchema.pre("save", function (next) {
-  if (this.mn.name) this.slug = slugify(this.mn.name);
-  if (this.eng.name) this.slug = slugify(this.eng.name);
+  this.slug = slugify(this.name);
   next();
 });
 
 NewsCategorySchema.pre("updateOne", function (next) {
-  if (this.mn.name) this.slug = slugify(this.mn.name);
-  if (this.eng.name) this.slug = slugify(this.eng.name);
+  this.slug = slugify(this.name);
   next();
 });
 

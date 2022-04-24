@@ -1,6 +1,18 @@
 const mongoose = require("mongoose");
 
 const BeProductsSchema = new mongoose.Schema({
+  status: {
+    type: Boolean,
+    enum: [true, false],
+    default: false,
+  },
+
+  sold: {
+    type: Boolean,
+    enum: [true, false],
+    default: false,
+  },
+
   id: {
     type: String,
   },
@@ -27,6 +39,11 @@ const BeProductsSchema = new mongoose.Schema({
     type: String,
     default: null,
   },
+
+  model:{
+    type: String,
+    default: null,
+  }
 
   location_fob: {
     type: String,

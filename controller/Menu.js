@@ -4,18 +4,19 @@ const asyncHandler = require("express-async-handler");
 const MyError = require("../utils/myError");
 
 exports.createMenu = asyncHandler(async (req, res, next) => {
-  const language = req.cookies.language || "mn";
-  const name = req.body.name;
-  delete req.body.name;
+  const isModel = req.body.isModel || false;
+  const isDirect = req.body.isDirect || false;
+
+  if (isModel === false) {
+    delete req.body.isModel;
+    delete req.body.model;
+  }
+  if (isDirect === false) {
+    delete req.body.isDirect;
+    delete req.body.direct;
+  }
+
   delete req.body.picture;
-  let picture;
-
-  if (req.body.model === null) delete req.body.model;
-  if (req.body.direct === null) delete req.body.direct;
-
-  req.body[language] = {
-    name,
-  };
 
   const category = await Menu.create(req.body);
 
@@ -35,7 +36,6 @@ exports.menuCount = asyncHandler(async (req, res, next) => {
 
 function createCategories(categories, parentId = null) {
   const categoryList = [];
-
   let category = null;
   if (parentId === null) {
     category = categories.filter((cat) => cat.parentId == undefined);
@@ -44,11 +44,6 @@ function createCategories(categories, parentId = null) {
   }
   createPosition(category);
   for (let cate of category) {
-    let mn, eng;
-
-    if (cate.mn !== undefined) mn = { name: cate.mn.name };
-    if (cate.eng !== undefined) eng = { name: cate.eng.name };
-
     categoryList.push({
       _id: cate._id,
       name: cate.name,
@@ -58,8 +53,6 @@ function createCategories(categories, parentId = null) {
       model: cate.model,
       picture: cate.picture || null,
       position: cate.position,
-      mn,
-      eng,
       children: createCategories(categories, cate._id),
     });
   }
@@ -114,7 +107,6 @@ exports.getMenus = asyncHandler(async (req, res, next) => {
         });
       if (categories) {
         const categoryList = createCategories(categories);
-
         res.status(200).json({
           success: true,
           data: categoryList,
@@ -124,18 +116,15 @@ exports.getMenus = asyncHandler(async (req, res, next) => {
 });
 
 exports.getMenu = asyncHandler(async (req, res, next) => {
-  const newsCategory = await Menu.findById(req.params.id);
+  const menu = await Menu.findById(req.params.id);
 
-  if (!newsCategory) {
-    throw new MyError(
-      req.params.id + " Тус мэдээний ангилал байхгүй байна.",
-      404
-    );
+  if (!menu) {
+    throw new MyError(req.params.id + " Тус  ангилал байхгүй байна.", 404);
   }
 
   res.status(200).json({
     success: true,
-    data: newsCategory,
+    data: menu,
   });
 });
 
@@ -154,20 +143,23 @@ exports.deletetMenu = asyncHandler(async (req, res, next) => {
 });
 
 exports.updateMenu = asyncHandler(async (req, res, next) => {
-  const language = req.cookies.language || "mn";
-  const name = req.body.name;
-  delete req.body.name;
-  if (req.body.model === null) delete req.body.model;
-  if (req.body.direct === null) delete req.body.direct;
+  const isModel = req.body.isModel || false;
+  const isDirect = req.body.isDirect || false;
 
-  req.body[language] = {
-    name,
-  };
+  if (isModel === false) {
+    delete req.body.isModel;
+    delete req.body.model;
+  }
+  if (isDirect === false) {
+    delete req.body.isDirect;
+    delete req.body.direct;
+  }
 
   const category = await Menu.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
     runValidators: true,
   });
+
   if (!category) {
     throw new MyError("Ангилалын нэр солигдсонгүй", 400);
   }

@@ -3,15 +3,6 @@ const asyncHandler = require("express-async-handler");
 const MyError = require("../utils/myError");
 
 exports.createNewsCategory = asyncHandler(async (req, res, next) => {
-  const language = req.body.language;
-  const name = req.body.name;
-  delete req.body.language;
-  delete req.body.name;
-
-  req.body[req.cookies.language] = {
-    name,
-  };
-
   const category = await NewsCategory.create(req.body);
 
   res.status(200).json({
@@ -30,17 +21,10 @@ function createCategories(categories, parentId = null) {
   }
 
   for (let cate of category) {
-    let mn, eng;
-
-    if (cate.mn !== undefined) mn = { name: cate.mn.name };
-    if (cate.eng !== undefined) eng = { name: cate.eng.name };
-
     categoryList.push({
       _id: cate._id,
       slug: cate.slug,
       children: createCategories(categories, cate._id),
-      mn,
-      eng,
     });
   }
 
@@ -96,13 +80,6 @@ exports.deletetNewsCategory = asyncHandler(async (req, res, next) => {
 });
 
 exports.updateNewsCategory = asyncHandler(async (req, res, next) => {
-  const name = req.body.name;
-  delete req.body.name;
-
-  req.body[req.cookies.language] = {
-    name,
-  };
-
   const category = await NewsCategory.findByIdAndUpdate(
     req.params.id,
     req.body,

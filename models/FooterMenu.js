@@ -5,7 +5,7 @@ const FooterMenuSchema = new mongoose.Schema({
   status: {
     type: Boolean,
     enum: [true, false],
-    default: true,
+    default: false,
   },
 
   isDirect: {
@@ -20,15 +20,10 @@ const FooterMenuSchema = new mongoose.Schema({
     default: false,
   },
 
-  mn: {
-    name: {
-      type: String,
-    },
-  },
-  eng: {
-    name: {
-      type: String,
-    },
+  name: {
+    type: String,
+    required: [true, "Цэсний нэрээ оруулна уу"],
+    trim: true,
   },
 
   direct: {
@@ -45,7 +40,7 @@ const FooterMenuSchema = new mongoose.Schema({
 
   model: {
     type: String,
-    enum: ["news", "employee", "contact"],
+    enum: ["news", "product", "beproduct", "faq"],
   },
 
   createAt: {
@@ -68,14 +63,8 @@ const FooterMenuSchema = new mongoose.Schema({
 });
 
 FooterMenuSchema.pre("save", function (next) {
-  if (this.mn.name) this.slug = slugify(this.mn.name);
-  if (this.eng.name) this.slug = slugify(this.eng.name);
-  next();
-});
-
-FooterMenuSchema.pre("updateOne", function (next) {
-  if (this.mn.name !== null) this.slug = slugify(this.mn.name);
-  if (this.eng.name !== null) this.slug = slugify(this.eng.name);
+  const date = Date.now();
+  this.slug = slugify(this.name) + date;
   next();
 });
 

@@ -4,13 +4,13 @@ const PartnerSchema = new mongoose.Schema({
   status: {
     type: Boolean,
     enum: [true, false],
-    required: [true, "Төлөв сонгоно уу"],
     default: false,
   },
 
   name: {
     type: String,
-    required: [true, "Хуудасны гарчиг оруулна уу"],
+    trim: true,
+    required: [true, "Хамтрагч компанийн нэрийг оруулна уу"],
   },
 
   link: {
@@ -19,6 +19,7 @@ const PartnerSchema = new mongoose.Schema({
 
   logo: {
     type: String,
+    required: [true, "Лого оруулна уу"],
   },
 
   createAt: {

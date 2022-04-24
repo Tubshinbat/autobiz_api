@@ -1,16 +1,16 @@
 const mongoose = require("mongoose");
 const { slugify } = require("transliteration");
 
-const FaqSchema = new mongoose.Schema({
-  question: {
+const FobSchema = new mongoose.Schema({
+  id: {
     type: String,
-    trim: true,
-    required: [true, "Асуулт оруулна уу"],
   },
-  answer: {
+  auction_name: {
     type: String,
-    trim: true,
-    required: [true, "Хариулт оруулна уу"],
+    required: [true, "Fob - ийн нэрийг оруулна уу"],
+  },
+  fob_price: {
+    type: String,
   },
 
   createAt: {
@@ -31,4 +31,4 @@ const FaqSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Faq", FaqSchema);
+module.exports = mongoose.model("Fob", FobSchema);

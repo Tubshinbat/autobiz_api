@@ -5,36 +5,24 @@ const BannerSchema = new mongoose.Schema({
   status: {
     type: Boolean,
     enum: [true, false],
-    required: [true, "Төлөв сонгоно уу"],
+    default: false,
   },
 
-  eng: {
-    name: {
-      type: String,
-      minlength: 5,
-      maxlength: 150,
-    },
-
-    details: {
-      type: String,
-      maxlength: 350,
-    },
-  },
-  banner: {
+  name: {
     type: String,
+    trim: true,
+    minlength: [3, "Баннерын гарчиг хамгийн багадаа 3 дээш тэмдэгтээс бүтнэ."],
+    maxlength: [150, "150 -аас дээш тэмдэгт оруулах боломжгүй"],
   },
 
-  video: {
+  details: {
     type: String,
+    maxlength: [350, "Баннерын тайлбар 350 - аас дээш оруулах боломжгүй"],
   },
-  mn: {
-    name: {
-      type: String,
-    },
 
-    details: {
-      type: String,
-    },
+  picture: {
+    type: String,
+    required: [true, "Зураг оруулна уу"],
   },
 
   menu: {
@@ -44,7 +32,7 @@ const BannerSchema = new mongoose.Schema({
 
   model: {
     type: String,
-    enum: ["news", "null"],
+    enum: ["news", "product", "beproduct", "faq"],
   },
 
   link: {
@@ -67,16 +55,6 @@ const BannerSchema = new mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     ref: "User",
   },
-});
-
-BannerSchema.pre("save", function (next) {
-  this.slug = slugify(this.name);
-  next();
-});
-
-BannerSchema.pre("updateOne", function (next) {
-  this.slug = slugify(this.name);
-  next();
 });
 
 module.exports = mongoose.model("Banner", BannerSchema);

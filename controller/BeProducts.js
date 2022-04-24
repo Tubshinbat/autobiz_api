@@ -1,4 +1,4 @@
-const Banner = require("../models/Banner");
+const BeProducts = require("../models/BeProducts");
 const MyError = require("../utils/myError");
 const asyncHandler = require("express-async-handler");
 const paginate = require("../utils/paginate");
@@ -6,37 +6,41 @@ const paginate = require("../utils/paginate");
 const { fileUpload, imageDelete } = require("../lib/photoUpload");
 const { valueRequired } = require("../lib/check");
 
-exports.createBanner = asyncHandler(async (req, res) => {
+exports.createBeProduct = asyncHandler(async (req, res) => {
   req.body.status = req.body.status || false;
   req.body.createUser = req.userId;
+  let fileNames;
 
   const files = req.files;
-  if (!files.picture) {
-    throw new MyError("Баннер зураг оруулна уу");
+  if (!files.pictures) {
+    throw new MyError("Зураг оруулна уу");
   }
 
-  if (files.picture) {
-    const banner = await fileUpload(files.banner, "banner").catch((error) => {
-      throw new MyError(`Зураг хуулах явцад алдаа гарлаа: ${error}`, 408);
-    });
-    req.body.banner = banner.fileName;
+  if (files.pictures.length > 1) {
+    fileNames = await multImages(files, Date.now());
+  } else {
+    fileNames = await fileUpload(files.pictures, Date.now());
+    fileNames = [fileNames.fileName];
   }
 
-  const banner = await Banner.create(req.body);
+  const beProducts = await BeProducts.create(req.body);
 
   res.status(200).json({
     success: true,
-    data: banner,
+    data: beProducts,
   });
 });
 
-exports.getBanners = asyncHandler(async (req, res) => {
+exports.getBeProduct = asyncHandler(async (req, res) => {
   // Эхлээд query - уудаа аваад хоосон үгүйг шалгаад утга олгох
   const page = parseInt(req.query.page) || 1;
   const limit = parseInt(req.query.limit) || 25;
   let sort = req.query.sort || { createAt: -1 };
   let status = req.query.status || null;
   const name = req.query.name;
+  const make = req.query.make;
+  const model = req.query.model;
+
   let nameSearch = {};
 
   if (typeof sort === "string") {
