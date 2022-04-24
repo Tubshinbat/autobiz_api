@@ -40,10 +40,10 @@ const BeProductsSchema = new mongoose.Schema({
     default: null,
   },
 
-  model:{
+  model: {
     type: String,
     default: null,
-  }
+  },
 
   location_fob: {
     type: String,
