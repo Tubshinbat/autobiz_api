@@ -11,11 +11,9 @@ exports.createBanner = asyncHandler(async (req, res) => {
   req.body.createUser = req.userId;
 
   const files = req.files;
-  if (!files.picture) {
-    throw new MyError("Баннер зураг оруулна уу");
-  }
+  if (!files || !files.banner) throw new MyError("Баннер зураг оруулна уу");
 
-  if (files.picture) {
+  if (files.banner) {
     const banner = await fileUpload(files.banner, "banner").catch((error) => {
       throw new MyError(`Зураг хуулах явцад алдаа гарлаа: ${error}`, 408);
     });
@@ -37,33 +35,23 @@ exports.getBanners = asyncHandler(async (req, res) => {
   let sort = req.query.sort || { createAt: -1 };
   let status = req.query.status || null;
   const name = req.query.name;
-  let nameSearch = {};
 
-  if (typeof sort === "string") {
-    sort = JSON.parse("{" + req.query.sort + "}");
-  }
-
-  if (!valueRequired(status)) {
-    status = null;
-  }
-
-  if (!valueRequired(name)) {
-    nameSearch = { $regex: ".*" + ".*" };
-  } else {
-    nameSearch = { $regex: ".*" + name + ".*" };
-  }
+  if (sort)
+    if (typeof sort === "string") {
+      sort = JSON.parse("{" + req.query.sort + "}");
+    }
 
   ["select", "sort", "page", "limit", "status", "name"].forEach(
     (el) => delete req.query[el]
   );
 
   const query = Banner.find();
-  if (valueRequired(name)) query.find({ $text: { name: nameSearch } });
-  if (status !== null) query.where("status").equals(status);
+  if (valueRequired(name)) query.find({ name: { $regex: ".*" + name + ".*" } });
+  if (valueRequired(status)) query.where("status").equals(status);
   query.populate("createUser");
   query.sort(sort);
-  const result = await query.exec();
 
+  const result = await query.exec();
   const pagination = await paginate(page, limit, null, result.length);
   query.skip(pagination.start - 1);
   query.limit(limit);

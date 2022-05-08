@@ -7,14 +7,13 @@ const { multImages, fileUpload, imageDelete } = require("../lib/photoUpload");
 exports.createProduct = asyncHandler(async (req, res, next) => {
   const files = req.files;
   req.body.status = req.body.status || false;
-
   let fileNames;
 
   if (!files) {
-    throw new MyError("Бүтээгдэхүүний зураг оруулна уу", 400);
+    throw new MyError("Машины зураг оруулна уу", 400);
   }
 
-  if (files.pictures.length >= 2) {
+  if (files.pictures.length > 1) {
     fileNames = await multImages(files, "product");
   } else {
     fileNames = await fileUpload(files.pictures, "product");
@@ -35,7 +34,7 @@ exports.createProduct = asyncHandler(async (req, res, next) => {
 
 exports.getProducts = asyncHandler(async (req, res, next) => {
   const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 10;
+  const limit = parseInt(req.query.limit) || 25;
   let sort = req.query.sort || { createAt: -1 };
   const select = req.query.select;
   let menu = req.query.menu;
@@ -48,9 +47,9 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   }
 
   if (name === "" || name === null || name === undefined) {
-    nameSearch = { $regex: ".*" + ".*" };
+    nameSearch = { $regex: ".*" + ".*", $options: "i" };
   } else {
-    nameSearch = { $regex: ".*" + name + ".*" };
+    nameSearch = { $regex: ".*" + name + ".*", $options: "i" };
   }
 
   ["select", "sort", "page", "limit", "menu", "status", "name"].forEach(
@@ -188,8 +187,7 @@ exports.getCountProduct = asyncHandler(async (req, res, next) => {
 
 exports.getSlugProduct = asyncHandler(async (req, res, next) => {
   const product = await Product.findOne({ slug: req.params.slug })
-    .populate("menu")
-    .populate("createUser");
+  .populate("createUser");
 
   if (!product) {
     throw new MyError("Тухайн бүтээгдэхүүн байхгүй байна. ", 404);

@@ -7,20 +7,20 @@ const { fileUpload, imageDelete } = require("../lib/photoUpload");
 const { valueRequired } = require("../lib/check");
 
 exports.createBeProduct = asyncHandler(async (req, res) => {
-  req.body.status = req.body.status || false;
+  req.body.status = req.body.status || true;
   req.body.createUser = req.userId;
+
   let fileNames;
-
   const files = req.files;
-  if (!files.pictures) {
-    throw new MyError("Зураг оруулна уу");
-  }
 
-  if (files.pictures.length > 1) {
-    fileNames = await multImages(files, Date.now());
-  } else {
-    fileNames = await fileUpload(files.pictures, Date.now());
-    fileNames = [fileNames.fileName];
+  if (files) {
+    if (files.pictures.length > 1) {
+      fileNames = await multImages(files, Date.now());
+    } else {
+      fileNames = await fileUpload(files.pictures, Date.now());
+      fileNames = [fileNames.fileName];
+    }
+    req.body.new_images = fileNames;
   }
 
   const beProducts = await BeProducts.create(req.body);
@@ -31,39 +31,69 @@ exports.createBeProduct = asyncHandler(async (req, res) => {
   });
 });
 
-exports.getBeProduct = asyncHandler(async (req, res) => {
+exports.getBeProducts = asyncHandler(async (req, res) => {
   // Эхлээд query - уудаа аваад хоосон үгүйг шалгаад утга олгох
   const page = parseInt(req.query.page) || 1;
   const limit = parseInt(req.query.limit) || 25;
+
+  // querys
   let sort = req.query.sort || { createAt: -1 };
   let status = req.query.status || null;
   const name = req.query.name;
   const make = req.query.make;
   const model = req.query.model;
-
-  let nameSearch = {};
+  const fuel = req.query.fuel;
+  const minPrice = req.query.minPrice;
+  const maxPrice = req.query.maxPrice;
+  const type = req.body.type;
+  const minEngcc = req.body.minEngcc;
+  const maxEngcc = req.body.maxEngcc;
+  const trans = req.body.trans;
+  const minYear = req.body.minYear;
+  const maxYear = req.body.maxYear;
+  const minMil = req.body.minMil;
+  const maxMil = req.body.maxMil;
 
   if (typeof sort === "string") {
     sort = JSON.parse("{" + req.query.sort + "}");
   }
 
-  if (!valueRequired(status)) {
-    status = null;
-  }
+  [
+    "select",
+    "sort",
+    "page",
+    "limit",
+    "status",
+    "name",
+    "make",
+    "model",
+    "fuel",
+    "minPrice",
+    "maxPrice",
+    "type",
+    "minEngcc",
+    "maxEngcc",
+    "trans",
+    "minYear",
+    "maxYear",
+    "minMil",
+    "maxMil",
+  ].forEach((el) => delete req.query[el]);
 
-  if (!valueRequired(name)) {
-    nameSearch = { $regex: ".*" + ".*" };
-  } else {
-    nameSearch = { $regex: ".*" + name + ".*" };
-  }
+  const query = BeProducts.find();
 
-  ["select", "sort", "page", "limit", "status", "name"].forEach(
-    (el) => delete req.query[el]
-  );
+  // Filter
+  if (valueRequired(name))
+    query.find({
+      name: { $regex: ".*" + name + ".*", $options: "i" },
+    });
+  if (valueRequired(status)) query.where("status").equals(status);
+  if (valueRequired(make)) query.where("mark_txt").equals(make);
+  if (valueRequired(model)) query.where("model").equals(model);
+  if (valueRequired(fuel)) query.where("fuel").equals(fuel);
+  if (valueRequired(type)) query.where("type_txt").equals(type);
+  if (valueRequired(trans)) query.where("trans").equals(trans);
 
-  const query = Banner.find();
-  if (valueRequired(name)) query.find({ $text: { name: nameSearch } });
-  if (status !== null) query.where("status").equals(status);
   query.populate("createUser");
   query.sort(sort);
   const result = await query.exec();
@@ -72,103 +102,84 @@ exports.getBeProduct = asyncHandler(async (req, res) => {
   query.skip(pagination.start - 1);
   query.limit(limit);
 
-  const banner = await query.exec();
+  const beProducts = await query.exec();
 
   res.status(200).json({
     success: true,
-    count: banner.length,
-    data: banner,
+    count: beProducts.length,
+    data: beProducts,
     pagination,
   });
 });
 
-exports.getBanner = asyncHandler(async (req, res, next) => {
-  const banner = await Banner.findById(req.params.id);
-  if (!banner) {
-    throw new MyError("Тухайн баннер байхгүй байна. ", 404);
+exports.getBeProduct = asyncHandler(async (req, res, next) => {
+  const beProduct = await BeProducts.findById(req.params.id);
+  if (!beProduct) {
+    throw new MyError("Тухайн машин байхгүй байна. ", 404);
   }
   res.status(200).json({
     success: true,
-    data: banner,
+    data: beProduct,
   });
 });
 
-exports.deleteBanner = asyncHandler(async (req, res) => {
+exports.deleteBeProduct = asyncHandler(async (req, res) => {
   const id = req.params.id;
-  const deleteBanner = await Banner.findById(id);
+  const deleteProducts = await BeProducts.findById(id);
 
-  if (!deleteBanner) throw new MyError("Тухайн баннер байхгүй байна. ", 404);
+  if (!deleteProducts)
+    throw new MyError("Тухайн машинууд байхгүй байна. ", 404);
 
-  await imageDelete(deleteBanner.picture);
+  await imageDelete(deleteProducts.picture);
 
   res.status(200).json({
     success: true,
-    data: deleteBanner,
+    data: deleteProducts,
   });
 });
 
-exports.multDeleteBanner = asyncHandler(async (req, res, next) => {
+exports.multDeleteProduct = asyncHandler(async (req, res, next) => {
   const ids = req.queryPolluted.id;
-  const findBanners = await Banner.find({ _id: { $in: ids } });
+  const findProducts = await BeProducts.find({ _id: { $in: ids } });
 
-  if (findBanners.length <= 0) {
-    throw new MyError("Таны сонгосон баннерууд байхгүй байна", 400);
+  if (findProducts.length <= 0) {
+    throw new MyError("Таны сонгосон машинууд байхгүй байна", 400);
   }
 
-  findBanners.map(async (el) => {
-    await imageDelete(el.picture);
-  });
-
-  const banner = await Banner.deleteMany({ _id: { $in: ids } });
+  const products = await BeProducts.deleteMany({ _id: { $in: ids } });
 
   res.status(200).json({
     success: true,
-    data: banner,
+    data: products,
   });
 });
 
-exports.updateBanner = asyncHandler(async (req, res, next) => {
-  let banner = await Banner.findById(req.params.id);
-  let oldBanner = req.body.oldBanner;
-
-  if (!banner) {
-    throw new MyError("Тухайн баннер байхгүй байна. ", 404);
-  }
-
+exports.updateProduct = asyncHandler(async (req, res, next) => {
+  let product = await BeProducts.findById(req.params.id);
   const files = req.files;
 
-  if (!oldBanner && !files) {
-    throw new MyError("Та баннераа оруулна уу", 400);
-  }
-
-  if (files.banner) {
-    const result = await fileUpload(files.banner, "banner").catch((error) => {
-      throw new MyError(`Баннер хуулах явцад алдаа гарлаа: ${error} `, 400);
-    });
-    req.body.picture = result.fileName;
-    await imageDelete(oldBanner);
-  } else {
-    req.body.picture = oldBanner;
+  if (!product) {
+    throw new MyError("Тухайн машин байхгүй байна. ", 404);
   }
 
   req.body.updateAt = new Date();
   req.body.updateUser = req.userId;
 
-  banner = await Banner.findByIdAndUpdate(req.params.id, req.body, {
+  product = await BeProducts.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
     runValidators: true,
   });
 
   res.status(200).json({
     success: true,
-    data: banner,
+    data: product,
   });
 });
 
-exports.getCounBanner = asyncHandler(async (req, res, next) => {
-  const banner = await Banner.count();
+exports.getCountBeProducts = asyncHandler(async (req, res, next) => {
+  const product = await BeProducts.count();
   res.status(200).json({
     success: true,
-    data: banner,
+    data: product,
   });
 });

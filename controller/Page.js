@@ -44,26 +44,19 @@ exports.getPages = asyncHandler(async (req, res, next) => {
   let sort = req.query.sort || { createAt: -1 };
 
   let status = req.query.status || "null";
-  const name = req.query.name || "";
+  const name = req.query.name || null;
   const menu = req.query.menu;
 
   let nameSearch = {};
   if (name === "" || name === null || name === undefined) {
-    nameSearch = { $regex: ".*" + ".*" };
+    nameSearch = { $regex: ".*" + ".*", $options: "i" };
   } else {
-    nameSearch = { $regex: ".*" + name + ".*" };
+    nameSearch = { $regex: ".*" + name + ".*", $options: "i" };
   }
 
-  [
-    "select",
-    "sort",
-    "page",
-    "limit",
-    "status",
-    "menu",
-    "name",
-    "admissionActive",
-  ].forEach((el) => delete req.query[el]);
+  ["select", "sort", "page", "limit", "status", "menu", "name"].forEach(
+    (el) => delete req.query[el]
+  );
 
   const query = SitePage.find();
   query.find({

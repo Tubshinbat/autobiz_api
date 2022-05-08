@@ -14,6 +14,7 @@ const WebInfoSchema = new mongoose.Schema({
   address: {
     type: String,
   },
+
   siteInfo: {
     type: String,
   },

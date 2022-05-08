@@ -14,7 +14,7 @@ exports.createContact = asyncHandler(async (req, res, next) => {
 
 exports.getContacts = asyncHandler(async (req, res, next) => {
   const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 10;
+  const limit = parseInt(req.query.limit) || 25;
   let sort = req.query.sort || { createAt: -1 };
   const select = req.query.select;
   const name = req.query.name;
@@ -25,9 +25,9 @@ exports.getContacts = asyncHandler(async (req, res, next) => {
   }
 
   if (name === "" || name === null || name === undefined) {
-    nameSearch = { $regex: ".*" + ".*" };
+    nameSearch = { $regex: ".*" + ".*", $options: "i" };
   } else {
-    nameSearch = { $regex: ".*" + name + ".*" };
+    nameSearch = { $regex: ".*" + name + ".*", $options: "i" };
   }
 
   ["select", "sort", "page", "limit", "name"].forEach(
@@ -60,7 +60,7 @@ exports.multDeleteContact = asyncHandler(async (req, res, next) => {
   const findContacts = await Contact.find({ _id: { $in: ids } });
 
   if (findContacts.length <= 0) {
-    throw new MyError("Таны сонгосон мэдээнүүд байхгүй байна", 400);
+    throw new MyError("Таны сонгосон санал хүсэлтүүд байхгүй байна", 400);
   }
 
   const contact = await Contact.deleteMany({ _id: { $in: ids } });

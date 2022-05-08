@@ -32,7 +32,7 @@ const BeProductsSchema = new mongoose.Schema({
   },
 
   price: {
-    type: mongoose.Decimal128,
+    type: String,
     default: null,
   },
   model_ref: {
@@ -51,11 +51,16 @@ const BeProductsSchema = new mongoose.Schema({
   },
 
   mileage: {
-    type: mongoose.Decimal128,
+    type: String,
     default: null,
   },
 
   car_year: {
+    type: String,
+    default: null,
+  },
+
+  mount: {
     type: String,
     default: null,
   },
@@ -81,6 +86,11 @@ const BeProductsSchema = new mongoose.Schema({
   },
 
   gallery_images: {
+    type: [String],
+    default: null,
+  },
+
+  new_images: {
     type: [String],
     default: null,
   },

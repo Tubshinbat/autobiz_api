@@ -6,11 +6,13 @@ const ProductSchema = new mongoose.Schema({
     type: String,
     default: null,
   },
+
   car_industry: {
     type: mongoose.Schema.ObjectId,
     ref: "carIndustry",
     default: null,
   },
+
   car_zagvar: {
     type: mongoose.Schema.ObjectId,
     ref: "CarZagar",

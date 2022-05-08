@@ -23,7 +23,6 @@ const webInfoRouters = require("./routes/WebInfo");
 const pageRouters = require("./routes/Pages");
 const menuRouters = require("./routes/Menu");
 const socialLinkRouters = require("./routes/SocialLink");
-const partnerRouter = require("./routes/Partners");
 const footerRouter = require("./routes/FooterMenu");
 
 const errorHandler = require("./middleware/error");

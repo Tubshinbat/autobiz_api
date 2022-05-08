@@ -10,9 +10,8 @@ const {
   updateNews,
   getCountNews,
   getAllNews,
-  getTags,
+
   getSlugNews,
-  updateView,
 } = require("../controller/News");
 
 router
@@ -20,10 +19,8 @@ router
   .post(protect, authorize("admin", "operator"), createNews)
   .get(getNews);
 
-router.route("/tags").get(getTags);
 router.route("/c").get(getAllNews);
 router.route("/s/:slug").get(getSlugNews);
-router.route("/view/:slug").get(updateView);
 
 router
   .route("/count")
