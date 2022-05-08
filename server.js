@@ -25,6 +25,7 @@ const menuRouters = require("./routes/Menu");
 const socialLinkRouters = require("./routes/SocialLink");
 const footerRouter = require("./routes/FooterMenu");
 const beProductRouters = require("./routes/BeProducts");
+const productRouters = require("./routes/productRouters");
 
 const errorHandler = require("./middleware/error");
 
@@ -107,6 +108,7 @@ app.use("/api/v1/pages", pageRouters);
 app.use("/api/v1/menu", menuRouters);
 app.use("/api/v1/footermenu", footerRouter);
 app.use("/api/v1/beproducts", beProductRouters);
+app.use("/api/v1/products", productRouters);
 app.use("/api/v1/slinks", socialLinkRouters);
 app.use(errorHandler);
 // Алдаа үүсэхэд барьж авч алдааны мэдээллийг клиент тал руу автоматаар мэдээлнэ
