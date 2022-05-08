@@ -25,7 +25,7 @@ const menuRouters = require("./routes/Menu");
 const socialLinkRouters = require("./routes/SocialLink");
 const footerRouter = require("./routes/FooterMenu");
 const beProductRouters = require("./routes/BeProducts");
-const productRouters = require("./routes/productRouters");
+const productRouters = require("./routes/Products");
 
 const errorHandler = require("./middleware/error");
 
