@@ -13,10 +13,12 @@ const CarZagvarSchema = new mongoose.Schema({
     required: [true, "Машины төрлийг оруулна уу"],
   },
 
-  industry: {
-    type: mongoose.Schema.ObjectId,
-    ref: "CarIndustry",
-  },
+  industry: [
+    {
+      type: mongoose.Schema.ObjectId,
+      ref: "CarIndustry",
+    },
+  ],
 
   image: {
     type: String,
