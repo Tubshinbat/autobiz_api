@@ -52,7 +52,7 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   );
 
   const query = Product.find();
-  query.find({ name: nameSearch });
+
   query.select(select);
   query.sort(sort);
 
@@ -68,6 +68,7 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   const result = await query.exec();
 
   const pagination = await paginate(page, limit, Product, result.length);
+
   query.limit(limit);
   query.skip(pagination.start - 1);
   const product = await query.exec();
