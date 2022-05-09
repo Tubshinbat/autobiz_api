@@ -41,10 +41,6 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   const name = req.query.name;
   let nameSearch = {};
 
-  if (menu == "null") {
-    menu = null;
-  }
-
   if (name === "" || name === null || name === undefined) {
     nameSearch = { $regex: ".*" + ".*", $options: "i" };
   } else {
