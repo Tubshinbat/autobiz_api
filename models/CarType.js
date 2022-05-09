@@ -14,7 +14,7 @@ const CarTypeSchema = new mongoose.Schema({
   },
 
   image: {
-    type: [String],
+    type: String,
   },
 
   createAt: {

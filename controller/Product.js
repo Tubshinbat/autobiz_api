@@ -186,8 +186,9 @@ exports.getCountProduct = asyncHandler(async (req, res, next) => {
 });
 
 exports.getSlugProduct = asyncHandler(async (req, res, next) => {
-  const product = await Product.findOne({ slug: req.params.slug })
-  .populate("createUser");
+  const product = await Product.findOne({ slug: req.params.slug }).populate(
+    "createUser"
+  );
 
   if (!product) {
     throw new MyError("Тухайн бүтээгдэхүүн байхгүй байна. ", 404);
