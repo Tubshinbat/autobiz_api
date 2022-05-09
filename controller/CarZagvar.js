@@ -34,6 +34,7 @@ exports.getCarZagvars = asyncHandler(async (req, res) => {
   let sort = req.query.sort || { createAt: -1 };
   let status = req.query.status || null;
   const name = req.query.name;
+  const industry = req.query.industry;
 
   if (sort)
     if (typeof sort === "string") {
@@ -48,6 +49,8 @@ exports.getCarZagvars = asyncHandler(async (req, res) => {
   if (valueRequired(name))
     query.find({ name: { $regex: ".*" + name + ".*", $options: "i" } });
   if (valueRequired(status)) query.where("status").equals(status);
+  if (valueRequired(industry)) query.where("industry").equals(industry);
+
   query.sort(sort);
   query.populate("industry");
 
