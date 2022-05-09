@@ -15,7 +15,7 @@ exports.createCarType = asyncHandler(async (req, res) => {
 
   if (files)
     if (files.image) {
-      const img = await fileUpload(files.carType, "carType").catch((error) => {
+      const img = await fileUpload(files.image, "carType").catch((error) => {
         throw new MyError(`Зураг хуулах явцад алдаа гарлаа: ${error}`, 408);
       });
       req.body.image = img.fileName;
