@@ -129,7 +129,7 @@ exports.updateCarType = asyncHandler(async (req, res, next) => {
       req.body.image = result.fileName;
       await imageDelete(oldImage);
     } else {
-      req.body.picture = oldImage;
+      req.body.image = oldImage;
     }
 
   req.body.updateAt = new Date();
