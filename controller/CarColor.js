@@ -121,11 +121,9 @@ exports.updateCarColor = asyncHandler(async (req, res, next) => {
 
   if (files) {
     if (files.image) {
-      const result = await fileUpload(files.image, "carColor").catch(
-        (error) => {
-          throw new MyError(`Баннер хуулах явцад алдаа гарлаа: ${error} `, 400);
-        }
-      );
+      const result = await fileUpload(files.image, "carType").catch((error) => {
+        throw new MyError(`Зураг хуулах явцад алдаа гарлаа: ${error} `, 400);
+      });
       req.body.image = result.fileName;
       await imageDelete(oldImage);
     } else {

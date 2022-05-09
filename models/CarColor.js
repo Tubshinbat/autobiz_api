@@ -15,10 +15,12 @@ const CarColorSchema = new mongoose.Schema({
 
   image: {
     type: String,
+    default: null,
   },
 
   code: {
     type: String,
+    default: null,
   },
 
   createAt: {
