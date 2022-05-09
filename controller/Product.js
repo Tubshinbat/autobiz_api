@@ -51,13 +51,12 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     nameSearch = { $regex: ".*" + name + ".*", $options: "i" };
   }
 
-  ["select", "sort", "page", "limit", "menu", "status", "name"].forEach(
+  ["select", "sort", "page", "limit", "status", "name"].forEach(
     (el) => delete req.query[el]
   );
 
   const query = Product.find();
   query.find({ name: nameSearch });
-  query.populate("menu");
   query.select(select);
   query.sort(sort);
 
