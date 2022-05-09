@@ -28,6 +28,7 @@ const beProductRouters = require("./routes/BeProducts");
 const productRouters = require("./routes/Products");
 const carTypeRouters = require("./routes/CarType");
 const carIndustryRouters = require("./routes/CarIndustry");
+const carZagvarRouters = require("./routes/CarZagvar");
 
 const errorHandler = require("./middleware/error");
 
@@ -114,6 +115,7 @@ app.use("/api/v1/products", productRouters);
 app.use("/api/v1/slinks", socialLinkRouters);
 app.use("/api/v1/cartypes", carTypeRouters);
 app.use("/api/v1/carindustrys", carIndustryRouters);
+app.use("/api/v1/carzagvars", carZagvarRouters);
 app.use(errorHandler);
 // Алдаа үүсэхэд барьж авч алдааны мэдээллийг клиент тал руу автоматаар мэдээлнэ
 
