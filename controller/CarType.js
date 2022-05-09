@@ -121,7 +121,7 @@ exports.updateCarType = asyncHandler(async (req, res, next) => {
 
   const files = req.files;
 
-  if (files)
+  if (files) {
     if (files.image) {
       const result = await fileUpload(files.image, "carType").catch((error) => {
         throw new MyError(`Баннер хуулах явцад алдаа гарлаа: ${error} `, 400);
@@ -131,6 +131,9 @@ exports.updateCarType = asyncHandler(async (req, res, next) => {
     } else {
       req.body.image = oldImage;
     }
+  } else {
+    req.body.image = oldImage;
+  }
 
   req.body.updateAt = new Date();
   req.body.updateUser = req.userId;
