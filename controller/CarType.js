@@ -11,6 +11,8 @@ exports.createCarType = asyncHandler(async (req, res) => {
 
   const files = req.files;
 
+  console.log(files);
+
   if (files)
     if (files.image) {
       const img = await fileUpload(files.carType, "carType").catch((error) => {
