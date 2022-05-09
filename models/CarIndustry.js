@@ -13,7 +13,7 @@ const CarIndustrySchema = new mongoose.Schema({
     required: [true, "Машины үйлдвэрлэгчийн нэрийг оруулна уу"],
   },
 
-  picture: {
+  image: {
     type: String,
   },
 
