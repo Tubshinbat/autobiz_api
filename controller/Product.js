@@ -61,15 +61,6 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   query.sort(sort);
 
   if (
-    menu != "null" &&
-    menu != undefined &&
-    menu != "undefined" &&
-    menu != null
-  ) {
-    query.where("menu").in(category);
-  }
-
-  if (
     status != "null" &&
     status != undefined &&
     status != "undefined" &&
