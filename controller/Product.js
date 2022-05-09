@@ -69,9 +69,9 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     query.where("status").equals(status);
   }
 
-  const product2 = await query.exec();
+  const result = await query.exec();
 
-  const pagination = await paginate(page, limit, Product, product2.length);
+  const pagination = await paginate(page, limit, Product, result.length);
   query.limit(limit);
   query.skip(pagination.start - 1);
   const product = await query.exec();
