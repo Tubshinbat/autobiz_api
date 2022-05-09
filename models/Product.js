@@ -39,7 +39,6 @@ const ProductSchema = new mongoose.Schema({
   description: {
     type: String,
     default: null,
-    required: [true, "Заавал дэлгэрэнгүй мэдээлэл оруулна уу"],
   },
   price: {
     type: mongoose.Decimal128,

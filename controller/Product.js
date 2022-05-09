@@ -37,7 +37,6 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   const limit = parseInt(req.query.limit) || 25;
   let sort = req.query.sort || { createAt: -1 };
   const select = req.query.select;
-  let menu = req.query.menu;
   let status = req.query.status || "null";
   const name = req.query.name;
   let nameSearch = {};
