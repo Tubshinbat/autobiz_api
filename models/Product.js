@@ -21,7 +21,7 @@ const ProductSchema = new mongoose.Schema({
 
   car_zagvar: {
     type: mongoose.Schema.ObjectId,
-    ref: "CarZagar",
+    ref: "CarZagvar",
     default: null,
   },
 
