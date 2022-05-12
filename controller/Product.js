@@ -48,18 +48,18 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   const query = Product.find();
   if (valueRequired(name)) {
     query.find({ title: { $regex: ".*" + name + ".*", $options: "i" } });
-    query.populate({
-      path: "car_industry",
-      match: { name: { $regex: ".*" + name + ".*", $options: "i" } },
-    });
-    query.populate({
-      path: "car_zagvar",
-      match: { name: { $regex: ".*" + name + ".*", $options: "i" } },
-    });
-    query.populate({
-      path: "car_type",
-      match: { name: { $regex: ".*" + name + ".*", $options: "i" } },
-    });
+    // query.populate({
+    //   path: "car_industry",
+    //   match: { name: { $regex: ".*" + name + ".*", $options: "i" } },
+    // });
+    // query.populate({
+    //   path: "car_zagvar",
+    //   match: { name: { $regex: ".*" + name + ".*", $options: "i" } },
+    // });
+    // query.populate({
+    //   path: "car_type",
+    //   match: { name: { $regex: ".*" + name + ".*", $options: "i" } },
+    // });
   } else {
     query.populate("car_industry");
     query.populate("car_zagvar");
