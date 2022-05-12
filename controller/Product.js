@@ -3,6 +3,7 @@ const MyError = require("../utils/myError");
 const asyncHandler = require("express-async-handler");
 const paginate = require("../utils/paginate");
 const { multImages, fileUpload, imageDelete } = require("../lib/photoUpload");
+const { valueRequired } = require("../lib/check");
 
 exports.createProduct = asyncHandler(async (req, res, next) => {
   const files = req.files;
@@ -39,36 +40,39 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   const select = req.query.select;
   let status = req.query.status || "null";
   const name = req.query.name;
-  let nameSearch = {};
-
-  if (name === "" || name === null || name === undefined) {
-    nameSearch = { $regex: ".*" + ".*", $options: "i" };
-  } else {
-    nameSearch = { $regex: ".*" + name + ".*", $options: "i" };
-  }
 
   ["select", "sort", "page", "limit", "status", "name"].forEach(
     (el) => delete req.query[el]
   );
 
   const query = Product.find();
+  if (valueRequired(name)) {
+    query.find({ title: { $regex: ".*" + name + ".*", $options: "i" } });
+    query.populate({
+      path: "car_industry",
+      match: { name: { $regex: ".*" + name + ".*", $options: "i" } },
+    });
+    query.populate({
+      path: "car_zagvar",
+      match: { name: { $regex: ".*" + name + ".*", $options: "i" } },
+    });
+    query.populate({
+      path: "car_type",
+      match: { name: { $regex: ".*" + name + ".*", $options: "i" } },
+    });
+  } else {
+    query.populate("car_industry");
+    query.populate("car_zagvar");
+    query.populate("car_type");
+  }
 
   query.select(select);
   query.sort(sort);
 
-  if (
-    status != "null" &&
-    status != undefined &&
-    status != "undefined" &&
-    status != null
-  ) {
-    query.where("status").equals(status);
-  }
+  if (valueRequired(status)) query.where("status").equals(status);
 
   const result = await query.exec();
-
   const pagination = await paginate(page, limit, Product, result.length);
-
   query.limit(limit);
   query.skip(pagination.start - 1);
   const product = await query.exec();

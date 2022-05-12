@@ -2,6 +2,12 @@ const mongoose = require("mongoose");
 const { slugify } = require("transliteration");
 
 const ProductSchema = new mongoose.Schema({
+  status: {
+    type: Boolean,
+    enum: [true, false],
+    default: false,
+  },
+
   id: {
     type: String,
     default: null,
@@ -23,10 +29,6 @@ const ProductSchema = new mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     ref: "CarType",
     default: null,
-  },
-
-  active: {
-    type: Number,
   },
 
   title: {
