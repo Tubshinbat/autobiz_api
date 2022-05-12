@@ -15,7 +15,7 @@ const ProductSchema = new mongoose.Schema({
 
   car_industry: {
     type: mongoose.Schema.ObjectId,
-    ref: "carIndustry",
+    ref: "CarIndustry",
     default: null,
   },
 

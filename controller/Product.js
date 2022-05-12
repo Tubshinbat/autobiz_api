@@ -61,9 +61,9 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     //   match: { name: { $regex: ".*" + name + ".*", $options: "i" } },
     // });
   } else {
-    query.populate("car_industry");
-    query.populate("car_zagvar");
-    query.populate("car_type");
+    // query.populate("car_industry");
+    // query.populate("car_zagvar");
+    // query.populate("car_type");
   }
 
   query.select(select);
