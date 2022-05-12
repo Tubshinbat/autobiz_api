@@ -52,17 +52,20 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
 
   if (valueRequired(name)) {
     query.find({ title: { $regex: ".*" + name + ".*", $options: "i" } });
+
+    let term = new RegExp(name, "i");
+
     query.populate({
       path: "car_industry",
-      name: { name, $options: "i" },
+      match: { name: { $regex: term } },
     });
     query.populate({
       path: "car_zagvar",
-      name: { name, $options: "i" },
+      match: { name: { $regex: term } },
     });
     query.populate({
       path: "car_type",
-      name: { name, $options: "i" },
+      match: { name: { $regex: term } },
     });
   }
 
