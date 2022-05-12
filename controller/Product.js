@@ -46,9 +46,9 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   );
 
   const query = Product.find();
-  query.populate("car_industry");
-  query.populate("car_zagvar");
-  query.populate("car_type");
+  // query.populate("car_industry");
+  // query.populate("car_zagvar");
+  // query.populate("car_type");
 
   if (valueRequired(name)) {
     let term = new RegExp(name, "i");
