@@ -62,9 +62,6 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
       name: { $regex: term },
     }).select("_id");
 
-    console.log(carZagvar);
-    console.log(carIndustry);
-
     query.find({
       title: { $regex: term },
     });
