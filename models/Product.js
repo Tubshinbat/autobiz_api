@@ -43,7 +43,7 @@ const ProductSchema = new mongoose.Schema({
     default: null,
   },
   price: {
-    type: mongoose.Decimal128,
+    type: Number,
     default: null,
   },
 
