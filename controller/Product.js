@@ -55,8 +55,12 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   if (valueRequired(name)) {
     let term = new RegExp(name, "i");
 
-    const carZagvar = await CarZagvar.find({ name: { $regex: term } });
-    const carIndustry = await CarIndustry.find({ name: { $regex: term } });
+    const carZagvar = await CarZagvar.find({ name: { $regex: term } }).select(
+      "_id"
+    );
+    const carIndustry = await CarIndustry.find({
+      name: { $regex: term },
+    }).select("_id");
 
     console.log(carZagvar);
     console.log(carIndustry);
