@@ -69,10 +69,10 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     console.log(carZagvar);
     console.log(carIndustry);
 
-    if (carZagvar) {
+    if (carZagvar !== null) {
       query.where("car_zagvar").equals(carZagvar._id);
     }
-    if (carIndustry) {
+    if (carIndustry !== null) {
       query.where("car_industry").equals(carIndustry._id);
     }
   }
