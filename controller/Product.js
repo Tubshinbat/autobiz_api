@@ -54,16 +54,16 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
 
   if (valueRequired(name)) {
     let term = new RegExp(name, "i");
-    query.find({ title: { $regex: term } });
+
     const carZagvar = await CarZagvar.find({ name: { $regex: term } });
     const carIndustry = await CarIndustry.find({ name: { $regex: term } });
     query.find({
       $or: [
         {
           title: { $regex: term },
-          car_industry: carIndustry._id,
-          car_zagvar: carZagvar._id,
         },
+        { car_industry: carIndustry._id },
+        { car_zagvar: carZagvar._id },
       ],
     });
   }
