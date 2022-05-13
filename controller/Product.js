@@ -1,4 +1,6 @@
 const Product = require("../models/Product");
+const CarZagvar = require("../models/CarZagvar");
+const CarIndustry = require("../models/CarIndustry");
 const MyError = require("../utils/myError");
 const asyncHandler = require("express-async-handler");
 const paginate = require("../utils/paginate");
@@ -52,20 +54,18 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
 
   if (valueRequired(name)) {
     let term = new RegExp(name, "i");
-    query
-      .find({ title: { $regex: term } })
-      .populate({
-        path: "car_industry",
-        match: { name: name },
-      })
-      .populate({
-        path: "car_zagvar",
-        match: { name: name },
-      })
-      .populate({
-        path: "car_type",
-        match: { name: name },
-      });
+    query.find({ title: { $regex: term } });
+    const carZagvar = await CarZagvar.find({ name: { $regex: term } });
+    const carIndustry = await CarIndustry.find({ name: { $regex: term } });
+    query.find(
+      $or[
+        {
+          title: { $regex: trem },
+          car_industry: carIndustry._id,
+          car_zagvar: carZagvar._id,
+        }
+      ]
+    );
   }
 
   query.select(select);
