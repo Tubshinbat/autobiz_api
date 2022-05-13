@@ -70,8 +70,8 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
         {
           title: { $regex: term },
         },
-        { car_industry: { $in: carIndustry._id } },
-        { car_zagvar: { $in: carZagvar._id } },
+        { car_industry: { $all: carIndustry._id } },
+        { car_zagvar: { $all: carZagvar._id } },
       ],
     });
   }
