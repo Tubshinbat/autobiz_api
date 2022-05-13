@@ -68,8 +68,11 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     query.find({
       title: { $regex: term },
     });
-    if (carZagvar.length > 0) query.where("car_zagvar").in(carZagvar);
-    if (carIndustry.length > 0) query.where("car_industry").in(carIndustry);
+    if (carZagvar.length > 0) {
+      query.where("car_zagvar").in(Object.values(carZagvar));
+    }
+    if (carIndustry.length > 0)
+      query.where("car_industry").in(Object.values(carIndustry));
   }
 
   query.select(select);
