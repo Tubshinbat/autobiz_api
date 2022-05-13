@@ -55,27 +55,21 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   if (valueRequired(name)) {
     let term = new RegExp(name, "i");
 
-    const carZagvar = await CarZagvar.find({ name: { $regex: term } }).select(
-      "_id"
-    );
-    const carIndustry = await CarIndustry.find({
+    const carZagvar = await CarZagvar.findByIdAndRemove({
+      name: { $regex: term },
+    }).select("_id");
+    const carIndustry = await CarIndustry.findByIdAndRemove({
       name: { $regex: term },
     }).select("_id");
 
     query.find({
       title: { $regex: term },
     });
-    if (carZagvar.length > 0) {
-      const newZagvar = [];
-      carZagvar.map((el) => newZagvar.push(el._id));
-      console.log(newZagvar);
-      query.where("car_zagvar").in(newZagvar);
+    if (carZagvar) {
+      query.where("car_zagvar").equals(carIndustry._id);
     }
-    if (carIndustry.length > 0) {
-      const newIndustry = [];
-      carIndustry.map((el) => newIndustry.push(el._id));
-      console.log(newIndustry);
-      query.where("car_industry").in(newIndustry);
+    if (carIndustry) {
+      query.where("car_industry").equals(carIndustry._id);
     }
   }
 
