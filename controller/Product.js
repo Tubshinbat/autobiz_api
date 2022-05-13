@@ -55,10 +55,10 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   if (valueRequired(name)) {
     let term = new RegExp(name, "i");
 
-    const carZagvar = await CarZagvar.findByIdAndRemove({
+    const carZagvar = await CarZagvar.findOne({
       name: { $regex: term },
     }).select("_id");
-    const carIndustry = await CarIndustry.findByIdAndRemove({
+    const carIndustry = await CarIndustry.findOne({
       name: { $regex: term },
     }).select("_id");
 
