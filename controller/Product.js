@@ -63,18 +63,12 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     }).select("_id");
 
     query.find({
-      title: { $regex: term },
+      $or: [
+        { title: { $regex: term } },
+        { car_zagvar: carZagvar._id },
+        { car_industry: carIndustry._id },
+      ],
     });
-
-    console.log(carZagvar);
-    console.log(carIndustry);
-
-    if (carZagvar !== null) {
-      query.where("car_zagvar").equals(carZagvar._id);
-    }
-    if (carIndustry !== null) {
-      query.where("car_industry").equals(carIndustry._id);
-    }
   }
 
   query.select(select);
