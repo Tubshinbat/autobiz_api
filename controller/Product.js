@@ -70,7 +70,7 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     console.log(carIndustry);
 
     if (carZagvar) {
-      query.where("car_zagvar").equals(carIndustry._id);
+      query.where("car_zagvar").equals(carZagvar._id);
     }
     if (carIndustry) {
       query.where("car_industry").equals(carIndustry._id);
