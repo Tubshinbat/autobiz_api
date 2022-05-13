@@ -61,14 +61,27 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     const carIndustry = await CarIndustry.findOne({
       name: { $regex: term },
     }).select("_id");
-
-    query.find({
-      $or: [
-        { title: { $regex: term } },
-        { car_zagvar: carZagvar !== null && carZagvar._id },
-        { car_industry: carIndustry !== null && carIndustry._id },
-      ],
-    });
+    if (carZagvar && carIndustry) {
+      query.find({
+        $or: [
+          { title: { $regex: term } },
+          { car_zagvar: carZagvar._id },
+          { car_industry: carIndustry._id },
+        ],
+      });
+    } else if (carZagvar === null && carIndustry) {
+      query.find({
+        $or: [{ title: { $regex: term } }, { car_industry: carIndustry._id }],
+      });
+    } else if (carZagvar && carIndustry === null) {
+      query.find({
+        $or: [{ title: { $regex: term } }, { car_zagvar: carZagvar._id }],
+      });
+    } else {
+      query.find({
+        title: { $regex: term },
+      });
+    }
   }
 
   query.select(select);
