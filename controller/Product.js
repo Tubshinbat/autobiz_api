@@ -71,12 +71,12 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     if (carZagvar.length > 0) {
       const newZagvar = [];
       carZagvar.map((el) => newZagvar.push(el._id));
-      query.where("car_zagvar").in(Object.values(newZagvar));
+      query.where("car_zagvar").in(newZagvar);
     }
     if (carIndustry.length > 0) {
       const newIndustry = [];
       carIndustry.map((el) => newIndustry.push(el._id));
-      query.where("car_industry").in(Object.values(newIndustry));
+      query.where("car_industry").in(newIndustry);
     }
   }
 
