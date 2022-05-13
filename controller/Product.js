@@ -69,10 +69,15 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
       title: { $regex: term },
     });
     if (carZagvar.length > 0) {
-      query.where("car_zagvar").in(Object.values(carZagvar));
+      const newZagvar = [];
+      carZagvar.map((el) => newZagvar.push(el._id));
+      query.where("car_zagvar").in(Object.values(newZagvar));
     }
-    if (carIndustry.length > 0)
-      query.where("car_industry").in(Object.values(carIndustry));
+    if (carIndustry.length > 0) {
+      const newIndustry = [];
+      carIndustry.map((el) => newIndustry.push(el._id));
+      query.where("car_industry").in(Object.values(newIndustry));
+    }
   }
 
   query.select(select);
