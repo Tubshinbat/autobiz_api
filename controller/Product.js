@@ -58,8 +58,8 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     const carZagvar = await CarZagvar.find({ name: { $regex: term } });
     const carIndustry = await CarIndustry.find({ name: { $regex: term } });
 
-    console.log(carZagvar._id);
-    console.log(carIndustry._id);
+    console.log(carZagvar);
+    console.log(carIndustry);
 
     query.find({
       $or: [
