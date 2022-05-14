@@ -17,6 +17,7 @@ router
   .get(getHybrids);
 
 router.route("/count").get(getCounHybrid);
+router.route("/delete").delete(protect, authorize("admin"), multDeleteHybrid);
 
 router
   .route("/:id")

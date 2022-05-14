@@ -53,8 +53,8 @@ exports.getCarIndustrys = asyncHandler(async (req, res) => {
   if (valueRequired(status)) query.where("status").equals(status);
   query.sort(sort);
 
-  const result = await query.exec();
-  const pagination = await paginate(page, limit, null, result.length);
+  const result = await CarIndustry.count();
+  const pagination = await paginate(page, limit, null, result);
   query.skip(pagination.start - 1);
   query.limit(limit);
 

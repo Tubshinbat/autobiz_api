@@ -51,8 +51,8 @@ exports.getBanners = asyncHandler(async (req, res) => {
   query.populate("createUser");
   query.sort(sort);
 
-  const result = await query.exec();
-  const pagination = await paginate(page, limit, null, result.length);
+  const result = await Banner.count();
+  const pagination = await paginate(page, limit, null, result);
   query.skip(pagination.start - 1);
   query.limit(limit);
 

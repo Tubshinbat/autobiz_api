@@ -54,8 +54,8 @@ exports.getCarZagvars = asyncHandler(async (req, res) => {
   query.sort(sort);
   query.populate("industry");
 
-  const result = await query.exec();
-  const pagination = await paginate(page, limit, null, result.length);
+  const result = await CarZagvar.count();
+  const pagination = await paginate(page, limit, null, result);
   query.skip(pagination.start - 1);
   query.limit(limit);
 
