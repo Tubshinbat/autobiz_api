@@ -97,7 +97,7 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   query.populate("createUser");
   query.sort(sort);
 
-  const result = await BeProducts.find().count();
+  const result = await BeProducts.count();
 
   const pagination = await paginate(page, limit, null, result.length);
   query.skip(pagination.start - 1);
