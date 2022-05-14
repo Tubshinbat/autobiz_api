@@ -87,10 +87,6 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   const query = BeProducts.find();
 
   // Filter
-  if (valueRequired(name))
-    query.find({
-      name: { $regex: ".*" + name + ".*", $options: "i" },
-    });
 
   if (valueRequired(status)) query.where("status").equals(status);
   if (valueRequired(title))
