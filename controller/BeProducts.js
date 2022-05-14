@@ -68,7 +68,6 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
     "page",
     "limit",
     "status",
-    "name",
     "make",
     "model",
     "fuel",
@@ -82,6 +81,7 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
     "maxYear",
     "minMil",
     "maxMil",
+    "priceText",
   ].forEach((el) => delete req.query[el]);
 
   const query = BeProducts.find();
