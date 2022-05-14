@@ -8,6 +8,7 @@ const { valueRequired } = require("../lib/check");
 
 exports.createCarColor = asyncHandler(async (req, res) => {
   req.body.status = req.body.status || false;
+  req.body.createUser = req.userId;
   const files = req.files;
   if (files)
     if (files.image) {

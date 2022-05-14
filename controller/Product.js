@@ -10,6 +10,7 @@ const { valueRequired } = require("../lib/check");
 exports.createProduct = asyncHandler(async (req, res, next) => {
   const files = req.files;
   req.body.status = req.body.status || false;
+  req.body.createUser = req.userId;
   let fileNames;
 
   if (!files) {
@@ -145,6 +146,7 @@ exports.updateProduct = asyncHandler(async (req, res, next) => {
 
   req.body.car_motor = parseInt(req.body.car_motor) || 0;
   req.body.car_km = parseInt(req.body.car_km) || 0;
+  req.body.price = parseInt(req.body.price) || null;
 
   if (!product) {
     throw new MyError("Тухайн мэдээ байхгүй байна. ", 404);

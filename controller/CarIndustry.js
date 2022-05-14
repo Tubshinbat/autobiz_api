@@ -8,6 +8,7 @@ const { valueRequired } = require("../lib/check");
 
 exports.createCarIndustry = asyncHandler(async (req, res) => {
   req.body.status = req.body.status || false;
+  req.body.createUser = req.userId;
 
   const files = req.files;
 

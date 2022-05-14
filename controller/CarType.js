@@ -34,6 +34,7 @@ exports.getCarTypes = asyncHandler(async (req, res) => {
   let sort = req.query.sort || { createAt: -1 };
   let status = req.query.status || null;
   const name = req.query.name;
+  req.body.createUser = req.userId;
 
   if (sort)
     if (typeof sort === "string") {
