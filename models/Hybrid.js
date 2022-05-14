@@ -1,12 +1,6 @@
 const mongoose = require("mongoose");
 
 const HybridSchema = new mongoose.Schema({
-  status: {
-    type: Boolean,
-    enum: [true, false],
-    default: true,
-  },
-
   model: {
     type: String,
   },
