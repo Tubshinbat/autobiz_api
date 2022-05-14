@@ -68,10 +68,10 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     const carIndustry = await CarIndustry.findOne({
       name: { $regex: regMark },
     }).select("_id");
-    if (carIndustry)
-      query.find({
-        car_industry: carIndustry._id,
-      });
+
+    query.find({
+      car_industry: carIndustry._id || null,
+    });
   }
 
   if (valueRequired(zagvarName)) {
@@ -80,10 +80,10 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     const carZagvar = await CarZagvar.findOne({
       name: { $regex: regZagvar },
     }).select("_id");
-    if (carZagvar)
-      query.find({
-        car_zagvar: carZagvar._id,
-      });
+
+    query.find({
+      car_zagvar: carZagvar._id || null,
+    });
   }
 
   query.select(select);
