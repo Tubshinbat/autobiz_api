@@ -9,6 +9,7 @@ const {
   deleteHybrid,
   updateHybrid,
   getHybrid,
+  multDeleteHybrid,
 } = require("../controller/Hybrid");
 
 router
