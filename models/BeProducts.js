@@ -45,6 +45,11 @@ const BeProductsSchema = new mongoose.Schema({
     default: null,
   },
 
+  country: {
+    type: String,
+    default: null,
+  },
+
   location_fob: {
     type: String,
     default: null,
