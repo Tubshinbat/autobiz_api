@@ -70,7 +70,7 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     }).select("_id");
 
     query.find({
-      car_industry: carIndustry._id || null,
+      car_industry: carIndustry._id || "",
     });
   }
 
@@ -82,7 +82,7 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     }).select("_id");
 
     query.find({
-      car_zagvar: carZagvar._id || null,
+      car_zagvar: carZagvar._id || "",
     });
   }
 
