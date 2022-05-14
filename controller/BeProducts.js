@@ -89,8 +89,6 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   // Filter
 
   if (valueRequired(status)) query.where("status").equals(status);
-  if (valueRequired(title))
-    query.find({ title: { $regex: ".*" + title + ".*", $options: "i" } });
 
   query.populate("createUser");
   query.sort(sort);
