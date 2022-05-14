@@ -71,6 +71,7 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
     "make",
     "model",
     "fuel",
+    "title",
     "minPrice",
     "maxPrice",
     "type",
