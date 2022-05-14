@@ -56,7 +56,7 @@ const ProductSchema = new mongoose.Schema({
 
   car_motor: {
     type: Number,
-    default: null,
+    default: 0,
   },
 
   car_km: {
