@@ -90,28 +90,6 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   if (valueRequired(title))
     query.find({ title: { $regex: ".*" + title + ".*", $options: "i" } });
 
-  if (valueRequired(make))
-    query.find({ mark_txt: { $regex: ".*" + make + ".*", $options: "i" } });
-
-  if (valueRequired(model))
-    query.find({ model: { $regex: ".*" + model + ".*", $options: "i" } });
-
-  if (valueRequired(type))
-    query.find({ type_txt: { $regex: ".*" + type + ".*", $options: "i" } });
-
-  if (valueRequired(country))
-    query.find({ country: { $regex: ".*" + country + ".*", $options: "i" } });
-
-  if (valueRequired(fob))
-    query.find({ location_fob: { $regex: ".*" + fob + ".*", $options: "i" } });
-
-  if (valueRequired(priceText)) query.where("price").equals(priceText);
-
-  if (valueRequired(fuel))
-    query.find({ fuel: { $regex: ".*" + fuel + ".*", $options: "i" } });
-
-  if (valueRequired(trans))
-    query.find({ trans: { $regex: ".*" + trans + ".*", $options: "i" } });
   if (valueRequired(status)) query.where("status").equals(status);
 
   query.populate("createUser");
