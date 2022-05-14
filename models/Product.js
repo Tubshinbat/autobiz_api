@@ -70,7 +70,6 @@ const ProductSchema = new mongoose.Schema({
 
   car_hurd: {
     type: String,
-    enum: ["Зөв", "Буруу", "Бусад"],
     default: "Буруу",
   },
 
