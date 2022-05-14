@@ -42,6 +42,8 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   const select = req.query.select;
   let status = req.query.status || "null";
   const name = req.query.name;
+  const markName = req.query.mark_name;
+  const zagvarName = req.query.zagvar_name;
 
   ["select", "sort", "page", "limit", "status", "name"].forEach(
     (el) => delete req.query[el]
@@ -53,35 +55,35 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   query.populate("car_type");
 
   if (valueRequired(name)) {
-    let term = new RegExp(name, "i");
+    let regName = new RegExp(name, "i");
+
+    query.find({
+      title: { $regex: regName },
+    });
+  }
+
+  if (valueRequired(markName)) {
+    let regMark = new RegExp(markName, "i");
+
+    const carIndustry = await CarIndustry.findOne({
+      name: { $regex: regMark },
+    }).select("_id");
+
+    query.find({
+      car_industry: carIndustry._id,
+    });
+  }
+
+  if (valueRequired(zagvarName)) {
+    let regZagvar = new RegExp(zagvarName, "i");
 
     const carZagvar = await CarZagvar.findOne({
-      name: { $regex: term },
+      name: { $regex: regZagvar },
     }).select("_id");
-    const carIndustry = await CarIndustry.findOne({
-      name: { $regex: term },
-    }).select("_id");
-    if (carZagvar && carIndustry) {
-      query.find({
-        $or: [
-          { title: { $regex: term } },
-          { car_zagvar: carZagvar._id },
-          { car_industry: carIndustry._id },
-        ],
-      });
-    } else if (carZagvar === null && carIndustry) {
-      query.find({
-        $or: [{ title: { $regex: term } }, { car_industry: carIndustry._id }],
-      });
-    } else if (carZagvar && carIndustry === null) {
-      query.find({
-        $or: [{ title: { $regex: term } }, { car_zagvar: carZagvar._id }],
-      });
-    } else {
-      query.find({
-        title: { $regex: term },
-      });
-    }
+
+    query.find({
+      car_zagvar: carZagvar._id,
+    });
   }
 
   query.select(select);
