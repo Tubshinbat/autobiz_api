@@ -39,16 +39,20 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   // querys
   let sort = req.query.sort || { createAt: -1 };
   let status = req.query.status || null;
-  const name = req.query.name;
+  const title = req.query.title;
   const make = req.query.make;
   const model = req.query.model;
   const fuel = req.query.fuel;
+  const country = req.body.country;
+  const fob = req.body.fob;
+  const priceText = req.body.pricetext;
+  const trans = req.body.trans;
+  const type = req.body.type;
+
   const minPrice = req.query.minPrice;
   const maxPrice = req.query.maxPrice;
-  const type = req.body.type;
   const minEngcc = req.body.minEngcc;
   const maxEngcc = req.body.maxEngcc;
-  const trans = req.body.trans;
   const minYear = req.body.minYear;
   const maxYear = req.body.maxYear;
   const minMil = req.body.minMil;
@@ -87,12 +91,32 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
     query.find({
       name: { $regex: ".*" + name + ".*", $options: "i" },
     });
+
   if (valueRequired(status)) query.where("status").equals(status);
-  if (valueRequired(make)) query.where("mark_txt").equals(make);
-  if (valueRequired(model)) query.where("model").equals(model);
-  if (valueRequired(fuel)) query.where("fuel").equals(fuel);
-  if (valueRequired(type)) query.where("type_txt").equals(type);
-  if (valueRequired(trans)) query.where("trans").equals(trans);
+  if (valueRequired(title))
+    query.find({ title: { $regex: ".*" + title + ".*", $options: "i" } });
+
+  if (valueRequired(make))
+    query.find({ mark_txt: { $regex: ".*" + make + ".*", $options: "i" } });
+
+  if (valueRequired(model))
+    query.find({ model: { $regex: ".*" + model + ".*", $options: "i" } });
+
+  if (valueRequired(type))
+    query.find({ type_txt: { $regex: ".*" + type + ".*", $options: "i" } });
+
+  if (valueRequired(country))
+    query.find({ country: { $regex: ".*" + country + ".*", $options: "i" } });
+
+  if (valueRequired(fob))
+    query.find({ location_fob: { $regex: ".*" + fob + ".*", $options: "i" } });
+
+  if (valueRequired(priceText)) query.where("price").equals(priceText);
+
+  if (valueRequired(fuel))
+    query.find({ fuel: { $regex: ".*" + fuel + ".*", $options: "i" } });
+  if (valueRequired(trans))
+    query.find({ trans: { $regex: ".*" + trans + ".*", $options: "i" } });
 
   query.populate("createUser");
   query.sort(sort);
