@@ -143,6 +143,9 @@ exports.updateProduct = asyncHandler(async (req, res, next) => {
   let fileNames = [];
   let oldFiles = req.body.oldPicture || null;
 
+  req.body.car_motor = parseInt(req.body.car_motor);
+  req.body.car_km = parseInt(req.body.car_km);
+
   if (!product) {
     throw new MyError("Тухайн мэдээ байхгүй байна. ", 404);
   }

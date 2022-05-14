@@ -61,6 +61,7 @@ const ProductSchema = new mongoose.Schema({
 
   car_km: {
     type: Number,
+    default: 0,
   },
 
   color: {
