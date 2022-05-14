@@ -32,7 +32,7 @@ exports.getHybrids = asyncHandler(async (req, res) => {
 
   const query = Hybrid.find();
   if (valueRequired(name))
-    query.find({ model: { $regex: ".*" + name + ".*" } });
+    query.find({ model: { $regex: ".*" + name + ".*", $options: "i" } });
   if (valueRequired(status)) query.where("status").equals(status);
   query.sort(sort);
 
