@@ -143,8 +143,8 @@ exports.updateProduct = asyncHandler(async (req, res, next) => {
   let fileNames = [];
   let oldFiles = req.body.oldPicture || null;
 
-  req.body.car_motor = parseInt(req.body.car_motor);
-  req.body.car_km = parseInt(req.body.car_km);
+  req.body.car_motor = parseInt(req.body.car_motor) || 0;
+  req.body.car_km = parseInt(req.body.car_km) || 0;
 
   if (!product) {
     throw new MyError("Тухайн мэдээ байхгүй байна. ", 404);
