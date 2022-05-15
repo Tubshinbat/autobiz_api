@@ -196,18 +196,13 @@ exports.getAllNews = asyncHandler(async (req, res, next) => {
     status = null;
   }
 
-  if (!valueRequired(name)) {
-    nameSearch = { $regex: ".*" + ".*" };
-  } else {
-    nameSearch = { $regex: ".*" + name + ".*" };
-  }
-
   ["select", "sort", "page", "limit", "category", "status", "name"].forEach(
     (el) => delete req.query[el]
   );
 
-  const query = News.find({ $text: { $search: nameSearch } });
-
+  const query = News.find({});
+  if (valueRequired(name))
+    query.find({ name: { $regex: ".*" + name + ".*", $options: "i" } });
   query.populate("categories");
   query.populate("createUser");
   query.select(select);
@@ -220,8 +215,11 @@ exports.getAllNews = asyncHandler(async (req, res, next) => {
     query.where("status").equals(status);
   }
 
-  const result = await query.exec();
-  const pagination = await paginate(page, limit, null, result.length);
+  const qc = query.toConstructor();
+  const clonedQuery = new qc();
+  const result = await clonedQuery.count();
+
+  const pagination = await paginate(page, limit, null, result);
   query.skip(pagination.start - 1);
   query.limit(limit);
 
