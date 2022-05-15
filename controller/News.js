@@ -148,8 +148,8 @@ exports.updateNews = asyncHandler(async (req, res, next) => {
     req.body.categories = [req.body.categories];
   }
 
-  req.body.updateAt = new Date();
-  req.body.updateUser = req.userId;
+  // req.body.updateAt = new Date();
+  // req.body.updateUser = req.userId;
 
   news = await News.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
