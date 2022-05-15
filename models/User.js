@@ -45,6 +45,7 @@ const UserSchema = new mongoose.Schema({
 
   oldUserLogin: {
     type: Boolean,
+    default: true,
   },
 
   oldPassword: {
@@ -83,6 +84,7 @@ const UserSchema = new mongoose.Schema({
   },
   wallet: {
     type: Number,
+    dafault: 0,
   },
 
   password: {
