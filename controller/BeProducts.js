@@ -182,8 +182,12 @@ exports.multDeleteProduct = asyncHandler(async (req, res, next) => {
 
 exports.groupFileds = asyncHandler(async (req, res, next) => {
   const groupName = req.params.group;
+  let groupFiled;
+  if (groupName === "mark_txt") groupFiled = "$mark_txt";
 
-  const group = await BeProducts.aggregate([{ $group: { _id: "$mark_txt" } }]);
+  const group = await BeProducts.aggregate([
+    { $group: { groupName: groupFiled } },
+  ]);
 
   res.status(200).json({
     success: true,
