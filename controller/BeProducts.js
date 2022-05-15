@@ -118,8 +118,8 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   query.populate("createUser");
   query.sort(sort);
   query.allowDiskUse(true);
-  const query2 = query;
-  const result = await query2.count();
+
+  const result = query.count();
 
   const pagination = await paginate(page, limit, null, result);
   console.log(pagination);
