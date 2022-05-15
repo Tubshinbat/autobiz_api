@@ -121,6 +121,7 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   const result = await BeProducts.count();
 
   const pagination = await paginate(page, limit, null, result);
+  console.log(pagination);
   query.skip(pagination.start - 1);
   query.limit(limit);
 
