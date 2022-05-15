@@ -199,13 +199,14 @@ exports.groupFileds = asyncHandler(async (req, res, next) => {
 
 exports.groupAndfilter = asyncHandler(async (req, res, next) => {
   const groupName = req.query.group;
+  const filedName = req.query.filed;
   const filter = req.query.filter;
   if (groupName === "mark_txt") groupFiled = "$mark_txt";
   if (groupName === "type_txt") groupFiled = "$type_txt";
   if (groupName === "model") groupFiled = "$model";
 
   const group = await BeProducts.aggregate([
-    { $match: { [filter]: filter } },
+    { $match: { [filedName]: filter } },
     { $group: { _id: groupFiled, count: { $sum: 1 } } },
   ]);
 
