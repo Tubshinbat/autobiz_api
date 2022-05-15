@@ -141,7 +141,7 @@ exports.changePassword = asyncHandler(async (req, res) => {
 
 exports.getUsers = asyncHandler(async (req, res, next) => {
   const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 10;
+  const limit = parseInt(req.query.limit) || 25;
   let sort = req.query.sort || { createAt: -1 };
   const select = req.query.select;
   let status = req.query.status || null;
