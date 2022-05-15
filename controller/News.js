@@ -114,7 +114,7 @@ exports.getSingleNews = asyncHandler(async (req, res, next) => {
 exports.updateNews = asyncHandler(async (req, res, next) => {
   const news = await News.findById(req.params.id);
   const files = req.files;
-  let fileNames;
+  let fileNames = [];
   let oldPictures = req.body.oldPicture;
 
   if (!news) {
