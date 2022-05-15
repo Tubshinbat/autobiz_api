@@ -121,9 +121,11 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
 
   const query2 = query;
 
-  let result = await query2.count();
+  const countQuery = query.merge(query);
 
-  const pagination = await paginate(page, limit, null, result);
+  const [count] = await Promise.all([query, countQuery.count()]);
+
+  const pagination = await paginate(page, limit, null, count);
   console.log(pagination);
   query.skip(pagination.start - 1);
   query.limit(limit);
