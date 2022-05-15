@@ -188,7 +188,7 @@ exports.groupFileds = asyncHandler(async (req, res, next) => {
   if (groupName === "model") groupFiled = "$model";
 
   const group = await BeProducts.aggregate([
-    { $group: { _id: groupFiled }, count: { $sum: 1 } },
+    { $group: { _id: groupFiled, count: { $sum: 1 } } },
   ]);
 
   res.status(200).json({
