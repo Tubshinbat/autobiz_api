@@ -122,7 +122,7 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   var result;
   const countQuery = query;
 
-  countQuery.exec(function (e, count) {
+  await countQuery.exec(function (e, count) {
     result = count;
   });
 
