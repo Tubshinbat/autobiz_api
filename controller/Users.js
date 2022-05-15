@@ -146,6 +146,7 @@ exports.getUsers = asyncHandler(async (req, res, next) => {
   const select = req.query.select;
   let status = req.query.status || null;
   const name = req.query.name;
+  const phone = parseInt(req.query.phone) || null;
 
   if (typeof sort === "string") {
     sort = JSON.parse("{" + req.query.sort + "}");
@@ -162,10 +163,14 @@ exports.getUsers = asyncHandler(async (req, res, next) => {
         { username: { $regex: ".*" + name + ".*", $options: "i" } },
         { lastname: { $regex: ".*" + name + ".*", $options: "i" } },
         { email: { $regex: ".*" + name + ".*", $options: "i" } },
-        { phone: {isNaN(name) && parseInt(name)} },
       ],
     });
   }
+
+  if (valueRequired(phone)) {
+    query.where("phone").equals(phone);
+  }
+
   query.select(select);
   query.sort(sort);
 
