@@ -8,6 +8,7 @@ const paginate = require("../utils/paginate");
 const sharp = require("sharp");
 const fs = require("fs");
 const { fileUpload, imageDelete } = require("../lib/photoUpload");
+const { valueRequired } = require("../lib/check");
 
 // Register
 exports.register = asyncHandler(async (req, res, next) => {
@@ -145,46 +146,36 @@ exports.getUsers = asyncHandler(async (req, res, next) => {
   const select = req.query.select;
   let status = req.query.status || "";
   const name = req.query.name;
-  let nameSearch = {};
 
   if (typeof sort === "string") {
     sort = JSON.parse("{" + req.query.sort + "}");
   }
 
-  if (
-    status === "*" ||
-    status === "" ||
-    status === undefined ||
-    status === "null" ||
-    status === "undefined"
-  ) {
+  if (valueRequired(status)) {
     status = null;
-  } else {
-    if (status === true) status = true;
-    if (status === false) status = false;
-  }
-
-  if (name === "" || name === null || name === undefined) {
-    nameSearch = { $regex: ".*" + ".*" };
-  } else {
-    nameSearch = { $regex: ".*" + name + ".*" };
   }
 
   ["select", "sort", "page", "limit", "status", "name"].forEach(
     (el) => delete req.query[el]
   );
-  const pagination = await paginate(page, limit, User);
 
   const query = User.find();
-  query.find({ name: nameSearch });
+  if (valueRequired(name))
+    query.find({ username: { $regex: ".*" + name + ".*", $options: "i" } });
   query.select(select);
   query.sort(sort);
-  query.skip(pagination.start - 1);
-  query.limit(limit);
 
   if (status) {
     query.where("status").equals(status);
   }
+
+  const qc = query.toConstructor();
+  const clonedQuery = new qc();
+  const result = await clonedQuery.count();
+
+  const pagination = await paginate(page, limit, User, result);
+  query.skip(pagination.start - 1);
+  query.limit(limit);
 
   const users = await query.exec();
 
