@@ -218,6 +218,7 @@ exports.groupAndfilter = asyncHandler(async (req, res, next) => {
 
 exports.updateProduct = asyncHandler(async (req, res, next) => {
   let product = await BeProducts.findById(req.params.id);
+  delete req.body.gallery_images;
   const files = req.files;
 
   if (!product) {
