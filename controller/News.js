@@ -138,8 +138,8 @@ exports.updateNews = asyncHandler(async (req, res, next) => {
 
   if (oldPictures) {
     typeof oldPictures != "string"
-      ? (req.body.pictures = [...oldFiles, ...fileNames])
-      : (req.body.pictures = [oldFiles, ...fileNames]);
+      ? (req.body.pictures = [...oldPictures, ...fileNames])
+      : (req.body.pictures = [oldPictures, ...fileNames]);
   } else {
     req.body.pictures = fileNames;
   }
