@@ -159,15 +159,12 @@ exports.getUsers = asyncHandler(async (req, res, next) => {
   if (valueRequired(name)) {
     const number = parseInt(name);
 
-    console.log(typeof number);
-    console.log(number === "NaN");
-
     query.find({
       $or: [
         { username: { $regex: ".*" + name + ".*", $options: "i" } },
         { lastname: { $regex: ".*" + name + ".*", $options: "i" } },
         { email: { $regex: ".*" + name + ".*", $options: "i" } },
-        { phone: number },
+        { phone: isNaN(number) === false && number },
       ],
     });
   }
