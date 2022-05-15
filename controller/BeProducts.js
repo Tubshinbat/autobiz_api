@@ -119,12 +119,7 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   query.sort(sort);
   query.allowDiskUse(true);
 
-  let result;
-  const countQuery = query;
-
-  await countQuery.exec(function (e, count) {
-    result = count;
-  });
+  let result = await BeProducts.count();
 
   const pagination = await paginate(page, limit, null, result);
   console.log(pagination);
