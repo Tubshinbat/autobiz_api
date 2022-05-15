@@ -162,7 +162,7 @@ exports.getUsers = asyncHandler(async (req, res, next) => {
         { username: { $regex: ".*" + name + ".*", $options: "i" } },
         { lastname: { $regex: ".*" + name + ".*", $options: "i" } },
         { email: { $regex: ".*" + name + ".*", $options: "i" } },
-        { phone: isNaN(name) && parseInt(name) },
+        { phone: {isNaN(name) && parseInt(name)} },
       ],
     });
   }
