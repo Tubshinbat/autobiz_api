@@ -205,7 +205,7 @@ exports.groupAndfilter = asyncHandler(async (req, res, next) => {
   if (groupName === "model") groupFiled = "$model";
 
   const group = await BeProducts.aggregate([
-    { $match: { filter: filter } },
+    { $match: { [filter]: filter } },
     { $group: { _id: groupFiled, count: { $sum: 1 } } },
   ]);
 
