@@ -39,9 +39,11 @@ exports.getContacts = asyncHandler(async (req, res, next) => {
   query.select(select);
   query.sort(sort);
 
-  const contactPage = await query.exec();
+  const qc = query.toConstructor();
+  const clonedQuery = new qc();
+  const result = await clonedQuery.count();
 
-  const pagination = await paginate(page, limit, Contact, contactPage.length);
+  const pagination = await paginate(page, limit, Contact, result);
   query.limit(limit);
   query.skip(pagination.start - 1);
 

@@ -180,6 +180,17 @@ exports.multDeleteProduct = asyncHandler(async (req, res, next) => {
   });
 });
 
+exports.groupFileds = asyncHandler(async (req, res, next) => {
+  const groupName = req.params.group;
+
+  const group = await BeProducts.aggregate([{ $group: { group: groupName } }]);
+
+  res.status(200).json({
+    success: true,
+    data: group,
+  });
+});
+
 exports.updateProduct = asyncHandler(async (req, res, next) => {
   let product = await BeProducts.findById(req.params.id);
   const files = req.files;
