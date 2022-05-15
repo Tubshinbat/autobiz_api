@@ -43,14 +43,6 @@ const NewsSchema = new mongoose.Schema({
     type: [String],
   },
 
-  videos: {
-    type: [String],
-  },
-
-  audios: {
-    type: [String],
-  },
-
   categories: [
     {
       type: mongoose.Schema.ObjectId,
@@ -64,11 +56,11 @@ const NewsSchema = new mongoose.Schema({
   },
   createAt: {
     type: Date,
-    default: dateUlaanbaatar.format(),
+    default: Date.now,
   },
   updateAt: {
     type: Date,
-    default: dateUlaanbaatar.format(),
+    default: Date.now,
   },
   createUser: {
     type: mongoose.Schema.ObjectId,

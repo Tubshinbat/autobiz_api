@@ -121,7 +121,7 @@ exports.updateNews = asyncHandler(async (req, res, next) => {
     throw new MyError("Тухайн мэдээ байхгүй байна. ", 404);
   }
 
-  if (!req.body.oldPictures && !files) {
+  if (!req.body.oldPicture && !files) {
     throw new MyError("Та зураг upload хийнэ үү", 400);
   }
 
