@@ -119,11 +119,9 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   query.sort(sort);
   query.allowDiskUse(true);
 
-  const query2 = query;
-
-  const countQuery = query.merge(query);
-
-  const [count] = await Promise.all([query, countQuery.count()]);
+  const qc = query.toConstructor();
+  const clonedQuery = new qc();
+  const count = await clonedQuery.count();
 
   const pagination = await paginate(page, limit, null, count);
   console.log(pagination);
