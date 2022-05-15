@@ -151,6 +151,8 @@ exports.updateNews = asyncHandler(async (req, res, next) => {
   // req.body.updateAt = new Date();
   // req.body.updateUser = req.userId;
 
+  delete req.body.updateUser;
+
   news = await News.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
     runValidators: true,
