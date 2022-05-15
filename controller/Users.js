@@ -156,8 +156,9 @@ exports.getUsers = asyncHandler(async (req, res, next) => {
   );
 
   const query = User.find();
-  if (valueRequired(name))
-  const number = parseInt(name)
+  if (valueRequired(name)) {
+    const number = parseInt(name);
+
     query.find({
       $or: [
         { username: { $regex: ".*" + name + ".*", $options: "i" } },
@@ -166,6 +167,7 @@ exports.getUsers = asyncHandler(async (req, res, next) => {
         { phone: number },
       ],
     });
+  }
   query.select(select);
   query.sort(sort);
 
