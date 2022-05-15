@@ -23,6 +23,7 @@ function createCategories(categories, parentId = null) {
   for (let cate of category) {
     categoryList.push({
       _id: cate._id,
+      name: cate.name,
       slug: cate.slug,
       children: createCategories(categories, cate._id),
     });
