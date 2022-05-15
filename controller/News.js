@@ -41,13 +41,6 @@ exports.getNews = asyncHandler(async (req, res, next) => {
   let category = req.query.category || null;
   let status = req.query.status || null;
   const name = req.query.name;
-  let nameSearch = {};
-
-  if (valueRequired(name)) {
-    nameSearch = { $regex: ".*" + ".*" };
-  } else {
-    nameSearch = { $regex: ".*" + name + ".*" };
-  }
 
   if (!valueRequired(status)) {
     status = null;
@@ -58,7 +51,8 @@ exports.getNews = asyncHandler(async (req, res, next) => {
   );
 
   const query = News.find();
-  query.find({ name: nameSearch });
+  if (valueRequired(name))
+    query.find({ name: { $regex: ".*" + name + ".*", $options: "i" } });
   query.populate("categories");
   query.select(select);
   query.sort(sort);
@@ -66,9 +60,11 @@ exports.getNews = asyncHandler(async (req, res, next) => {
   if (valueRequired(category)) query.where("categories").in(category);
   if (valueRequired(status)) query.where("status").equals(status);
 
-  const news2 = await query.exec();
+  const qc = query.toConstructor();
+  const clonedQuery = new qc();
+  const result = await clonedQuery.count();
 
-  const pagination = await paginate(page, limit, News, news2.length);
+  const pagination = await paginate(page, limit, News, result);
   query.limit(limit);
   query.skip(pagination.start - 1);
   const news = await query.exec();
@@ -183,7 +179,6 @@ exports.getAllNews = asyncHandler(async (req, res, next) => {
   let sort = req.query.sort || { createAt: -1 };
   let category = req.query.category;
   let status = req.query.status || null;
-  let nameSearch = {};
 
   if (typeof sort === "string") {
     sort = JSON.parse("{" + req.query.sort + "}");
