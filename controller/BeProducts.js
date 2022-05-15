@@ -197,6 +197,24 @@ exports.groupFileds = asyncHandler(async (req, res, next) => {
   });
 });
 
+exports.groupAndfilter = asyncHandler(async (req, res, next) => {
+  const groupName = req.query.group;
+  const filter = req.query.filter;
+  if (groupName === "mark_txt") groupFiled = "$mark_txt";
+  if (groupName === "type_txt") groupFiled = "$type_txt";
+  if (groupName === "model") groupFiled = "$model";
+
+  const group = await BeProducts.aggregate([
+    { $match: { filter: filter } },
+    { $group: { _id: groupFiled, count: { $sum: 1 } } },
+  ]);
+
+  res.status(200).json({
+    success: true,
+    data: group,
+  });
+});
+
 exports.updateProduct = asyncHandler(async (req, res, next) => {
   let product = await BeProducts.findById(req.params.id);
   const files = req.files;

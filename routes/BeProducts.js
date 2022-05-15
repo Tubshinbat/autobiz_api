@@ -24,6 +24,7 @@ router
 router.route("/delete").delete(protect, authorize("admin"), multDeleteProduct);
 
 router.route("/group/:group").get(groupFileds);
+router.route("/groupfilter");
 
 router
   .route("/:id")
