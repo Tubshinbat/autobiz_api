@@ -160,7 +160,7 @@ exports.getUsers = asyncHandler(async (req, res, next) => {
     const number = parseInt(name);
 
     console.log(typeof number);
-    console.log(number);
+    console.log(number === NaN);
 
     query.find({
       $or: [
