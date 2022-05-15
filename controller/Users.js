@@ -144,15 +144,11 @@ exports.getUsers = asyncHandler(async (req, res, next) => {
   const limit = parseInt(req.query.limit) || 10;
   let sort = req.query.sort || { createAt: -1 };
   const select = req.query.select;
-  let status = req.query.status || "";
+  let status = req.query.status || null;
   const name = req.query.name;
 
   if (typeof sort === "string") {
     sort = JSON.parse("{" + req.query.sort + "}");
-  }
-
-  if (valueRequired(status)) {
-    status = null;
   }
 
   ["select", "sort", "page", "limit", "status", "name"].forEach(
@@ -165,7 +161,7 @@ exports.getUsers = asyncHandler(async (req, res, next) => {
   query.select(select);
   query.sort(sort);
 
-  if (status) {
+  if (valueRequired(status)) {
     query.where("status").equals(status);
   }
 
