@@ -6,6 +6,7 @@ const asyncHandler = require("../middleware/asyncHandler");
 const paginate = require("../utils/paginate");
 const { decode } = require("html-entities");
 const { multImages, fileUpload, imageDelete } = require("../lib/photoUpload");
+const { valueRequired } = require("../lib/check");
 
 exports.createPage = asyncHandler(async (req, res) => {
   const files = req.files;
@@ -22,7 +23,7 @@ exports.createPage = asyncHandler(async (req, res) => {
     }
     page.pictures = fileNames;
     if (req.body.menu) {
-      const menus = await Menu.updateMany(
+      await Menu.updateMany(
         { _id: { $in: req.body.menu } },
         { $set: { picture: fileNames[0] } }
       );
@@ -43,40 +44,29 @@ exports.getPages = asyncHandler(async (req, res, next) => {
   const limit = parseInt(req.query.limit) || 25;
   let sort = req.query.sort || { createAt: -1 };
 
-  let status = req.query.status || "null";
+  let status = req.query.status || null;
   const name = req.query.name || null;
   const menu = req.query.menu;
-
-  let nameSearch = {};
-  if (name === "" || name === null || name === undefined) {
-    nameSearch = { $regex: ".*" + ".*", $options: "i" };
-  } else {
-    nameSearch = { $regex: ".*" + name + ".*", $options: "i" };
-  }
 
   ["select", "sort", "page", "limit", "status", "menu", "name"].forEach(
     (el) => delete req.query[el]
   );
 
   const query = SitePage.find();
-  query.find({
-    $or: [{ "eng.name": nameSearch }, { "mn.name": nameSearch }],
-  });
-
   query.populate("menu");
-
   query.sort(sort);
-  if (status != "null") {
-    query.where("status").equals(status);
-  }
 
-  if (menu != "null" && menu != undefined && menu != "undefined") {
-    query.where("menu").in(menu);
-  }
+  if (valueRequired(name))
+    query.find({ name: { $regex: ".*" + name + ".*", $options: "i" } });
+  if (valueRequired(status)) query.where("status").equals(status);
+  if (valueRequired(menu)) query.where("menu").in(menu);
 
-  const sitePage2 = await query.exec();
+  const qc = query.toConstructor();
+  const clonedQuery = new qc();
+  const result = await clonedQuery.count();
 
-  const pagination = await paginate(page, limit, SitePage, sitePage2.length);
+  const pagination = await paginate(page, limit, SitePage, result);
+
   query.limit(limit);
   query.skip(pagination.start - 1);
   const sitePage = await query.exec();
@@ -93,7 +83,7 @@ exports.multDeletePages = asyncHandler(async (req, res, next) => {
   const ids = req.queryPolluted.id;
   const findPages = await SitePage.find({ _id: { $in: ids } });
   if (findPages.length <= 0) {
-    throw new MyError("Таны сонгосон аяллууд байхгүй байна", 404);
+    throw new MyError("Таны сонгосон хуудсууд байхгүй байна", 404);
   }
   const sitePages = await SitePage.deleteMany({ _id: { $in: ids } });
   res.status(200).json({
@@ -104,12 +94,9 @@ exports.multDeletePages = asyncHandler(async (req, res, next) => {
 
 exports.getMenuData = asyncHandler(async (req, res, next) => {
   const id = req.params.id;
-  const page = await SitePage.findOne({})
-    .where("menu")
-    .in(id)
-    .populate("position");
+  const page = await SitePage.findOne({}).where("menu").in(id);
   if (!page) {
-    throw new MyError("Хайсан мэдээлэл олдсонгүй", 404);
+    throw new MyError("Хайсан хуудас олдсонгүй", 404);
   }
 
   res.status(200).json({
@@ -121,8 +108,7 @@ exports.getMenuData = asyncHandler(async (req, res, next) => {
 exports.getPage = asyncHandler(async (req, res, next) => {
   const sitePage = await SitePage.findById(req.params.id)
     .populate("menu")
-    .populate("footerMenu")
-    .populate("position");
+    .populate("footerMenu");
   if (!sitePage) {
     throw new MyError("Тухайн хуудас байхгүй байна.", 404);
   }
@@ -136,7 +122,7 @@ exports.getFooterData = asyncHandler(async (req, res, next) => {
   const id = req.params.id;
   const page = await SitePage.findOne({}).where("footerMenu").in(id);
   if (!page) {
-    throw new MyError("Хайсан мэдээлэл олдсонгүй", 404);
+    throw new MyError("Хайсан хуудас олдсонгүй", 404);
   }
 
   res.status(200).json({
@@ -147,17 +133,13 @@ exports.getFooterData = asyncHandler(async (req, res, next) => {
 
 exports.getSlug = asyncHandler(async (req, res, next) => {
   const menu = await Menu.findOne({ slug: req.params.slug });
-
   if (!menu) {
     throw new MyError("Тухайн хуудас байхгүй байна.", 404);
   }
-
   const sitePage = await SitePage.findOne({ menu: menu._id });
-
   if (!sitePage) {
     throw new MyError("Тухайн хуудас байхгүй байна.", 404);
   }
-
   res.status(200).json({
     success: true,
     data: sitePage,
@@ -169,27 +151,9 @@ exports.updatePage = asyncHandler(async (req, res, next) => {
   let fileNames = [];
   let oldFiles = req.body.oldPicture || null;
 
-  if (
-    req.body.position === "" ||
-    req.body.position === undefined ||
-    req.body.position === "undefined" ||
-    req.body.position === null
-  )
-    delete req.body.position;
-
   if (!sitePage) {
     throw new MyError("Тухайн хуудас байхгүй байна...", 404);
   }
-
-  const language = req.cookies.language || "mn";
-  const { name, pageInfo } = req.body;
-  language === "eng" ? delete req.body.mn : delete req.body.eng;
-  ["name", "pageInfo"].map((el) => delete req.body[el]);
-
-  req.body[language] = {
-    name,
-    pageInfo,
-  };
 
   const files = req.files;
 
