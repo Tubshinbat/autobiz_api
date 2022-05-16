@@ -51,6 +51,7 @@ var whitelist = [
   "http://192.168.10.25",
   "https://naog.lvg.mn",
   "https://naog-admin.lvg.mn",
+  "https://admin.queenbella.mn",
 ];
 
 // Өөр домэйн дээр байрлах клиент вэб аппуудаас шаардах шаардлагуудыг энд тодорхойлно

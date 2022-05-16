@@ -409,7 +409,8 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
   res.status(200).json({
     success: true,
     resetToken,
-    message,
+    console: message,
+    message: "Таны имэйл хаягруу нууц үг солих линк илгээлээ",
   });
 });
 
