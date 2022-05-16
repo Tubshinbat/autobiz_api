@@ -27,6 +27,7 @@ const sendEmail = async (options) => {
         type: "OAuth2",
         user: "autobizotp@gmail.com",
         clientId: CLIENT_ID,
+        clientSecret: CLEINT_SECRET,
         refreshToken: REFRESH_TOKEN,
         accessToken: accessToken,
       },
