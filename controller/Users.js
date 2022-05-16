@@ -247,7 +247,8 @@ exports.updateUser = asyncHandler(async (req, res, next) => {
   req.body.role = req.body.role || "user";
   req.body.email = req.body.email.toLowerCase();
   req.body.updateUser = req.userId;
-
+  req.body.age = parseInt(req.body.age) || 0;
+  req.body.phone = parseInt(req.body.phone) || null;
   delete req.body.password;
   delete req.body.confirmPassword;
 
