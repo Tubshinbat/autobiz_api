@@ -130,7 +130,7 @@ exports.changePassword = asyncHandler(async (req, res) => {
   user.password = req.body.password;
   user.resetPassword = undefined;
   user.resetPasswordExpire = undefined;
-
+  user.createAt = Date.now();
   await user.save();
 
   res.status(200).json({
