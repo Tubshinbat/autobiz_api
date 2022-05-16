@@ -159,21 +159,20 @@ exports.updatePage = asyncHandler(async (req, res, next) => {
 
   if (files) {
     if (files.pictures.length >= 2) {
-      fileNames = await multImages(files, "news");
+      fileNames = await multImages(files, "page");
     } else if (files.pictures) {
-      fileNames = await fileUpload(files.pictures, "news");
+      fileNames = await fileUpload(files.pictures, "page");
       fileNames = [fileNames.fileName];
     }
   }
 
-  if (
-    oldFiles !== undefined &&
-    oldFiles !== null &&
-    typeof oldFiles !== "string"
-  )
-    req.body.pictures = [...oldFiles, ...fileNames];
-  else if (typeof oldFiles === "string") req.body.pictures = [oldFiles];
-  else req.body.pictures = [...fileNames];
+  if (oldPictures) {
+    typeof oldPictures != "string"
+      ? (req.body.pictures = [...oldPictures, ...fileNames])
+      : (req.body.pictures = [oldPictures, ...fileNames]);
+  } else {
+    req.body.pictures = fileNames;
+  }
 
   if (typeof req.body.menu === "string") {
     req.body.menu = [req.body.menu];
