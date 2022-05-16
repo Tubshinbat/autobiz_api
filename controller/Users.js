@@ -253,7 +253,7 @@ exports.updateUser = asyncHandler(async (req, res, next) => {
   req.body.age = parseInt(req.body.age) || 0;
   req.body.phone = parseInt(req.body.phone) || null;
   req.body.wallet = parseInt(req.body.wallet) || 0;
-  req.body.gender = req.body.gender || "other";
+  if (valueRequired(req.body.gender)) req.body.gender = "other";
 
   delete req.body.password;
   delete req.body.confirmPassword;
