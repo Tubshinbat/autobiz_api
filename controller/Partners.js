@@ -4,6 +4,7 @@ const asyncHandler = require("express-async-handler");
 // const fs = require("fs");
 const paginate = require("../utils/paginate");
 const { fileUpload, imageDelete } = require("../lib/photoUpload");
+const { valueRequired } = require("../lib/check");
 
 exports.createPartner = asyncHandler(async (req, res, next) => {
   const files = req.files;
