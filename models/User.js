@@ -19,10 +19,12 @@ const UserSchema = new mongoose.Schema({
 
   lastname: {
     type: String,
+    default: null,
   },
 
   firstname: {
     type: String,
+    default: null,
   },
 
   username: {
@@ -50,6 +52,7 @@ const UserSchema = new mongoose.Schema({
 
   oldPassword: {
     type: String,
+    default: null,
   },
 
   phone: {
@@ -60,6 +63,7 @@ const UserSchema = new mongoose.Schema({
 
   image: {
     type: String,
+    default: null,
   },
 
   gender: {
@@ -69,18 +73,22 @@ const UserSchema = new mongoose.Schema({
   },
   age: {
     type: Number,
+    default: null,
   },
 
   city: {
     type: String,
+    default: null,
   },
 
   district: {
     type: String,
+    default: null,
   },
 
   address: {
     type: String,
+    default: null,
   },
   wallet: {
     type: Number,
@@ -96,6 +104,7 @@ const UserSchema = new mongoose.Schema({
 
   address: {
     type: String,
+    default: null,
   },
 
   resetPasswordToken: String,
