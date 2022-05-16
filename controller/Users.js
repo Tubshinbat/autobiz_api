@@ -391,8 +391,8 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
   }
 
   const resetToken = user.generatePasswordChangeToken();
-  await user.save();
-  // await user.save({ validateBeforeSave: false });
+  // await user.save();
+  await user.save({ validateBeforeSave: false });
 
   const link = `https://autobiz.mn/changepassword/${resetToken}`;
   const message = `Сайн байна уу? Доод линк дээр дарж солино уу <br> <br> <a href="${link}" target=_blank>${link}</a><br> <br> өдрийг сайхан өнгөрүүлээрэй!`;
