@@ -46,7 +46,8 @@ exports.getBanners = asyncHandler(async (req, res) => {
   );
 
   const query = Banner.find();
-  if (valueRequired(name)) query.find({ name: { $regex: ".*" + name + ".*" } });
+  if (valueRequired(name))
+    query.find({ name: { $regex: ".*" + name + ".*", $options: "i" } });
   if (valueRequired(status)) query.where("status").equals(status);
   query.populate("createUser");
   query.sort(sort);
@@ -127,13 +128,14 @@ exports.updateBanner = asyncHandler(async (req, res, next) => {
   if (!oldBanner && !files) {
     throw new MyError("Та баннераа оруулна уу", 400);
   }
-
-  if (files.banner) {
-    const result = await fileUpload(files.banner, "banner").catch((error) => {
-      throw new MyError(`Баннер хуулах явцад алдаа гарлаа: ${error} `, 400);
-    });
-    req.body.picture = result.fileName;
-    await imageDelete(oldBanner);
+  if (files) {
+    if (files.banner) {
+      const result = await fileUpload(files.banner, "banner").catch((error) => {
+        throw new MyError(`Баннер хуулах явцад алдаа гарлаа: ${error} `, 400);
+      });
+      req.body.picture = result.fileName;
+      await imageDelete(oldBanner);
+    }
   } else {
     req.body.picture = oldBanner;
   }
