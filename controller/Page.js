@@ -149,7 +149,7 @@ exports.getSlug = asyncHandler(async (req, res, next) => {
 exports.updatePage = asyncHandler(async (req, res, next) => {
   let sitePage = await SitePage.findById(req.params.id);
   let fileNames = [];
-  let oldFiles = req.body.oldPicture || null;
+  let oldPictures = req.body.oldPicture || null;
 
   if (!sitePage) {
     throw new MyError("Тухайн хуудас байхгүй байна...", 404);
@@ -165,9 +165,6 @@ exports.updatePage = asyncHandler(async (req, res, next) => {
       fileNames = [fileNames.fileName];
     }
   }
-
-  console.log(fileNames);
-  console.log(oldPictures);
 
   if (oldPictures) {
     typeof oldPictures != "string"
