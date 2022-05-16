@@ -14,20 +14,17 @@ exports.createPartner = asyncHandler(async (req, res, next) => {
     throw new MyError("Хамтрагч компаний лого оруулна уу", 400);
   }
 
-  const partner = await Partner.create(req.body);
-
   if (files) {
     fileName = await fileUpload(files.logo, "partner").catch((error) => {
       throw new MyError(`Зураг хуулах явцад алдаа гарлаа: ${error}`, 408);
     });
     fileName = fileName.fileName;
   }
-  console.log(fileName);
 
-  partner.createUser = req.userId;
-  partner.logo = fileName;
-  partner.save();
+  req.body.createUser = req.userId;
+  req.body.logo = fileName;
 
+  const partner = await Partner.create(req.body);
   res.status(200).json({
     success: true,
     data: partner,
