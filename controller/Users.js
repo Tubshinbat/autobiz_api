@@ -220,6 +220,9 @@ exports.createUser = asyncHandler(async (req, res, next) => {
   req.body.role = req.body.role || "user";
   req.body.email = req.body.email.toLowerCase();
   req.body.createUser = req.userId;
+  req.body.age = parseInt(req.body.age) || 0;
+  req.body.phone = parseInt(req.body.phone) || null;
+  req.body.wallet = parseInt(req.body.wallet) || 0;
 
   const file = req.files;
 
@@ -249,6 +252,7 @@ exports.updateUser = asyncHandler(async (req, res, next) => {
   req.body.updateUser = req.userId;
   req.body.age = parseInt(req.body.age) || 0;
   req.body.phone = parseInt(req.body.phone) || null;
+  req.body.wallet = parseInt(req.body.wallet) || 0;
   delete req.body.password;
   delete req.body.confirmPassword;
 
