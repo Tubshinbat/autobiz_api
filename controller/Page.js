@@ -166,6 +166,9 @@ exports.updatePage = asyncHandler(async (req, res, next) => {
     }
   }
 
+  console.log(fileNames);
+  console.log(oldPictures);
+
   if (oldPictures) {
     typeof oldPictures != "string"
       ? (req.body.pictures = [...oldPictures, ...fileNames])
