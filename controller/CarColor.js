@@ -44,8 +44,7 @@ exports.getCarColors = asyncHandler(async (req, res) => {
   );
 
   const query = CarColor.find();
-  if (valueRequired(name))
-    query.find({ name: { $regex: ".*" + name + ".*", $options: "i" } });
+  if (valueRequired(name)) query.find({ name: { $regex: ".*" + name + ".*" } });
   if (valueRequired(status)) query.where("status").equals(status);
   query.sort(sort);
 

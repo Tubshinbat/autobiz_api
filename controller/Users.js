@@ -10,6 +10,31 @@ const fs = require("fs");
 const { fileUpload, imageDelete } = require("../lib/photoUpload");
 const { valueRequired } = require("../lib/check");
 
+// OldUSer Check
+exports.oldUser = asyncHandler(async (req, res, next) => {
+  const { email, password } = req.body;
+  let data = false;
+
+  if (!email || !password)
+    throw new MyError("Имэйл болон нууц үгээ дамжуулна уу", 400);
+  const user = await User.findOne({ email: email });
+
+  if (!user) {
+    throw new MyError("Имэйл болон нууц үгээ зөв оруулна уу", 401);
+  }
+
+  if (user.oldUserLogin === false) {
+    data = true;
+  } else {
+    data = false;
+  }
+
+  res.status(200).json({
+    success: true,
+    data: data,
+  });
+});
+
 // Register
 exports.register = asyncHandler(async (req, res, next) => {
   req.body.email = req.body.email.toLowerCase();
@@ -38,6 +63,12 @@ exports.login = asyncHandler(async (req, res, next) => {
     throw new MyError("Имэйл болон нууц үгээ зөв оруулна уу", 401);
   }
 
+  if (user.oldUserLogin === false)
+    throw new MyError(
+      "Уучлаарай та нууц үгээ мартсан дээр дарж шинэчлэн үү",
+      401
+    );
+
   const ok = await user.checkPassword(password);
 
   if (!ok) {
@@ -59,7 +90,7 @@ exports.login = asyncHandler(async (req, res, next) => {
     httpOnly: false,
   };
 
-  res.status(200).cookie("uatoken", token, cookieOption).json({
+  res.status(200).cookie("autobiztoken", token, cookieOption).json({
     success: true,
     token,
     user,
@@ -67,7 +98,7 @@ exports.login = asyncHandler(async (req, res, next) => {
 });
 
 exports.tokenCheckAlways = asyncHandler(async (req, res, next) => {
-  const token = req.cookies.uatoken;
+  const token = req.cookies.autobiztoken;
 
   if (!token) {
     throw new MyError("Уучлаарай хандах боломжгүй байна..", 400);
@@ -92,7 +123,7 @@ exports.logout = asyncHandler(async (req, res, next) => {
     expires: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000),
     httpOnly: false,
   };
-  res.status(200).cookie("uatoken", null, cookieOption).json({
+  res.status(200).cookie("autobiztoken", null, cookieOption).json({
     success: true,
     data: "logout...",
   });
@@ -442,48 +473,6 @@ exports.adminControlResetPassword = asyncHandler(async (req, res, next) => {
 });
 
 // FILE UPLOAD
-
-const newResizePhoto = (file) => {
-  sharp(`${process.env.FILE_AVATAR_UPLOAD_PATH}/${file}`)
-    .resize({
-      width: 150,
-      height: 150,
-      fit: sharp.fit.cover,
-    })
-    .toFile(`${process.env.FILE_AVATAR_UPLOAD_PATH}/150x150/${file}`)
-    .then(function (newFileInfo) {
-      console.log("img croped 150" + newFileInfo);
-    })
-    .catch(function (err) {
-      console.log(err + "150");
-    });
-
-  sharp(`${process.env.FILE_AVATAR_UPLOAD_PATH}/${file}`)
-    .resize({
-      width: 300,
-      height: 300,
-      fit: sharp.fit.cover,
-    })
-    .toFile(`${process.env.FILE_AVATAR_UPLOAD_PATH}/350x350/${file}`)
-    .then(function (newFileInfo) {
-      console.log("img croped 300 " + newFileInfo);
-    })
-    .catch(function (err) {
-      console.log(err + "300");
-    });
-
-  sharp(`${process.env.FILE_AVATAR_UPLOAD_PATH}/${file}`)
-    .resize({
-      width: 450,
-    })
-    .toFile(`${process.env.FILE_AVATAR_UPLOAD_PATH}/450/${file}`)
-    .then(function (newFileInfo) {
-      console.log("img croped 450" + newFileInfo);
-    })
-    .catch(function (err) {
-      console.log(err + "450");
-    });
-};
 
 const deleteImage = (filePaths) => {
   if (filePaths) {
