@@ -404,7 +404,7 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
     message,
   });
 
-  console.log("Message sent: %s", info.messageId);
+  console.log("Message sent: %s", info);
 
   res.status(200).json({
     success: true,

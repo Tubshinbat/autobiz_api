@@ -7,7 +7,7 @@ const oAuth2Client = new google.auth.OAuth2(
   process.env.REDIRECT_URI
 );
 
-async function sendEmail(options) {
+const sendEmail = async (options) => {
   try {
     const accessToken = await oAuth2Client.getAccessToken();
     const transport = nodemailer.createTransport({
@@ -34,7 +34,7 @@ async function sendEmail(options) {
   } catch (error) {
     return error;
   }
-}
+};
 
 //  // async..await is not allowed in global scope, must use a wrapper
 // const sendEmail = async (options) => {
