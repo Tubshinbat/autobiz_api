@@ -22,7 +22,7 @@ exports.createPartner = asyncHandler(async (req, res, next) => {
     });
     fileName = fileName.fileName;
   }
-
+  console.log(fileName);
   partner.createUser = req.userId;
   partner.logo = fileName;
   partner.save();

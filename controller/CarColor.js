@@ -53,7 +53,7 @@ exports.getCarColors = asyncHandler(async (req, res) => {
   const clonedQuery = new qc();
   const result = await clonedQuery.count();
 
-  const pagination = await paginate(page, limit, null, result);
+  const pagination = await paginate(page, limit, null);
   query.skip(pagination.start - 1);
   query.limit(limit);
 
