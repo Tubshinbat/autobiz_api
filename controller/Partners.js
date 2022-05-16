@@ -38,20 +38,14 @@ exports.getPartners = asyncHandler(async (req, res) => {
   const select = req.query.select;
   let status = req.query.status || "null";
   const name = req.query.name;
-  let nameSearch = {};
-
-  if (name === "" || name === null || name === undefined) {
-    nameSearch = { $regex: ".*" + ".*" };
-  } else {
-    nameSearch = { $regex: ".*" + name + ".*" };
-  }
 
   ["select", "sort", "page", "limit", "status", "name"].forEach(
     (el) => delete req.query[el]
   );
 
   const query = Partner.find();
-  query.find({ name: nameSearch });
+  if (valueRequired(name))
+    query.find({ name: { $regex: ".*" + name + ".*", $options: "i" } });
   query.select(select);
   query.sort(sort);
   if (status !== "null") {
