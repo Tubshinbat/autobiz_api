@@ -254,15 +254,15 @@ exports.updateUser = asyncHandler(async (req, res, next) => {
   let avatar = req.body.oldAvatar;
   const file = req.files;
 
-  if (req.body.role === "admin" && req.userRole !== "admin") {
-    throw new MyError("Уучлаарай админ эрх өгөх эрхгүй байна", 200);
-  }
+  // if (req.body.role === "admin" && req.userRole !== "admin") {
+  //   throw new MyError("Уучлаарай админ эрх өгөх эрхгүй байна", 200);
+  // }
 
   if (file) {
     const resultData = await fileUpload(file.image, "image").catch((error) => {
       throw new MyError(`Зураг хуулах явцад алдаа гарлаа: ${error}`, 408);
     });
-    avatar = resultData.image;
+    avatar = resultData.fileName;
   }
 
   req.body.image = avatar;
