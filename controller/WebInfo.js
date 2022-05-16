@@ -60,12 +60,6 @@ exports.updateWebInfo = asyncHandler(async (req, res, next) => {
   let newLogo = "";
   let newWhiteLogo = "";
 
-  const name = req.body.name;
-  const address = req.body.address;
-  const siteInfo = req.body.siteInfo;
-  const policy = req.body.policy;
-  const lang = req.cookies.language || "mn";
-
   if (files) {
     if (files.logo) {
       newLogo = await fileUpload(files.logo, "logo").catch((error) => {
@@ -82,10 +76,6 @@ exports.updateWebInfo = asyncHandler(async (req, res, next) => {
       whiteLogo = newWhiteLogo.fileName;
     }
   }
-
-  ["logo", "whiteLogo", "name", "address", "siteInfo", "policy", "_id"].forEach(
-    (el) => delete req.body[el]
-  );
 
   req.body.logo = logo;
   req.body.whiteLogo = whiteLogo || "";
