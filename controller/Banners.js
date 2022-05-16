@@ -17,7 +17,7 @@ exports.createBanner = asyncHandler(async (req, res) => {
     const banner = await fileUpload(files.banner, "banner").catch((error) => {
       throw new MyError(`Зураг хуулах явцад алдаа гарлаа: ${error}`, 408);
     });
-    req.body.banner = banner.fileName;
+    req.body.picture = banner.fileName;
   }
 
   const banner = await Banner.create(req.body);
