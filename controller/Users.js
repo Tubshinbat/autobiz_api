@@ -387,17 +387,14 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
   const user = await User.findOne({ email: req.body.email });
 
   if (!user) {
-    throw new MyError(
-      req.body.email + " Имэйлтэй хэрэглэгч байхгүй байна.",
-      400
-    );
+    throw new MyError(req.body.email + " Имэйл хаягаа дахин шалгана уу.", 400);
   }
 
   const resetToken = user.generatePasswordChangeToken();
   await user.save();
   // await user.save({ validateBeforeSave: false });
 
-  const link = `https://amazon.mn/changepassword/${resetToken}`;
+  const link = `https://autobiz.mn/changepassword/${resetToken}`;
   const message = `Сайн байна уу? Доод линк дээр дарж солино уу <br> <br> <a href="${link}" target=_blank>${link}</a><br> <br> өдрийг сайхан өнгөрүүлээрэй!`;
 
   // Имэйл илгээнэ
