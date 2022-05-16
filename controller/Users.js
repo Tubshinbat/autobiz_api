@@ -228,10 +228,10 @@ exports.createUser = asyncHandler(async (req, res, next) => {
   // }
 
   if (file) {
-    const avatar = await fileUpload(file.avatar, "banner").catch((error) => {
+    const avatar = await fileUpload(file.image, "avatar").catch((error) => {
       throw new MyError(`Зураг хуулах явцад алдаа гарлаа: ${error}`, 408);
     });
-    req.body.avatar = avatar.fileName;
+    req.body.image = avatar.fileName;
   }
 
   const user = await User.create(req.body);
@@ -259,15 +259,13 @@ exports.updateUser = asyncHandler(async (req, res, next) => {
   }
 
   if (file) {
-    const resultData = await fileUpload(file.avatar, "banner").catch(
-      (error) => {
-        throw new MyError(`Зураг хуулах явцад алдаа гарлаа: ${error}`, 408);
-      }
-    );
-    avatar = resultData.fileName;
+    const resultData = await fileUpload(file.image, "image").catch((error) => {
+      throw new MyError(`Зураг хуулах явцад алдаа гарлаа: ${error}`, 408);
+    });
+    avatar = resultData.image;
   }
 
-  req.body.avatar = avatar;
+  req.body.image = avatar;
 
   const user = await User.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
