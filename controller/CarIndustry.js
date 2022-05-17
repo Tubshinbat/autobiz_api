@@ -1,4 +1,5 @@
 const CarIndustry = require("../models/CarIndustry");
+const Product = require("../models/Product");
 const MyError = require("../utils/myError");
 const asyncHandler = require("express-async-handler");
 const paginate = require("../utils/paginate");
@@ -63,10 +64,36 @@ exports.getCarIndustrys = asyncHandler(async (req, res) => {
 
   const carIndustry = await query.exec();
 
+  if (groupName === "model") groupFiled = "$model";
+
+  const group = await BeProducts.aggregate([
+    { $group: { _id: groupFiled, count: { $sum: 1 } } },
+  ]);
+
+  const products = await Product.aggregate([
+    { $group: { _id: "$car_industry", sum: { $sum: 1 } } },
+    {
+      $lookup: {
+        form: "carIndustry",
+        local_field: "car_industry",
+        foreign_field: "_id",
+        as: "car_industry",
+      },
+    },
+    {
+      $car_industry: {
+        industry_id: "$_id",
+        industryCount: "$sum",
+        industryName: "$car_industry.name",
+      },
+    },
+  ]);
+
   res.status(200).json({
     success: true,
     count: carIndustry.length,
     data: carIndustry,
+    products,
     pagination,
   });
 });
