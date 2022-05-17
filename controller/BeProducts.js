@@ -182,7 +182,7 @@ exports.multDeleteProduct = asyncHandler(async (req, res, next) => {
 
 exports.groupFileds = asyncHandler(async (req, res, next) => {
   const groupName = req.params.group;
-  const limit = req.query.limit;
+  const limit = req.query.limit || 100;
   let groupFiled;
   if (groupName === "mark_txt") groupFiled = "$mark_txt";
   if (groupName === "type_txt") groupFiled = "$type_txt";
@@ -204,6 +204,7 @@ exports.groupAndfilter = asyncHandler(async (req, res, next) => {
   const groupName = req.query.group;
   const filedName = req.query.filed;
   const filter = req.query.filter;
+  const limit = req.query.limit || 100;
   if (groupName === "mark_txt") groupFiled = "$mark_txt";
   if (groupName === "type_txt") groupFiled = "$type_txt";
   if (groupName === "model") groupFiled = "$model";
