@@ -96,7 +96,7 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   const clonedQuery = new qc();
   const result = await clonedQuery.count();
 
-  const pagination = await paginate(page, limit, null, result.length);
+  const pagination = await paginate(page, limit, null, result);
   query.limit(limit);
   query.skip(pagination.start - 1);
   const product = await query.exec();
