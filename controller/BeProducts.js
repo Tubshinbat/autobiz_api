@@ -190,7 +190,7 @@ exports.groupFileds = asyncHandler(async (req, res, next) => {
 
   const group = await BeProducts.aggregate([
     { $group: { _id: groupFiled, count: { $sum: 1 } } },
-    { $sort: { $sum: -1 } },
+    { $sort: { count: -1 } },
     { $limit: limit },
   ]);
 
@@ -212,7 +212,7 @@ exports.groupAndfilter = asyncHandler(async (req, res, next) => {
   const group = await BeProducts.aggregate([
     { $match: { [filedName]: filter } },
     { $group: { _id: groupFiled, count: { $sum: 1 } } },
-    { $sort: { $sum: -1 } },
+    { $sort: { count: -1 } },
     { $limit: limit },
   ]);
 
