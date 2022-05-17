@@ -68,7 +68,7 @@ exports.getCarIndustrys = asyncHandler(async (req, res) => {
     { $group: { _id: "$car_industry", sum: { $sum: 1 } } },
     {
       $lookup: {
-        from: "carIndustry",
+        from: "CarIndustry",
         local_field: "car_industry",
         foreign_field: "_id",
         as: "industry",
