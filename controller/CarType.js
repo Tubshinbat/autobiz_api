@@ -72,6 +72,7 @@ exports.getCarTypes = asyncHandler(async (req, res) => {
         as: "types",
       },
     },
+    { $sort: { sum: -1 } },
     {
       $unwind: "$types",
     },
