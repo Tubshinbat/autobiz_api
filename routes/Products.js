@@ -9,6 +9,7 @@ const {
   getCountProduct,
   multDeleteProduct,
   updateProduct,
+  groupFileds,
 } = require("../controller/Product");
 
 router
@@ -19,6 +20,8 @@ router
 router
   .route("/count")
   .get(protect, authorize("admin", "operator"), getCountProduct);
+
+router.route("/group/:group").get(groupFileds);
 
 router.route("/delete").delete(protect, authorize("admin"), multDeleteProduct);
 router

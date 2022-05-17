@@ -195,6 +195,30 @@ exports.updateProduct = asyncHandler(async (req, res, next) => {
   });
 });
 
+exports.groupFileds = asyncHandler(async (req, res, next) => {
+  const groupName = req.params.group;
+  const limit = parseInt(req.query.limit) || 100;
+  let groupFiled;
+  if (groupName) groupFiled = "$" + groupName;
+
+  const group = await Product.aggregate([
+    { $group: { _id: groupFiled, count: { $sum: 1 } } },
+    { $sort: { count: -1 } },
+    { $limit: limit },
+    {
+      $project: {
+        name: "$_id",
+        count: "$sum",
+      },
+    },
+  ]);
+
+  res.status(200).json({
+    success: true,
+    data: group,
+  });
+});
+
 exports.getCountProduct = asyncHandler(async (req, res, next) => {
   const product = await Product.count();
   res.status(200).json({
