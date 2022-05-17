@@ -182,6 +182,7 @@ exports.multDeleteProduct = asyncHandler(async (req, res, next) => {
 
 exports.groupFileds = asyncHandler(async (req, res, next) => {
   const groupName = req.params.group;
+  const limit = req.query.limit;
   let groupFiled;
   if (groupName === "mark_txt") groupFiled = "$mark_txt";
   if (groupName === "type_txt") groupFiled = "$type_txt";
@@ -189,6 +190,8 @@ exports.groupFileds = asyncHandler(async (req, res, next) => {
 
   const group = await BeProducts.aggregate([
     { $group: { _id: groupFiled, count: { $sum: 1 } } },
+    { $sort: { $sum: -1 } },
+    { $limit: limit },
   ]);
 
   res.status(200).json({
@@ -208,6 +211,8 @@ exports.groupAndfilter = asyncHandler(async (req, res, next) => {
   const group = await BeProducts.aggregate([
     { $match: { [filedName]: filter } },
     { $group: { _id: groupFiled, count: { $sum: 1 } } },
+    { $sort: { $sum: -1 } },
+    { $limit: limit },
   ]);
 
   res.status(200).json({
