@@ -1,4 +1,5 @@
 const CarType = require("../models/CarType");
+const Product = require("../models/Product");
 const MyError = require("../utils/myError");
 const asyncHandler = require("express-async-handler");
 const paginate = require("../utils/paginate");
