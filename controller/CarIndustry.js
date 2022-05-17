@@ -69,8 +69,8 @@ exports.getCarIndustrys = asyncHandler(async (req, res) => {
     {
       $lookup: {
         form: "carIndustry",
-        local_field: "car_industry",
-        foreign_field: "_id",
+        local_field: "_id",
+        foreign_field: "car_industry",
         as: "car_industry",
       },
     },
