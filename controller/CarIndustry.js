@@ -78,7 +78,7 @@ exports.getCarIndustrys = asyncHandler(async (req, res) => {
       $project: {
         industry_id: "$_id",
         industryCount: "$sum",
-        industryName: "$industry.name",
+        industry: "$industry",
       },
     },
   ]);
