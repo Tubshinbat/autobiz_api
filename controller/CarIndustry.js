@@ -64,12 +64,6 @@ exports.getCarIndustrys = asyncHandler(async (req, res) => {
 
   const carIndustry = await query.exec();
 
-  if (groupName === "model") groupFiled = "$model";
-
-  const group = await BeProducts.aggregate([
-    { $group: { _id: groupFiled, count: { $sum: 1 } } },
-  ]);
-
   const products = await Product.aggregate([
     { $group: { _id: "$car_industry", sum: { $sum: 1 } } },
     {
