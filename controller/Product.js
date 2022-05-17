@@ -203,7 +203,7 @@ exports.groupFileds = asyncHandler(async (req, res, next) => {
 
   const group = await Product.aggregate([
     { $group: { _id: groupFiled, count: { $sum: 1 } } },
-    { $sort: { _id: -1 } },
+    { $sort: { _id: 1 } },
     { $limit: limit },
     {
       $project: {
