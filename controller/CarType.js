@@ -147,9 +147,32 @@ exports.updateCarType = asyncHandler(async (req, res, next) => {
     runValidators: true,
   });
 
+  const products = await Product.aggregate([
+    { $group: { _id: "$car_type", sum: { $sum: 1 } } },
+    {
+      $lookup: {
+        from: "cartypes",
+        localField: "_id",
+        foreignField: "_id",
+        as: "types",
+      },
+    },
+    {
+      $unwind: "$types",
+    },
+    {
+      $project: {
+        type_id: "$_id",
+        typeCount: "$sum",
+        type: "$types.name",
+      },
+    },
+  ]);
+
   res.status(200).json({
     success: true,
     data: carType,
+    products,
   });
 });
 
