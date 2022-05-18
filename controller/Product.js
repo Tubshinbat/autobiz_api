@@ -62,13 +62,13 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
 
   const query = await Product.find();
 
-  query.forEach((p) => {
+  query.map((p) => {
     (p.make_date = parseInt(p.make_date)),
       (p.import_date = parseInt(p.import_date)),
       (p.price = parseInt(p.price)),
       (p.car_motor = parseInt(p.car_motor)),
       (p.car_km = parseInt(p.car_km)),
-      query.save(p);
+      await Product.findByIdAndUpdate(p_id, p)
   });
 
   // query.populate("car_industry");
