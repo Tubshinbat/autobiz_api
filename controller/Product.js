@@ -192,7 +192,10 @@ exports.multDeleteProduct = asyncHandler(async (req, res, next) => {
 });
 
 exports.getProduct = asyncHandler(async (req, res, next) => {
-  const product = await Product.findById(req.params.id).populate("menu");
+  const product = await Product.findById(req.params.id)
+    .populate("car_industry")
+    .populate("car_zagvar")
+    .populate("car_type");
 
   if (!product) {
     throw new MyError("Тухайн машин байхгүй байна. ", 404);
