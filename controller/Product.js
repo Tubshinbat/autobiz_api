@@ -100,19 +100,20 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   if (valueRequired(status)) query.where("status").equals(status);
 
   if (valueRequired(req.query.industry))
-    query.where("car_industry").in(req.query.industry);
+    query.where("car_industry").equals(req.query.industry);
 
   if (valueRequired(req.query.carType))
-    query.where("car_type").in(req.query.carType);
-  if (valueRequired(req.query.color)) query.where("color").in(req.query.color);
+    query.where("car_type").equals(req.query.carType);
   if (valueRequired(req.query.color))
-    query.where("car_hurd").in(req.query.car_hurd);
+    query.where("color").equals(req.query.color);
+  if (valueRequired(req.query.color))
+    query.where("car_hurd").equals(req.query.car_hurd);
   if (valueRequired(req.query.car_shatakhuun))
-    query.where("car_shatakhuun").in(req.query.car_shatakhuun);
+    query.where("car_shatakhuun").equals(req.query.car_shatakhuun);
   if (valueRequired(req.query.car_speed_box))
-    query.where("car_speed_box").in(req.query.car_speed_box);
+    query.where("car_speed_box").equals(req.query.car_speed_box);
   if (valueRequired(req.query.lizing))
-    query.where("lizing").in(req.query.lizing);
+    query.where("lizing").equals(req.query.lizing);
 
   if (valueRequired(req.query.minYear) && valueRequired(req.query.maxYear))
     query.find({
