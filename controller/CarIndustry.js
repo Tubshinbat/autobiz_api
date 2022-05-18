@@ -75,9 +75,7 @@ exports.getCarIndustrys = asyncHandler(async (req, res) => {
       },
     },
     { $sort: { sum: -1 } },
-    {
-      $unwind: "$industry",
-    },
+
     {
       $project: {
         industry_id: "$_id",
