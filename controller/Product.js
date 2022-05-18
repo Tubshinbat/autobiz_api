@@ -115,11 +115,19 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   if (valueRequired(req.query.lizing))
     query.where("lizing").equals(req.query.lizing);
 
-  if (valueRequired(req.query.minYear) && valueRequired(req.query.maxYear))
+  if (valueRequired(req.query.minYear) && valueRequired(req.query.maxYear)) {
+    const yearConvert = {
+      $addFields: {
+        convertedYear: { $toInt: "$make_date" },
+      },
+    };
+
+    query.aggregate([yearConvert]);
+
     query.find({
-      make_date: { $gte: req.query.minYear, $lte: req.query.maxYear },
+      convertedYear: { $gte: req.query.minYear, $lte: req.query.maxYear },
     });
-  else if (
+  } else if (
     valueRequired(req.query.maxYear) &&
     valueRequired(req.query.minYear) === false
   )
