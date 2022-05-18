@@ -39,12 +39,16 @@ exports.createProduct = asyncHandler(async (req, res, next) => {
 exports.getProducts = asyncHandler(async (req, res, next) => {
   const page = parseInt(req.query.page) || 1;
   const limit = parseInt(req.query.limit) || 25;
-  let sort = req.query.sort || { createAt: -1 };
+  let sort = req.query.sort;
   const select = req.query.select;
   let status = req.query.status || "null";
   const name = req.query.name;
   const markName = req.query.mark_name;
   const zagvarName = req.query.zagvar_name;
+
+  if (valueRequired(sort) === false) {
+    sort = { createAt: -1 };
+  }
 
   ["select", "sort", "page", "limit", "status", "name"].forEach(
     (el) => delete req.query[el]
