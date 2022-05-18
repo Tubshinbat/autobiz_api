@@ -38,7 +38,7 @@ exports.createProduct = asyncHandler(async (req, res, next) => {
 
 exports.getProducts = asyncHandler(async (req, res, next) => {
   const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 25;
+  const limit = parseInt(req.query.limit) || 24;
   let sort = req.query.sort;
   const select = req.query.select;
   let status = req.query.status || "null";
