@@ -37,28 +37,28 @@ exports.createProduct = asyncHandler(async (req, res, next) => {
 });
 
 exports.getProducts = asyncHandler(async (req, res, next) => {
-  const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 24;
-  let sort = req.query.sort;
-  const select = req.query.select;
-  let status = req.query.status || "null";
-  const name = req.query.name;
-  const markName = req.query.mark_name;
-  const zagvarName = req.query.zagvar_name;
+  // const page = parseInt(req.query.page) || 1;
+  // const limit = parseInt(req.query.limit) || 24;
+  // let sort = req.query.sort;
+  // const select = req.query.select;
+  // let status = req.query.status || "null";
+  // const name = req.query.name;
+  // const markName = req.query.mark_name;
+  // const zagvarName = req.query.zagvar_name;
 
-  if (valueRequired(sort) === false || sort === "new") {
-    sort = { createAt: -1 };
-  } else if (sort === "old") sort = { createAt: 1 };
-  else if (sort === "maxtomin") sort = { price: -1 };
-  else if (sort === "mintomax") sort = { price: 1 };
-  else sort = { createAt: -1 };
+  // if (valueRequired(sort) === false || sort === "new") {
+  //   sort = { createAt: -1 };
+  // } else if (sort === "old") sort = { createAt: 1 };
+  // else if (sort === "maxtomin") sort = { price: -1 };
+  // else if (sort === "mintomax") sort = { price: 1 };
+  // else sort = { createAt: -1 };
 
-  [("select", "sort", "page", "limit", "status", "name")].forEach(
-    (el) => delete req.query[el]
-  );
+  // [("select", "sort", "page", "limit", "status", "name")].forEach(
+  //   (el) => delete req.query[el]
+  // );
 
-  const minYear = parseInt(req.query.minYear) || null;
-  const maxYear = parseInt(req.query.maxYear) || null;
+  // const minYear = parseInt(req.query.minYear) || null;
+  // const maxYear = parseInt(req.query.maxYear) || null;
 
   const query = Product.find().forEach((p) => {
     (p.make_date = parseInt(d.make_date)),
@@ -263,10 +263,10 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   //     runValidators: true,
   //   });
 
-  //   res.status(200).json({
-  //     success: true,
-  //     data: product,
-  //   });
+  res.status(200).json({
+    success: true,
+    // data: product,
+  });
 });
 
 exports.groupFileds = asyncHandler(async (req, res, next) => {
