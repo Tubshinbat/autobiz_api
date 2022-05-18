@@ -195,7 +195,8 @@ exports.getProduct = asyncHandler(async (req, res, next) => {
   const product = await Product.findById(req.params.id)
     .populate("car_industry")
     .populate("car_zagvar")
-    .populate("car_type");
+    .populate("car_type")
+    .populate("color");
 
   if (!product) {
     throw new MyError("Тухайн машин байхгүй байна. ", 404);
