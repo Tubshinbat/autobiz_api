@@ -184,9 +184,7 @@ exports.groupFileds = asyncHandler(async (req, res, next) => {
   const groupName = req.params.group;
   const limit = parseInt(req.query.limit) || 100;
   let groupFiled;
-  if (groupName === "mark_txt") groupFiled = "$mark_txt";
-  if (groupName === "type_txt") groupFiled = "$type_txt";
-  if (groupName === "model") groupFiled = "$model";
+  if (valueRequired(groupName)) groupFiled = "$" + groupName;
 
   const group = await BeProducts.aggregate([
     { $group: { _id: groupFiled, count: { $sum: 1 } } },
@@ -206,9 +204,8 @@ exports.groupAndfilter = asyncHandler(async (req, res, next) => {
   const filter = req.query.filter;
   let groupFiled;
   const limit = parseInt(req.query.limit) || 100;
-  if (groupName === "mark_txt") groupFiled = "$mark_txt";
-  if (groupName === "type_txt") groupFiled = "$type_txt";
-  if (groupName === "model") groupFiled = "$model";
+  if (valueRequired(groupName)) groupFiled = "$" + groupName;
+
   let group;
   if (valueRequired(filter)) {
     group = await BeProducts.aggregate([
