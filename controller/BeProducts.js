@@ -34,7 +34,7 @@ exports.createBeProduct = asyncHandler(async (req, res) => {
 exports.getBeProducts = asyncHandler(async (req, res) => {
   // Эхлээд query - уудаа аваад хоосон үгүйг шалгаад утга олгох
   const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 25;
+  const limit = parseInt(req.query.limit) || 24;
   let sort = req.query.sort;
 
   // querys
