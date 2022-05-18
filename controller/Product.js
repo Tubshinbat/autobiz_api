@@ -99,58 +99,58 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
 
   if (valueRequired(status)) query.where("status").equals(status);
 
-  if (valueRequired(req.body.industry))
-    query.where("car_industry").in(req.body.industry);
+  if (valueRequired(req.query.industry))
+    query.where("car_industry").in(req.query.industry);
 
-  if (valueRequired(req.body.carType))
-    query.where("car_type").in(req.body.carType);
-  if (valueRequired(req.body.color))
-    query.where("car_color").in(req.body.color);
-  if (valueRequired(req.body.car_hurd))
-    query.where("car_hurd").in(req.body.car_hurd);
-  if (valueRequired(req.body.car_shatakhuun))
-    query.where("car_shatakhuun").in(req.body.car_shatakhuun);
-  if (valueRequired(req.body.car_speed_box))
-    query.where("car_speed_box").in(req.body.car_speed_box);
-  if (valueRequired(req.body.lizing))
-    query.where("car_speed_box").in(req.body.lizing);
+  if (valueRequired(req.query.carType))
+    query.where("car_type").in(req.query.carType);
+  if (valueRequired(req.query.color))
+    query.where("car_color").in(req.query.color);
+  if (valueRequired(req.query.car_hurd))
+    query.where("car_hurd").in(req.query.car_hurd);
+  if (valueRequired(req.query.car_shatakhuun))
+    query.where("car_shatakhuun").in(req.query.car_shatakhuun);
+  if (valueRequired(req.query.car_speed_box))
+    query.where("car_speed_box").in(req.query.car_speed_box);
+  if (valueRequired(req.query.lizing))
+    query.where("car_speed_box").in(req.query.lizing);
 
-  if (valueRequired(req.body.minYear) && valueRequired(req.body.maxYear))
+  if (valueRequired(req.query.minYear) && valueRequired(req.query.maxYear))
     query.find({
-      make_date: { $gte: req.body.minYear, $lte: req.body.maxYear },
+      make_date: { $gte: req.query.minYear, $lte: req.query.maxYear },
     });
   else if (
-    valueRequired(req.body.maxYear) &&
-    valueRequired(req.body.minYear) === false
+    valueRequired(req.query.maxYear) &&
+    valueRequired(req.query.minYear) === false
   )
     query.find({
-      make_date: { $gte: req.body.maxYear },
+      make_date: { $gte: req.query.maxYear },
     });
   else if (
-    valueRequired(req.body.minYear) &&
-    valueRequired(req.body.maxYear) === false
+    valueRequired(req.query.minYear) &&
+    valueRequired(req.query.maxYear) === false
   )
     query.find({
-      make_date: { $lte: req.body.minYear },
+      make_date: { $lte: req.query.minYear },
     });
 
-  if (valueRequired(req.body.minMotor) && valueRequired(req.body.maxMotor))
+  if (valueRequired(req.query.minMotor) && valueRequired(req.query.maxMotor))
     query.find({
-      car_motor: { $gte: req.body.minMotor, $lte: req.body.maxMotor },
+      car_motor: { $gte: req.query.minMotor, $lte: req.query.maxMotor },
     });
   else if (
-    valueRequired(req.body.maxMotor) &&
-    valueRequired(req.body.minMotor) === false
+    valueRequired(req.query.maxMotor) &&
+    valueRequired(req.query.minMotor) === false
   )
     query.find({
-      car_motor: { $gte: req.body.maxMotor },
+      car_motor: { $gte: req.query.maxMotor },
     });
   else if (
-    valueRequired(req.body.maxMotor) &&
-    valueRequired(req.body.minMotor) === false
+    valueRequired(req.query.maxMotor) &&
+    valueRequired(req.query.minMotor) === false
   )
     query.find({
-      car_motor: { $lte: req.body.minMotor },
+      car_motor: { $lte: req.query.minMotor },
     });
 
   const qc = query.toConstructor();
