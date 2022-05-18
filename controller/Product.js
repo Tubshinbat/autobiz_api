@@ -57,6 +57,9 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     (el) => delete req.query[el]
   );
 
+  const minYear = parseInt(req.query.minYear) || null;
+  const maxYear = parseInt(req.query.maxYear) || null;
+
   const query = Product.find();
   query.populate("car_industry");
   query.populate("car_zagvar");
@@ -115,31 +118,25 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   if (valueRequired(req.query.lizing))
     query.where("lizing").equals(req.query.lizing);
 
-  if (valueRequired(req.query.minYear) && valueRequired(req.query.maxYear)) {
-    const yearConvert = {
-      $addFields: {
-        convertedYear: { $toInt: "$make_date" },
-      },
-    };
+  if (valueRequired(minYear) && valueRequired(maxYear)) {
+    // const yearConvert = {
+    //   $addFields: {
+    //     convertedYear: { $toInt: "$make_date" },
+    //   },
+    // };
 
-    query.aggregate([yearConvert]);
+    // query.aggregate([yearConvert]);
 
     query.find({
-      convertedYear: { $gte: req.query.minYear, $lte: req.query.maxYear },
+      convertedYear: { $gte: minYear, $lte: maxYear },
     });
-  } else if (
-    valueRequired(req.query.maxYear) &&
-    valueRequired(req.query.minYear) === false
-  )
+  } else if (valueRequired(maxYear) && valueRequired(minYear) === false)
     query.find({
-      make_date: { $gte: req.query.maxYear },
+      make_date: { $gte: maxYear },
     });
-  else if (
-    valueRequired(req.query.minYear) &&
-    valueRequired(req.query.maxYear) === false
-  )
+  else if (valueRequired(minYear) && valueRequired(maxYear) === false)
     query.find({
-      make_date: { $lte: req.query.minYear },
+      make_date: { $lte: minYear },
     });
 
   if (valueRequired(req.query.minMotor) && valueRequired(req.query.maxMotor))
