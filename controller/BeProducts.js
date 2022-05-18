@@ -35,9 +35,16 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   // Эхлээд query - уудаа аваад хоосон үгүйг шалгаад утга олгох
   const page = parseInt(req.query.page) || 1;
   const limit = parseInt(req.query.limit) || 25;
+  let sort = req.query.sort;
 
   // querys
-  let sort = req.query.sort || { createAt: -1 };
+  if (valueRequired(sort) === false || sort === "new") {
+    sort = { createAt: -1 };
+  } else if (sort === "old") sort = { createAt: 1 };
+  else if (sort === "maxtomin") sort = { price: -1 };
+  else if (sort === "mintomax") sort = { price: 1 };
+  else sort = { createAt: -1 };
+
   let status = req.query.status || null;
   const title = req.query.title;
   const make = req.query.make;
@@ -114,6 +121,58 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
     query.find({ trans: { $regex: ".*" + trans + ".*", $options: "i" } });
 
   if (valueRequired(status)) query.where("status").equals(status);
+
+  if (valueRequired(minYear) && valueRequired(maxYear)) {
+    query.find({
+      car_year: { $gte: minYear, $lte: maxYear },
+    });
+  } else if (valueRequired(maxYear) && valueRequired(minYear) === false)
+    query.find({
+      car_year: { $gte: maxYear },
+    });
+  else if (valueRequired(minYear) && valueRequired(maxYear) === false)
+    query.find({
+      car_year: { $lte: minYear },
+    });
+
+  if (valueRequired(minEngcc) && valueRequired(maxEngcc))
+    query.find({
+      engine: { $gte: minEngcc, $lte: maxEngcc },
+    });
+  else if (valueRequired(maxEngcc) && valueRequired(minEngcc) === false)
+    query.find({
+      engine: { $gte: maxEngcc },
+    });
+  else if (valueRequired(maxEngcc) && valueRequired(minEngcc) === false)
+    query.find({
+      engine: { $lte: minEngcc },
+    });
+
+  if (valueRequired(minMil) && valueRequired(maxMil))
+    query.find({
+      mileage: { $gte: minMil, $lte: maxMil },
+    });
+  else if (valueRequired(maxMil) && valueRequired(minMil) === false)
+    query.find({
+      mileage: { $gte: maxMil },
+    });
+  else if (valueRequired(maxMil) && valueRequired(minMil) === false)
+    query.find({
+      mileage: { $lte: minMil },
+    });
+
+  if (valueRequired(minPrice) && valueRequired(maxPrice))
+    query.find({
+      price: { $gte: minPrice, $lte: maxPrice },
+    });
+  else if (valueRequired(maxPrice) && valueRequired(minPrice) === false)
+    query.find({
+      mileage: { $gte: maxPrice },
+    });
+  else if (valueRequired(maxPrice) && valueRequired(minPrice) === false)
+    query.find({
+      mileage: { $lte: minPrice },
+    });
 
   query.populate("createUser");
   query.sort(sort);
