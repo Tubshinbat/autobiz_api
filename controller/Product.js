@@ -60,12 +60,14 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   // const minYear = parseInt(req.query.minYear) || null;
   // const maxYear = parseInt(req.query.maxYear) || null;
 
-  const query = Product.find().forEach((p) => {
-    (p.make_date = parseInt(d.make_date)),
-      (p.import_date = parseInt(d.import_date)),
-      (p.price = parseInt(d.price)),
-      (p.car_motor = parseInt(d.car_motor)),
-      (p.car_km = parseInt(d.car_km)),
+  const query = await Product.find();
+
+  query.forEach((p) => {
+    (p.make_date = parseInt(p.make_date)),
+      (p.import_date = parseInt(p.import_date)),
+      (p.price = parseInt(p.price)),
+      (p.car_motor = parseInt(p.car_motor)),
+      (p.car_km = parseInt(p.car_km)),
       query.save(p);
   });
 
