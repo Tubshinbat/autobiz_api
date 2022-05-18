@@ -51,15 +51,14 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
 
   const q = await BeProducts.find();
 
-  q.map((el) => {
+  q.map(async (el) => {
     el.price = parseInt(el.price);
     el.mileage = parseInt(el.mileage);
     el.car_year = parseInt(el.car_year);
     el.mount = parseInt(el.mount);
-    el.engine = parseInt(el.engine)
+    el.engine = parseInt(el.engine);
 
     await BeProducts.findByIdAndUpdate(el._id, el);
-
   });
 
   const minPrice = req.query.minPrice;
