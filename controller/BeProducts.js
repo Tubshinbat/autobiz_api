@@ -49,18 +49,6 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   const trans = req.query.trans;
   const type = req.query.type;
 
-  const q = await BeProducts.find();
-
-  q.map(async (el) => {
-    el.price = parseInt(el.price);
-    el.mileage = parseInt(el.mileage);
-    el.car_year = parseInt(el.car_year);
-    el.mount = parseInt(el.mount);
-    el.engine = parseInt(el.engine);
-
-    await BeProducts.findByIdAndUpdate(el._id, el);
-  });
-
   const minPrice = req.query.minPrice;
   const maxPrice = req.query.maxPrice;
   const minEngcc = req.body.minEngcc;
