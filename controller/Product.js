@@ -106,7 +106,7 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     query.where("car_type").equals(req.query.carType);
   if (valueRequired(req.query.color))
     query.where("color").equals(req.query.color);
-  if (valueRequired(req.query.color))
+  if (valueRequired(req.query.car_hurd))
     query.where("car_hurd").equals(req.query.car_hurd);
   if (valueRequired(req.query.car_shatakhuun))
     query.where("car_shatakhuun").equals(req.query.car_shatakhuun);
