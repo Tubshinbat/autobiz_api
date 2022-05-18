@@ -60,6 +60,18 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   const minYear = parseInt(req.query.minYear) || null;
   const maxYear = parseInt(req.query.maxYear) || null;
 
+  const convertData = await Product.find();
+
+  await convertData.map(async (product) => {
+    product.make_date = parseInt(product.make_date);
+    product.import_date = parseInt(product.import_date);
+    product.car_motor = parseInt(product.car_motor);
+    product.car_km = parseInt(product.car_km);
+    product.price = parseInt(product.price);
+
+    await Product.findByIdAndUpdate(product._id, product);
+  });
+
   const query = Product.find();
   query.populate("car_industry");
   query.populate("car_zagvar");
