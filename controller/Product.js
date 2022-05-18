@@ -106,14 +106,14 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     query.where("car_type").in(req.query.carType);
   if (valueRequired(req.query.color))
     query.where("car_color").in(req.query.color);
-  if (valueRequired(req.query.car_hurd))
+  if (valueRequired(req.query.color))
     query.where("car_hurd").in(req.query.car_hurd);
   if (valueRequired(req.query.car_shatakhuun))
     query.where("car_shatakhuun").in(req.query.car_shatakhuun);
   if (valueRequired(req.query.car_speed_box))
     query.where("car_speed_box").in(req.query.car_speed_box);
   if (valueRequired(req.query.lizing))
-    query.where("car_speed_box").in(req.query.lizing);
+    query.where("lizing").in(req.query.lizing);
 
   if (valueRequired(req.query.minYear) && valueRequired(req.query.maxYear))
     query.find({
