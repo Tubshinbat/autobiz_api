@@ -218,7 +218,6 @@ exports.groupAndfilter = asyncHandler(async (req, res, next) => {
     ]);
   } else {
     group = await BeProducts.aggregate([
-      { $match: { [filedName]: filter } },
       { $group: { _id: groupFiled, count: { $sum: 1 } } },
       { $sort: { count: -1 } },
       { $limit: limit },
