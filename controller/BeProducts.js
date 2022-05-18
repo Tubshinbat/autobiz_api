@@ -49,6 +49,19 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   const trans = req.query.trans;
   const type = req.query.type;
 
+  const q = await BeProducts.find();
+
+  q.map((el) => {
+    el.price = parseInt(el.price);
+    el.mileage = parseInt(el.mileage);
+    el.car_year = parseInt(el.car_year);
+    el.mount = parseInt(el.mount);
+    el.engine = parseInt(el.engine)
+
+    await BeProducts.findByIdAndUpdate(el._id, el);
+
+  });
+
   const minPrice = req.query.minPrice;
   const maxPrice = req.query.maxPrice;
   const minEngcc = req.body.minEngcc;
@@ -226,6 +239,10 @@ exports.updateProduct = asyncHandler(async (req, res, next) => {
   let product = await BeProducts.findById(req.params.id);
   delete req.body.gallery_images;
   const files = req.files;
+
+  ["price", "mileage", "car_year", "mount", "engine"].map((el) => {
+    if (valueRequired(req.body[el])) req.body[el] = parseInt(req.body[el]);
+  });
 
   if (!product) {
     throw new MyError("Тухайн машин байхгүй байна. ", 404);

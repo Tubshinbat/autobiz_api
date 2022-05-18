@@ -11,6 +11,11 @@ exports.createProduct = asyncHandler(async (req, res, next) => {
   const files = req.files;
   req.body.status = req.body.status || false;
   req.body.createUser = req.userId;
+  ["car_motor", "car_km", "price", "make_date", "import_date"].map((el) => {
+    if (valueRequired(req.body[el])) req.body[el] = parseInt(req.body[el]);
+    else req.body[el] = 0;
+  });
+
   let fileNames;
 
   if (!files) {
@@ -59,18 +64,6 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
 
   const minYear = parseInt(req.query.minYear) || null;
   const maxYear = parseInt(req.query.maxYear) || null;
-
-  const convertData = await Product.find();
-
-  await convertData.map(async (product) => {
-    product.make_date = parseInt(product.make_date);
-    product.import_date = parseInt(product.import_date);
-    product.car_motor = parseInt(product.car_motor);
-    product.car_km = parseInt(product.car_km);
-    product.price = parseInt(product.price);
-
-    await Product.findByIdAndUpdate(product._id, product);
-  });
 
   const query = Product.find();
   query.populate("car_industry");
@@ -131,14 +124,6 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     query.where("lizing").equals(req.query.lizing);
 
   if (valueRequired(minYear) && valueRequired(maxYear)) {
-    // const yearConvert = {
-    //   $addFields: {
-    //     convertedYear: { $toInt: "$make_date" },
-    //   },
-    // };
-
-    // query.aggregate([yearConvert]);
-
     query.find({
       make_date: { $gte: minYear, $lte: maxYear },
     });
@@ -210,7 +195,7 @@ exports.getProduct = asyncHandler(async (req, res, next) => {
   const product = await Product.findById(req.params.id).populate("menu");
 
   if (!product) {
-    throw new MyError("Тухайн мэдээ байхгүй байна. ", 404);
+    throw new MyError("Тухайн машин байхгүй байна. ", 404);
   }
 
   res.status(200).json({
@@ -225,12 +210,12 @@ exports.updateProduct = asyncHandler(async (req, res, next) => {
   let fileNames = [];
   let oldFiles = req.body.oldPicture || null;
 
-  req.body.car_motor = parseInt(req.body.car_motor) || 0;
-  req.body.car_km = parseInt(req.body.car_km) || 0;
-  req.body.price = parseInt(req.body.price) || null;
+  ["car_motor", "car_km", "price", "make_date", "import_date"].map((el) => {
+    if (valueRequired(req.body[el])) req.body[el] = parseInt(req.body[el]);
+  });
 
   if (!product) {
-    throw new MyError("Тухайн мэдээ байхгүй байна. ", 404);
+    throw new MyError("Тухайн машин байхгүй байна. ", 404);
   }
 
   const files = req.files;
