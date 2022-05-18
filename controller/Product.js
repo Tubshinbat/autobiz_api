@@ -46,11 +46,14 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   const markName = req.query.mark_name;
   const zagvarName = req.query.zagvar_name;
 
-  if (valueRequired(sort) === false) {
+  if (valueRequired(sort) === false || sort === "new") {
     sort = { createAt: -1 };
-  }
+  } else if (sort === "old") sort = { createAt: 1 };
+  else if (sort === "maxtomin") sort = { price: -1 };
+  else if (sort === "mintomax") sort = { price: 1 };
+  else sort = { createAt: -1 };
 
-  ["select", "sort", "page", "limit", "status", "name"].forEach(
+  [("select", "sort", "page", "limit", "status", "name")].forEach(
     (el) => delete req.query[el]
   );
 
@@ -95,6 +98,60 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   query.sort(sort);
 
   if (valueRequired(status)) query.where("status").equals(status);
+
+  if (valueRequired(req.body.industry))
+    query.where("car_industry").in(req.body.industry);
+
+  if (valueRequired(req.body.carType))
+    query.where("car_type").in(req.body.carType);
+  if (valueRequired(req.body.color))
+    query.where("car_color").in(req.body.color);
+  if (valueRequired(req.body.car_hurd))
+    query.where("car_hurd").in(req.body.car_hurd);
+  if (valueRequired(req.body.car_shatakhuun))
+    query.where("car_shatakhuun").in(req.body.car_shatakhuun);
+  if (valueRequired(req.body.car_speed_box))
+    query.where("car_speed_box").in(req.body.car_speed_box);
+  if (valueRequired(req.body.lizing))
+    query.where("car_speed_box").in(req.body.lizing);
+
+  if (valueRequired(req.body.minYear) && valueRequired(req.body.maxYear))
+    query.find({
+      make_date: { $gte: req.body.minYear, $lte: req.body.maxYear },
+    });
+  else if (
+    valueRequired(req.body.maxYear) &&
+    valueRequired(req.body.minYear) === false
+  )
+    query.find({
+      make_date: { $gte: req.body.maxYear },
+    });
+  else if (
+    valueRequired(req.body.minYear) &&
+    valueRequired(req.body.maxYear) === false
+  )
+    query.find({
+      make_date: { $lte: req.body.minYear },
+    });
+
+  if (valueRequired(req.body.minMotor) && valueRequired(req.body.maxMotor))
+    query.find({
+      car_motor: { $gte: req.body.minMotor, $lte: req.body.maxMotor },
+    });
+  else if (
+    valueRequired(req.body.maxMotor) &&
+    valueRequired(req.body.minMotor) === false
+  )
+    query.find({
+      car_motor: { $gte: req.body.maxMotor },
+    });
+  else if (
+    valueRequired(req.body.maxMotor) &&
+    valueRequired(req.body.minMotor) === false
+  )
+    query.find({
+      car_motor: { $lte: req.body.minMotor },
+    });
 
   const qc = query.toConstructor();
   const clonedQuery = new qc();
