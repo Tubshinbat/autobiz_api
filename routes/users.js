@@ -22,6 +22,7 @@ const {
   changePassword,
   getUseInfo,
   getUseUpdate,
+  localUser,
   phoneCheck,
   emailCheck,
 } = require("../controller/Users");
@@ -36,7 +37,7 @@ router.route("/delete").delete(multDeleteUsers);
 
 router.route("/loginuser").post(loginUser);
 
-router.route("/localuser").post(localuser);
+router.route("/localuser").post(localUser);
 
 // LOGIN USER
 
