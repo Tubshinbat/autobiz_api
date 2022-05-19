@@ -54,6 +54,7 @@ var whitelist = [
   "https://naog.lvg.mn",
   "https://naog-admin.lvg.mn",
   "https://admin.queenbella.mn",
+  "https://beta.queenbella.mn/",
 ];
 
 // Өөр домэйн дээр байрлах клиент вэб аппуудаас шаардах шаардлагуудыг энд тодорхойлно
