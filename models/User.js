@@ -30,7 +30,7 @@ const UserSchema = new mongoose.Schema({
   username: {
     type: String,
     trim: true,
-    required: [true, "Хэрэглэгчинй нэрийг оруулна уу"],
+
     minlength: [1, "Таны оруулсан нэр буруу байна."],
   },
 
@@ -57,7 +57,7 @@ const UserSchema = new mongoose.Schema({
 
   phone: {
     type: Number,
-    required: [true, "Утасны дугаар заавал оруулна уу"],
+
     unique: true,
   },
 
