@@ -28,8 +28,8 @@ router.route("/login").post(login);
 router.route("/register").post(register);
 router.route("/forgot-password").post(forgotPassword);
 router.route("/reset-password").post(resetPassword);
-router.route("/logout").get(logout);
-router.route(protect, "/checktoken").post(tokenCheckAlways);
+router.route("/logout").get(protect, logout);
+router.route("/checktoken").post(protect, tokenCheckAlways);
 router.route("/delete").delete(multDeleteUsers);
 
 router.route("/loginuser").post(loginUser);
