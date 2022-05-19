@@ -9,7 +9,7 @@ const {
   multDeleteOrder,
   updateOrder,
   getCounOrder,
-} = require("../controller/Orders");
+} = require("../controller/Order");
 
 router
   .route("/")
