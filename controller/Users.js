@@ -497,6 +497,7 @@ exports.resetPassword = asyncHandler(async (req, res, next) => {
   }
 
   user.password = req.body.password;
+  user.oldUserLogin = true;
   user.resetPassword = undefined;
   user.resetPasswordExpire = undefined;
 
