@@ -70,6 +70,16 @@ const BeProductsSchema = new mongoose.Schema({
     default: null,
   },
 
+  color: {
+    type: String,
+    default: null,
+  },
+
+  steering: {
+    type: String,
+    default: null,
+  },
+
   engine: {
     type: Number,
     default: null,
