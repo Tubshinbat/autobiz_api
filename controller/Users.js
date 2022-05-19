@@ -168,7 +168,10 @@ exports.getUseInfo = asyncHandler(async (req, res, next) => {
   const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
 
   if (req.params.id !== tokenObject.id) {
-    throw new MyError("Уучлаарай хандах боломжгүй байна..", 400);
+    throw new MyError(
+      ` ${tokenObject.id} Уучлаарай хандах боломжгүй байна.. ${token}`,
+      400
+    );
   }
   const user = await User.findById(req.params.id);
 
