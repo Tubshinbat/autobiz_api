@@ -27,6 +27,8 @@ const {
   emailCheck,
 } = require("../controller/Users");
 
+const { getOrderUser } = require("../controller/Order");
+
 router.route("/login").post(login);
 router.route("/register").post(register);
 router.route("/forgot-password").post(forgotPassword);
@@ -40,6 +42,8 @@ router.route("/loginuser").post(loginUser);
 router.route("/localuser").post(localUser);
 
 // LOGIN USER
+
+router.route("/order").get(protect, getOrderUser);
 
 router
   .route("/user/:id")

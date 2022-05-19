@@ -2,6 +2,7 @@ const Order = require("../models/Order");
 const MyError = require("../utils/myError");
 const asyncHandler = require("express-async-handler");
 const paginate = require("../utils/paginate");
+const jwt = require("jsonwebtoken");
 
 const { valueRequired } = require("../lib/check");
 
@@ -106,6 +107,21 @@ exports.updateOrder = asyncHandler(async (req, res, next) => {
     new: true,
     runValidators: true,
   });
+
+  res.status(200).json({
+    success: true,
+    data: order,
+  });
+});
+
+exports.getOrderUser = asyncHandler(async (req, res, next) => {
+  const token = req.body.token;
+  const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
+
+  if (req.userId !== tokenObject.id)
+    throw new MyError("Уучлаарай хандах боломжгүй байна", 400);
+
+  const order = await Order.find({}).where(createUser).equals(req.userId);
 
   res.status(200).json({
     success: true,

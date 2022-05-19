@@ -164,7 +164,7 @@ exports.localUser = asyncHandler(async (req, res, next) => {
 });
 
 exports.getUseInfo = asyncHandler(async (req, res, next) => {
-  const token = req.cookies.autobiztoken;
+  const token = req.body.token;
   const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
 
   if (req.userId !== tokenObject.id) {
@@ -182,6 +182,13 @@ exports.getUseInfo = asyncHandler(async (req, res, next) => {
 });
 
 exports.getUseUpdate = asyncHandler(async (req, res, next) => {
+  const token = req.body.token;
+  const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
+
+  if (req.userId !== tokenObject.id) {
+    throw new MyError("Уучлаарай хандах боломжгүй байна..", 400);
+  }
+
   req.body.email = req.body.email.toLowerCase();
   req.body.updateUser = req.userId;
   req.body.age = parseInt(req.body.age) || 0;
