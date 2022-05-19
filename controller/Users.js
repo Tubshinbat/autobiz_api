@@ -485,7 +485,7 @@ exports.resetPassword = asyncHandler(async (req, res, next) => {
   }
 
   const user = await User.findOne({
-    resetPasswordToken: otp,
+    resetPasswordToken: req.body.otp,
     resetPasswordExpire: { $gt: Date.now() },
   });
 
