@@ -170,7 +170,7 @@ exports.getUseInfo = asyncHandler(async (req, res, next) => {
   if (req.userId !== tokenObject.id) {
     throw new MyError("Уучлаарай хандах боломжгүй байна..", 400);
   }
-  const user = await User.findById(req.userId);
+  const user = await User.findById(req.params.id);
 
   if (user.status === false)
     throw new MyError("Уучлаарай таны эрхийг хаасан байна..", 400);
