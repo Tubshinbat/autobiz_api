@@ -143,6 +143,7 @@ exports.loginUser = asyncHandler(async (req, res, next) => {
 
 exports.localUser = asyncHandler(async (req, res, next) => {
   const token = req.body.autobiztoken;
+
   if (!token) {
     throw new MyError("Уучлаарай хандах боломжгүй байна..", 400);
   }
@@ -156,7 +157,9 @@ exports.localUser = asyncHandler(async (req, res, next) => {
     role: tokenObject.role,
     userId: tokenObject.id,
     avatar: tokenObject.avatar,
-    name: tokenObject.name,
+    name: tokenObject.username,
+    email: tokenObject.email,
+    phone: tokenObject.phone,
   });
 });
 
