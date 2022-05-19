@@ -113,7 +113,7 @@ exports.loginUser = asyncHandler(async (req, res, next) => {
 
   if (user.oldUserLogin === false)
     throw new MyError(
-      "Вэбсайт шинжлэгдсэнтэй холбоотой та нууц үгээ мартсан дээр дарж шинэчлэн үү",
+      "Вэбсайт шинчлэгдсэнтэй холбоотой та нууц үгээ мартсан дээр дарж шинэчлэн үү",
       401
     );
 
@@ -170,6 +170,22 @@ exports.logout = asyncHandler(async (req, res, next) => {
   res.status(200).cookie("autobiztoken", null, cookieOption).json({
     success: true,
     data: "logout...",
+  });
+});
+
+exports.emailCheck = asyncHandler(async (req, res) => {
+  const email = parseInt(req.body.email) || 0;
+  const user = await User.findOne({ status: true })
+    .where("email")
+    .equals(email);
+
+  if (!user) {
+    throw new MyError("Уучлаарай И-мэйлээ дугаараа шалгаад дахин оролдоно уу");
+  }
+
+  res.status(200).json({
+    success: true,
+    data: user,
   });
 });
 
@@ -434,12 +450,16 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
     throw new MyError(req.body.email + " Имэйл хаягаа дахин шалгана уу.", 400);
   }
 
-  const resetToken = user.generatePasswordChangeToken();
+  const resetToken = 100000 + Math.floor(Math.random() * 900000);
+  const resetPasswordExpire = Date.now() + 10 * 60 * 1000;
+
+  user.resetPasswordToken = resetToken;
+  user.resetPasswordExpire = resetPasswordExpire;
+
   // await user.save();
   await user.save({ validateBeforeSave: false });
 
-  const link = `https://autobiz.mn/changepassword/${resetToken}`;
-  const message = `Сайн байна уу? Доод линк дээр дарж солино уу <br> <br> <a href="${link}" target=_blank>${link}</a><br> <br> өдрийг сайхан өнгөрүүлээрэй!`;
+  const message = `Сайн байна уу? Энэ таны баталгаажуулах код <br> <br> ${resetToken}<br> <br> өдрийг сайхан өнгөрүүлээрэй!`;
 
   // Имэйл илгээнэ
   const info = await sendEmail({
@@ -447,8 +467,6 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
     subject: "Нууц үг сэргээх хүсэлт",
     message,
   });
-
-  console.log("Message sent: %s", info);
 
   res.status(200).json({
     success: true,
@@ -459,22 +477,20 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
 });
 
 exports.resetPassword = asyncHandler(async (req, res, next) => {
-  if (!req.body.resetToken || !req.body.password) {
-    throw new MyError("Нууц үгээ дамжуулна уу.", 400);
+  if (!req.body.resetOTP) {
+    throw new MyError("Баталгаажуулах кодоо оруулна уу.", 400);
   }
 
-  const encryptd = crypto
-    .createHash("sha256")
-    .update(req.body.resetToken)
-    .digest("hex");
-
   const user = await User.findOne({
-    resetPasswordToken: encryptd,
+    resetPasswordToken: resetOTP,
     resetPasswordExpire: { $gt: Date.now() },
   });
 
   if (!user) {
-    throw new MyError(req.body.email + "Токен хүчингүй байна.", 400);
+    throw new MyError(
+      req.body.email + "Баталгаажуулах код хүчингүй байна дахин авна уу.",
+      400
+    );
   }
 
   user.password = req.body.password;

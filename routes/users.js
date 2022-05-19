@@ -21,6 +21,7 @@ const {
   loginUser,
   changePassword,
   phoneCheck,
+  emailCheck,
 } = require("../controller/Users");
 
 router.route("/login").post(login);
@@ -43,6 +44,7 @@ router
   .get(protect, authorize("admin", "operator"), getUsers);
 router.route("/count").get(protect, getCount);
 router.route("/phone").post(phoneCheck);
+router.route("/email").post(emailCheck);
 router.route("/changepassword").post(changePassword);
 router.route("/c/:id").put(protect, updateCuser);
 
