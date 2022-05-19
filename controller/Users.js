@@ -141,6 +141,88 @@ exports.loginUser = asyncHandler(async (req, res, next) => {
   });
 });
 
+exports.localUser = asyncHandler(async (req, res, next) => {
+  const token = req.body.autobiztoken;
+  if (!token) {
+    throw new MyError("Уучлаарай хандах боломжгүй байна..", 400);
+  }
+  const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
+
+  req.userId = tokenObject.id;
+  req.userRole = tokenObject.role;
+
+  res.status(200).json({
+    success: true,
+    role: tokenObject.role,
+    userId: tokenObject.id,
+    avatar: tokenObject.avatar,
+    name: tokenObject.name,
+  });
+});
+
+exports.getUseInfo = asyncHandler(async (req, res, next) => {
+  const token = req.cookies.autobiztoken;
+  const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
+
+  if (req.userId !== tokenObject.id) {
+    throw new MyError("Уучлаарай хандах боломжгүй байна..", 400);
+  }
+  const user = await User.findById(req.userId);
+
+  if (user.status === false)
+    throw new MyError("Уучлаарай таны эрхийг хаасан байна..", 400);
+
+  res.status(200).json({
+    success: true,
+    data: user,
+  });
+});
+
+exports.getUseUpdate = asyncHandler(async (req, res, next) => {
+  req.body.email = req.body.email.toLowerCase();
+  req.body.updateUser = req.userId;
+  req.body.age = parseInt(req.body.age) || 0;
+  req.body.phone = parseInt(req.body.phone) || null;
+
+  delete req.body.status;
+  delete req.body.wallet;
+  delete req.body.role;
+  const password = req.body.password;
+  delete req.body.password;
+  delete req.body.confirmPassword;
+
+  if (valueRequired(req.body.gender) === false) req.body.gender = "other";
+
+  let avatar = req.body.oldAvatar;
+  const file = req.files;
+  if (file) {
+    const resultData = await fileUpload(file.image, "image").catch((error) => {
+      throw new MyError(`Зураг хуулах явцад алдаа гарлаа: ${error}`, 408);
+    });
+    avatar = resultData.fileName;
+  }
+
+  req.body.image = avatar;
+
+  const user = await User.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+    runValidators: true,
+  });
+
+  if (!user) {
+    throw new MyError(req.params.id + " Хэрэглэгч олдсонгүй.", 400);
+  }
+  if (valueRequired(password)) {
+    user.password = password;
+    user.save();
+  }
+
+  res.status(200).json({
+    success: true,
+    data: user,
+  });
+});
+
 exports.tokenCheckAlways = asyncHandler(async (req, res, next) => {
   const token = req.cookies.autobiztoken;
 

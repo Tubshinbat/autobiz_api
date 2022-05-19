@@ -20,6 +20,8 @@ const {
   getCount,
   loginUser,
   changePassword,
+  getUseInfo,
+  getUseUpdate,
   phoneCheck,
   emailCheck,
 } = require("../controller/Users");
@@ -29,10 +31,19 @@ router.route("/register").post(register);
 router.route("/forgot-password").post(forgotPassword);
 router.route("/reset-password").post(resetPassword);
 router.route("/logout").get(protect, logout);
-router.route("/checktoken").post(protect, tokenCheckAlways);
+router.route("/checktoken").post(tokenCheckAlways);
 router.route("/delete").delete(multDeleteUsers);
 
 router.route("/loginuser").post(loginUser);
+
+router.route("/localuser").post(localuser);
+
+// LOGIN USER
+
+router
+  .route("/user/:id")
+  .get(protect, authorize("user"), getUseInfo)
+  .put(protect, authorize("user"), getUseUpdate);
 
 router
   .route("/admin-reset-password/:id")
@@ -50,7 +61,7 @@ router.route("/c/:id").put(protect, updateCuser);
 
 router
   .route("/:id")
-  .get(protect, getUser)
+  .get(protect, authorize("admin", "operator"), getUser)
   .put(protect, authorize("admin", "operator"), updateUser)
   .delete(protect, authorize("admin"), deleteUser);
 
