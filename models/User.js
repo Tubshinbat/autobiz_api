@@ -56,8 +56,6 @@ const UserSchema = new mongoose.Schema({
 
   phone: {
     type: Number,
-
-    unique: true,
   },
 
   image: {
