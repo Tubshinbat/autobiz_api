@@ -497,7 +497,7 @@ exports.resetPassword = asyncHandler(async (req, res, next) => {
   user.resetPassword = undefined;
   user.resetPasswordExpire = undefined;
 
-  await user.save();
+  user.save();
 
   const token = user.getJsonWebToken();
   res.status(200).json({
