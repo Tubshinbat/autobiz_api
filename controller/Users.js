@@ -166,7 +166,8 @@ exports.localUser = asyncHandler(async (req, res, next) => {
 exports.getUseInfo = asyncHandler(async (req, res, next) => {
   const token = req.body.token;
   const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
-
+  console.log(req.userId);
+  console.log(tokenObject.id);
   if (req.userId !== tokenObject.id) {
     throw new MyError("Уучлаарай хандах боломжгүй байна..", 400);
   }
