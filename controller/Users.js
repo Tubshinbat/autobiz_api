@@ -485,6 +485,8 @@ exports.resetPassword = asyncHandler(async (req, res, next) => {
     resetPasswordExpire: { $gt: Date.now() },
   });
 
+  console.log(user + " =======> " + user.resetPasswordExpire);
+
   if (!user) {
     throw new MyError(
       req.body.email + "Баталгаажуулах код хүчингүй байна дахин авна уу.",
