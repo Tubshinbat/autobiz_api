@@ -180,7 +180,7 @@ exports.emailCheck = asyncHandler(async (req, res) => {
     .equals(email);
 
   if (!user) {
-    throw new MyError("Уучлаарай И-мэйлээ дугаараа шалгаад дахин оролдоно уу");
+    throw new MyError("Уучлаарай И-мэйлээ шалгаад дахин оролдоно уу");
   }
 
   res.status(200).json({
@@ -477,12 +477,15 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
 });
 
 exports.resetPassword = asyncHandler(async (req, res, next) => {
-  if (!req.body.resetOTP) {
-    throw new MyError("Баталгаажуулах кодоо оруулна уу.", 400);
+  if (!req.body.otp || !req.body.password) {
+    throw new MyError(
+      "Баталгаажуулах код болон шинэж нууц үгээ оруулна уу.",
+      400
+    );
   }
 
   const user = await User.findOne({
-    resetPasswordToken: resetOTP,
+    resetPasswordToken: otp,
     resetPasswordExpire: { $gt: Date.now() },
   });
 
