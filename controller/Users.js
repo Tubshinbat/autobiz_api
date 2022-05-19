@@ -452,8 +452,8 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
 
   const resetToken = user.generatePasswordChangeToken();
 
-  // await user.save();
-  await user.save({ validateBeforeSave: false });
+  await user.save();
+  // await user.save({ validateBeforeSave: false });
 
   const message = `Сайн байна уу? Энэ таны баталгаажуулах код <br> <br> ${resetToken}<br> <br> өдрийг сайхан өнгөрүүлээрэй!`;
 
