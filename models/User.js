@@ -30,7 +30,6 @@ const UserSchema = new mongoose.Schema({
   username: {
     type: String,
     trim: true,
-
     minlength: [1, "Таны оруулсан нэр буруу байна."],
   },
 

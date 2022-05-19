@@ -38,6 +38,7 @@ exports.oldUser = asyncHandler(async (req, res, next) => {
 // Register
 exports.register = asyncHandler(async (req, res, next) => {
   req.body.email = req.body.email.toLowerCase();
+  delete req.body.phone;
   const user = await User.create(req.body);
 
   const jwt = user.getJsonWebToken();
