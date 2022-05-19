@@ -33,6 +33,7 @@ const carZagvarRouters = require("./routes/CarZagvar");
 const carColorRouters = require("./routes/CarColor");
 const partnerRouter = require("./routes/Partners");
 const hybridRouters = require("./routes/Hybrid");
+const orderRouters = require("./routes/Order");
 const errorHandler = require("./middleware/error");
 
 const connectDB = require("./config/db");
@@ -123,6 +124,7 @@ app.use("/api/v1/carzagvars", carZagvarRouters);
 app.use("/api/v1/carcolors", carColorRouters);
 app.use("/api/v1/hybrids", hybridRouters);
 app.use("/api/v1/partners", partnerRouter);
+app.use("/api/v1/orders", orderRouters);
 app.use(errorHandler);
 // Алдаа үүсэхэд барьж авч алдааны мэдээллийг клиент тал руу автоматаар мэдээлнэ
 
