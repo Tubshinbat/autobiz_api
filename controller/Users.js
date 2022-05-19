@@ -450,11 +450,7 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
     throw new MyError(req.body.email + " Имэйл хаягаа дахин шалгана уу.", 400);
   }
 
-  const resetToken = 100000 + Math.floor(Math.random() * 900000);
-  const resetPasswordExpire = Date.now() + 10 * 60 * 1000;
-
-  user.resetPasswordToken = resetToken;
-  user.resetPasswordExpire = resetPasswordExpire;
+  const resetToken = user.generatePasswordChangeToken();
 
   // await user.save();
   await user.save({ validateBeforeSave: false });
