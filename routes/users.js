@@ -18,7 +18,7 @@ const {
   adminControlResetPassword,
   updateCuser,
   getCount,
-
+  loginUser,
   changePassword,
   phoneCheck,
 } = require("../controller/Users");
@@ -30,6 +30,8 @@ router.route("/reset-password").post(resetPassword);
 router.route("/logout").get(logout);
 router.route("/checktoken").post(tokenCheckAlways);
 router.route("/delete").delete(multDeleteUsers);
+
+router.route("/loginuser").post(loginUser);
 
 router
   .route("/admin-reset-password/:id")

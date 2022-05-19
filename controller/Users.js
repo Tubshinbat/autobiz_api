@@ -65,7 +65,7 @@ exports.login = asyncHandler(async (req, res, next) => {
 
   if (user.oldUserLogin === false)
     throw new MyError(
-      "Уучлаарай та нууц үгээ мартсан дээр дарж шинэчлэн үү",
+      "Вэбсайт шинжлэгдсэнтэй холбоотой та нууц үгээ мартсан дээр дарж шинэчлэн үү",
       401
     );
 
@@ -77,6 +77,50 @@ exports.login = asyncHandler(async (req, res, next) => {
 
   if (user.role === "user") {
     throw new MyError("Уучлаарай нэвтрэх боломжгүй.");
+  }
+
+  if (user.status === false) {
+    throw new MyError("Уучлаарай таны эрхийг хаасан байна.");
+  }
+
+  const token = user.getJsonWebToken();
+  req.token = token;
+  const cookieOption = {
+    expires: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000),
+    httpOnly: false,
+  };
+
+  res.status(200).cookie("autobiztoken", token, cookieOption).json({
+    success: true,
+    token,
+    user,
+  });
+});
+
+exports.loginUser = asyncHandler(async (req, res, next) => {
+  let { email, password } = req.body;
+  email = email.toLowerCase();
+  // Оролтыгоо шалгана
+  if (!email || !password)
+    throw new MyError("Имэйл болон нууц үгээ дамжуулна уу", 400);
+
+  // Тухайн хэрэглэгчийг хайна
+  const user = await User.findOne({ email }).select("+password");
+
+  if (!user) {
+    throw new MyError("Имэйл болон нууц үгээ зөв оруулна уу", 401);
+  }
+
+  if (user.oldUserLogin === false)
+    throw new MyError(
+      "Вэбсайт шинжлэгдсэнтэй холбоотой та нууц үгээ мартсан дээр дарж шинэчлэн үү",
+      401
+    );
+
+  const ok = await user.checkPassword(password);
+
+  if (!ok) {
+    throw new MyError("Имэйл болон нууц үгээ зөв оруулна уу", 402);
   }
 
   if (user.status === false) {
@@ -416,7 +460,7 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
 
 exports.resetPassword = asyncHandler(async (req, res, next) => {
   if (!req.body.resetToken || !req.body.password) {
-    throw new MyError("Токен болон нууц үгээ дамжуулна уу.", 400);
+    throw new MyError("Нууц үгээ дамжуулна уу.", 400);
   }
 
   const encryptd = crypto
