@@ -21,10 +21,10 @@ exports.protect = asyncHandler(async (req, res, next) => {
 });
 
 exports.authorize = (...roles) => {
-  // return (req, res, next) => {
-  //   if (!roles.includes(req.userRole)) {
-  //     throw new MyError("Уучлаарай хандах эрхгүй байна.", 400);
-  //   }
-  next();
-  // };
+  return (req, res, next) => {
+    //   if (!roles.includes(req.userRole)) {
+    //     throw new MyError("Уучлаарай хандах эрхгүй байна.", 400);
+    //   }
+    next();
+  };
 };
