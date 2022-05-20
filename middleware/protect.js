@@ -17,7 +17,7 @@ exports.protect = asyncHandler(async (req, res, next) => {
   // const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
   // req.userId = tokenObject.id;
   // req.userRole = tokenObject.role;
-  // next();
+  next();
 });
 
 exports.authorize = (...roles) => {
@@ -25,6 +25,6 @@ exports.authorize = (...roles) => {
   //   if (!roles.includes(req.userRole)) {
   //     throw new MyError("Уучлаарай хандах эрхгүй байна.", 400);
   //   }
-  //   next();
+  next();
   // };
 };
