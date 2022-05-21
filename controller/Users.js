@@ -220,11 +220,15 @@ exports.getUseUpdate = asyncHandler(async (req, res, next) => {
   // }
 
   // req.body.image = avatar;
-
-  const user = await User.findByIdAndUpdate(req.params.id, req.body, {
-    new: true,
-    runValidators: true,
-  });
+  //req.params.id
+  const user = await User.findByIdAndUpdate(
+    "626199de6e05e8e5916cd6a3",
+    req.body,
+    {
+      new: true,
+      runValidators: true,
+    }
+  );
 
   if (!user) {
     throw new MyError(req.params.id + " Хэрэглэгч олдсонгүй.", 400);
