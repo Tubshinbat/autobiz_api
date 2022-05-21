@@ -189,15 +189,15 @@ exports.getUseInfo = asyncHandler(async (req, res, next) => {
 });
 
 exports.getUseUpdate = asyncHandler(async (req, res, next) => {
-  const token = req.body.token;
-  const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
+  // const token = req.body.token;
+  // const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
 
-  if (req.userId !== tokenObject.id) {
-    throw new MyError("Уучлаарай хандах боломжгүй байна..", 400);
-  }
+  // if (req.userId !== tokenObject.id) {
+  //   throw new MyError("Уучлаарай хандах боломжгүй байна..", 400);
+  // }
 
   req.body.email = req.body.email.toLowerCase();
-  req.body.updateUser = req.userId;
+  // req.body.updateUser = req.userId;
   req.body.age = parseInt(req.body.age) || 0;
   req.body.phone = parseInt(req.body.phone) || null;
 
@@ -210,16 +210,16 @@ exports.getUseUpdate = asyncHandler(async (req, res, next) => {
 
   if (valueRequired(req.body.gender) === false) req.body.gender = "other";
 
-  let avatar = req.body.oldAvatar;
-  const file = req.files;
-  if (file) {
-    const resultData = await fileUpload(file.image, "image").catch((error) => {
-      throw new MyError(`Зураг хуулах явцад алдаа гарлаа: ${error}`, 408);
-    });
-    avatar = resultData.fileName;
-  }
+  // let avatar = req.body.oldAvatar;
+  // const file = req.files;
+  // if (file) {
+  //   const resultData = await fileUpload(file.image, "image").catch((error) => {
+  //     throw new MyError(`Зураг хуулах явцад алдаа гарлаа: ${error}`, 408);
+  //   });
+  //   avatar = resultData.fileName;
+  // }
 
-  req.body.image = avatar;
+  // req.body.image = avatar;
 
   const user = await User.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
