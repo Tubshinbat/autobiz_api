@@ -42,7 +42,15 @@ const MenuSchema = new mongoose.Schema({
 
   model: {
     type: String,
-    enum: ["news", "products", "beproducts", "faq", "lend", "calculator"],
+    enum: [
+      "news",
+      "products",
+      "beproducts",
+      "faq",
+      "lend",
+      "calculator",
+      "contact",
+    ],
   },
 
   position: {

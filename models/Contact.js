@@ -9,7 +9,6 @@ const ContactSchema = new mongoose.Schema({
 
   email: {
     type: String,
-    required: [true, "Хэрэглэгчинй имэйл хаягийг оруулж өгнө үү"],
     match: [
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
       "Имэйл хаягаа буруу оруулсан байна",
@@ -17,6 +16,7 @@ const ContactSchema = new mongoose.Schema({
   },
   phoneNumber: {
     type: Number,
+    required: [true, "Хэрэглэгчинй имэйл хаягийг оруулж өгнө үү"],
   },
   message: {
     type: String,

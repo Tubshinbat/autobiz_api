@@ -34,6 +34,7 @@ const carColorRouters = require("./routes/CarColor");
 const partnerRouter = require("./routes/Partners");
 const hybridRouters = require("./routes/Hybrid");
 const orderRouters = require("./routes/Order");
+const contactRouters = require("./routes/Contact");
 const errorHandler = require("./middleware/error");
 
 const connectDB = require("./config/db");
@@ -105,7 +106,7 @@ var accessLogStream = rfs.createStream("access.log", {
 app.use(morgan("combined", { stream: accessLogStream }));
 
 // REST API RESOURSE
-
+app.use("/api/v1/contacts", contactRouters);
 app.use("/api/v1/news-categories", newsCategoriesRouters);
 app.use("/api/v1/news", newsRouters);
 app.use("/api/v1/imgupload", imageUploadRouter);
