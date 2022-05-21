@@ -165,19 +165,22 @@ exports.localUser = asyncHandler(async (req, res, next) => {
 });
 
 exports.getUseInfo = asyncHandler(async (req, res, next) => {
-  const token = req.body.token;
-  const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
+  // const token = req.cookies.autobiztoken;
+  // const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
 
-  if (req.params.id !== tokenObject.id) {
-    throw new MyError(
-      ` ${tokenObject.id} Уучлаарай хандах боломжгүй байна.. ${token}`,
-      400
-    );
-  }
-  const user = await User.findById(req.params.id);
+  // if (req.userId !== tokenObject.id) {
+  //   throw new MyError(
+  //     ` ${tokenObject.id} Уучлаарай хандах боломжгүй байна.. ${token}`,
+  //     400
+  //   );
+  // }
 
-  if (user.status === false)
-    throw new MyError("Уучлаарай таны эрхийг хаасан байна..", 400);
+  // const user = await User.findById(req.userId);
+
+  // if (user.status === false)
+  //   throw new MyError("Уучлаарай таны эрхийг хаасан байна..", 400);
+
+  const user = await User.findById("626199de6e05e8e5916cd6a3");
 
   res.status(200).json({
     success: true,

@@ -45,10 +45,7 @@ router.route("/localuser").post(localUser);
 
 router.route("/order").get(protect, getOrderUser);
 
-router
-  .route("/userdata/:id")
-  .post(protect, getUseInfo)
-  .put(protect, getUseUpdate);
+router.route("/userdata").get(protect, getUseInfo).put(protect, getUseUpdate);
 
 router
   .route("/admin-reset-password/:id")
