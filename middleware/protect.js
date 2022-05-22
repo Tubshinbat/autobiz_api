@@ -9,7 +9,6 @@ exports.protect = asyncHandler(async (req, res, next) => {
     token = req.header.authorization.split(" ")[1];
   } else if (req.cookies) {
     token = req.cookies["autobiztoken"];
-    token = req.cookies["autobiztoken"];
   }
   if (!token) {
     throw new MyError("Уучлаарай хандах боломжгүй байна..", 400);
