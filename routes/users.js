@@ -46,7 +46,7 @@ router.route("/order").get(protect, getOrderUser);
 
 router
   .route("/userdata")
-  .get(protect, getUseInfo)
+  .get(getUseInfo)
   .put(protect, getUseUpdate)
   .post(protect, getUserPasswordChange);
 
