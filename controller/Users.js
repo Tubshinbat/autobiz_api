@@ -142,28 +142,6 @@ exports.loginUser = asyncHandler(async (req, res, next) => {
   });
 });
 
-exports.localUser = asyncHandler(async (req, res, next) => {
-  const token = req.body.autobiztoken;
-
-  if (!token) {
-    throw new MyError("Уучлаарай хандах боломжгүй байна..", 400);
-  }
-  const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
-
-  req.userId = tokenObject.id;
-  req.userRole = tokenObject.role;
-
-  res.status(200).json({
-    success: true,
-    role: tokenObject.role,
-    userId: tokenObject.id,
-    avatar: tokenObject.avatar,
-    name: tokenObject.username,
-    email: tokenObject.email,
-    phone: tokenObject.phone,
-  });
-});
-
 exports.getUseInfo = asyncHandler(async (req, res, next) => {
   // const token = req.cookies.autobiztoken;
   // const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
@@ -260,6 +238,9 @@ exports.tokenCheckAlways = asyncHandler(async (req, res, next) => {
   }
 
   const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
+
+  if (req.userId !== tokenObject.id)
+    throw new MyError("Уучлаарай хандах боломжгүй байна..", 400);
 
   req.userId = tokenObject.id;
   req.userRole = tokenObject.role;

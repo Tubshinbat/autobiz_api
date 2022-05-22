@@ -22,7 +22,7 @@ const {
   changePassword,
   getUseInfo,
   getUseUpdate,
-  localUser,
+
   phoneCheck,
   emailCheck,
   getUserPasswordChange,
@@ -35,12 +35,10 @@ router.route("/register").post(register);
 router.route("/forgot-password").post(forgotPassword);
 router.route("/reset-password").post(resetPassword);
 router.route("/logout").get(protect, logout);
-router.route("/checktoken").post(tokenCheckAlways);
+router.route("/checktoken").get(tokenCheckAlways);
 router.route("/delete").delete(multDeleteUsers);
 
 router.route("/loginuser").post(loginUser);
-
-router.route("/localuser").post(localUser);
 
 // LOGIN USER
 
