@@ -25,6 +25,7 @@ const {
   localUser,
   phoneCheck,
   emailCheck,
+  getUserPasswordChange,
 } = require("../controller/Users");
 
 const { getOrderUser } = require("../controller/Order");
@@ -45,7 +46,11 @@ router.route("/localuser").post(localUser);
 
 router.route("/order").get(protect, getOrderUser);
 
-router.route("/userdata").get(protect, getUseInfo).put(protect, getUseUpdate);
+router
+  .route("/userdata")
+  .get(protect, getUseInfo)
+  .put(protect, getUseUpdate)
+  .post(protect, getUserPasswordChange);
 
 router
   .route("/admin-reset-password/:id")

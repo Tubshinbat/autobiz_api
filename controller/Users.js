@@ -188,54 +188,62 @@ exports.getUseInfo = asyncHandler(async (req, res, next) => {
   });
 });
 
-exports.getUseUpdate = asyncHandler(async (req, res, next) => {
-  // const token = req.body.token;
-  // const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
+exports.getUserPasswordChange = asyncHandler(async (req, res, next) => {
+  const token = req.cookies.autobiztoken;
+  const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
 
-  // if (req.userId !== tokenObject.id) {
-  //   throw new MyError("Уучлаарай хандах боломжгүй байна..", 400);
-  // }
+  if (req.userId !== tokenObject.id) {
+    throw new MyError("Уучлаарай хандах боломжгүй байна..", 401);
+  }
+
+  const password = req.body.password;
+  const confPassword = req.body.confPassword;
+
+  if (password !== confPassword)
+    throw new MyError(
+      "Уучлаарай давтан оруулсан нууц үг тохирохгүй байна..",
+      401
+    );
+
+  if (!password) throw new MyError(`Нууц үгээ оруулна уу ${error}`, 401);
+
+  const user = await User.findById(req.userId);
+  user.password = req.body.password;
+  await user.save();
+
+  res.status(200).json({
+    success: true,
+    data: user,
+  });
+});
+
+exports.getUseUpdate = asyncHandler(async (req, res, next) => {
+  const token = req.cookies.autobiztoken;
+  const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
+
+  if (req.userId !== tokenObject.id) {
+    throw new MyError("Уучлаарай хандах боломжгүй байна..", 400);
+  }
 
   req.body.email = req.body.email.toLowerCase();
-  // req.body.updateUser = req.userId;
   req.body.age = parseInt(req.body.age) || 0;
   req.body.phone = parseInt(req.body.phone) || null;
 
   delete req.body.status;
   delete req.body.wallet;
   delete req.body.role;
-  const password = req.body.password;
   delete req.body.password;
   delete req.body.confirmPassword;
 
   if (valueRequired(req.body.gender) === false) req.body.gender = "other";
 
-  // let avatar = req.body.oldAvatar;
-  // const file = req.files;
-  // if (file) {
-  //   const resultData = await fileUpload(file.image, "image").catch((error) => {
-  //     throw new MyError(`Зураг хуулах явцад алдаа гарлаа: ${error}`, 408);
-  //   });
-  //   avatar = resultData.fileName;
-  // }
-
-  // req.body.image = avatar;
-  //req.params.id
-  const user = await User.findByIdAndUpdate(
-    "626199de6e05e8e5916cd6a3",
-    req.body,
-    {
-      new: true,
-      runValidators: true,
-    }
-  );
+  const user = await User.findByIdAndUpdate(req.userId, req.body, {
+    new: true,
+    runValidators: true,
+  });
 
   if (!user) {
     throw new MyError(req.params.id + " Хэрэглэгч олдсонгүй.", 400);
-  }
-  if (valueRequired(password)) {
-    user.password = password;
-    user.save();
   }
 
   res.status(200).json({
