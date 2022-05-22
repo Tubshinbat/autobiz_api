@@ -128,7 +128,7 @@ app.use("/api/v1/carcolors", carColorRouters);
 app.use("/api/v1/hybrids", hybridRouters);
 app.use("/api/v1/partners", partnerRouter);
 app.use("/api/v1/orders", orderRouters);
-app.use("/api/v1/beproducts", beorderRouters);
+app.use("/api/v1/beorders", beorderRouters);
 app.use(errorHandler);
 // Алдаа үүсэхэд барьж авч алдааны мэдээллийг клиент тал руу автоматаар мэдээлнэ
 
