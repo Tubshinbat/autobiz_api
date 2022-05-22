@@ -239,9 +239,6 @@ exports.tokenCheckAlways = asyncHandler(async (req, res, next) => {
 
   const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
 
-  if (req.userId !== tokenObject.id)
-    throw new MyError("Уучлаарай хандах боломжгүй байна..", 400);
-
   req.userId = tokenObject.id;
   req.userRole = tokenObject.role;
 
