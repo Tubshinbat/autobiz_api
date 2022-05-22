@@ -46,9 +46,9 @@ router.route("/order").get(protect, getOrderUser);
 
 router
   .route("/userdata")
-  .get(protectUser, getUseInfo)
-  .put(protectUser, getUseUpdate)
-  .post(protectUser, getUserPasswordChange);
+  .get(protect, getUseInfo)
+  .put(protect, getUseUpdate)
+  .post(protect, getUserPasswordChange);
 
 router
   .route("/admin-reset-password/:id")
