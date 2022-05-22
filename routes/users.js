@@ -35,7 +35,7 @@ router.route("/register").post(register);
 router.route("/forgot-password").post(forgotPassword);
 router.route("/reset-password").post(resetPassword);
 router.route("/logout").get(protect, logout);
-router.route("/checktoken").get(protect, tokenCheckAlways);
+router.route("/checktoken").post(tokenCheckAlways);
 router.route("/delete").delete(multDeleteUsers);
 
 router.route("/loginuser").post(loginUser);
