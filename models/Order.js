@@ -7,23 +7,26 @@ const OrderSchema = new mongoose.Schema({
     default: true,
   },
 
-  title: {
+  lastname: {
     type: String,
   },
 
-  type: {
+  phone: {
     type: String,
-    enum: ["beproduct", "product"],
+  },
+
+  email: {
+    type: String,
+  },
+
+  deals: {
+    type: String,
+    enum: ["bank", "cash"],
   },
 
   product_id: {
     type: mongoose.Schema.ObjectId,
     ref: "Product",
-  },
-
-  beproduct_id: {
-    type: mongoose.Schema.ObjectId,
-    ref: "BeProducts",
   },
 
   done: {
@@ -36,12 +39,7 @@ const OrderSchema = new mongoose.Schema({
     ref: "User",
   },
 
-  message: [
-    { message: { type: String } },
-    { subject: { type: String } },
-    { createAt: { type: Date } },
-    { userName: { type: String } },
-  ],
+  message: { type: [String] },
 
   invoice: {
     type: mongoose.Schema.ObjectId,
