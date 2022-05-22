@@ -115,13 +115,16 @@ exports.updateOrder = asyncHandler(async (req, res, next) => {
 });
 
 exports.getOrderUser = asyncHandler(async (req, res, next) => {
-  const token = req.body.token;
+  const token = req.cookies.autobiztoken;
   const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
 
   if (req.userId !== tokenObject.id)
     throw new MyError("Уучлаарай хандах боломжгүй байна", 400);
 
-  const order = await Order.find({}).where(createUser).equals(req.userId);
+  const order = await Order.find({})
+    .where(createUser)
+    .equals(req.userId)
+    .populate("product_id");
 
   res.status(200).json({
     success: true,

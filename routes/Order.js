@@ -9,9 +9,15 @@ const {
   multDeleteOrder,
   updateOrder,
   getCounOrder,
+  getOrderUser,
 } = require("../controller/Order");
 
-router.route("/").post(createOrder).get(getOrders);
+router
+  .route("/")
+  .post(createOrder)
+  .get(protect, authorize("admin", "operator"), getOrders);
+
+router.route("/user").get(protect, getOrderUser);
 
 router
   .route("/count")
@@ -20,7 +26,7 @@ router
 router.route("/delete").delete(protect, authorize("admin"), multDeleteOrder);
 router
   .route("/:id")
-  .get(getOrder)
+  .get(protect, authorize("admin", "operator"), getOrder)
   .put(protect, authorize("admin", "operator"), updateOrder);
 
 module.exports = router;
