@@ -158,7 +158,7 @@ exports.getUseInfo = asyncHandler(async (req, res, next) => {
   // if (user.status === false)
   //   throw new MyError("Уучлаарай таны эрхийг хаасан байна..", 400);
 
-  const user = await User.findById("626199de6e05e8e5916cd6a3");
+  const user = await User.findById(req.userId);
 
   res.status(200).json({
     success: true,
