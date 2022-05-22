@@ -122,9 +122,7 @@ exports.getOrderUser = asyncHandler(async (req, res, next) => {
     throw new MyError("Уучлаарай хандах боломжгүй байна", 400);
 
   const order = await Order.find({})
-    .where(createUser)
-    .equals(req.userId)
-    .populate("product_id");
+  .populate("product_id");
 
   res.status(200).json({
     success: true,
