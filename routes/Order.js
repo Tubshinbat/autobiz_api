@@ -11,10 +11,7 @@ const {
   getCounOrder,
 } = require("../controller/Order");
 
-router
-  .route("/")
-  .post(protect, authorize("admin", "operator"), createOrder)
-  .get(getOrders);
+router.route("/").post(createOrder).get(getOrders);
 
 router
   .route("/count")
