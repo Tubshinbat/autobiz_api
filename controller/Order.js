@@ -7,8 +7,8 @@ const jwt = require("jsonwebtoken");
 const { valueRequired } = require("../lib/check");
 
 exports.createOrder = asyncHandler(async (req, res) => {
-  req.body.status = req.body.status || false;
-  req.body.createUser = req.userId;
+  if (valueRequired(req.body.userId)) req.body.createUser = req.body.userId;
+  else delete req.body.userId;
 
   const order = await Order.create(req.body);
 
