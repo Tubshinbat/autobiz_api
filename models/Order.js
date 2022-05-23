@@ -33,6 +33,9 @@ const OrderSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  total: {
+    type: Number,
+  },
 
   userId: {
     type: mongoose.Schema.ObjectId,

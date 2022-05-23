@@ -9,9 +9,12 @@ const {
   multDeleteBeOrder,
   updateBeOrder,
   getCounBeOrder,
+  getBeOrderUser,
 } = require("../controller/BeOrder");
 
 router.route("/").post(createBeOrder).get(getBeOrders);
+
+router.route("/user").get(protect, getBeOrderUser);
 
 router
   .route("/count")
