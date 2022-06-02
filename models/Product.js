@@ -72,7 +72,7 @@ const ProductSchema = new mongoose.Schema({
 
   car_hurd: {
     type: String,
-    default: "Буруу",
+    default: "Баруун",
   },
 
   car_shatakhuun: {

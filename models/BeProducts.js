@@ -80,6 +80,11 @@ const BeProductsSchema = new mongoose.Schema({
     default: null,
   },
 
+  drive: {
+    type: String,
+    default: null,
+  },
+
   engine: {
     type: Number,
     default: null,
