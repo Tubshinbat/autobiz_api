@@ -43,7 +43,7 @@ exports.createProduct = asyncHandler(async (req, res, next) => {
 
 exports.getProducts = asyncHandler(async (req, res, next) => {
   const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 24;
+  const limit = parseInt(req.query.limit) || 25;
   let sort = req.query.sort;
   const select = req.query.select;
   let status = req.query.status || "null";
@@ -129,11 +129,11 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     });
   } else if (valueRequired(maxYear) && valueRequired(minYear) === false)
     query.find({
-      make_date: { $gte: maxYear },
+      make_date: { $lte: maxYear },
     });
   else if (valueRequired(minYear) && valueRequired(maxYear) === false)
     query.find({
-      make_date: { $lte: minYear },
+      make_date: { $gte: minYear },
     });
 
   if (valueRequired(req.query.minMotor) && valueRequired(req.query.maxMotor))
@@ -145,14 +145,14 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     valueRequired(req.query.minMotor) === false
   )
     query.find({
-      car_motor: { $gte: req.query.maxMotor },
+      car_motor: { $lte: req.query.maxMotor },
     });
   else if (
     valueRequired(req.query.maxMotor) &&
     valueRequired(req.query.minMotor) === false
   )
     query.find({
-      car_motor: { $lte: req.query.minMotor },
+      car_motor: { $gte: req.query.minMotor },
     });
 
   const qc = query.toConstructor();

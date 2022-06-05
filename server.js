@@ -53,6 +53,7 @@ var whitelist = [
   "http://localhost:3001",
   "https://ua.vercel.app",
   "http://192.168.10.25",
+  "http://localhost:3020",
   "https://naog.lvg.mn",
   "https://naog-admin.lvg.mn",
   "https://admin.queenbella.mn",

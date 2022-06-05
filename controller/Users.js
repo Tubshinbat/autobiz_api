@@ -38,7 +38,7 @@ exports.oldUser = asyncHandler(async (req, res, next) => {
 // Register
 exports.register = asyncHandler(async (req, res, next) => {
   req.body.email = req.body.email.toLowerCase();
-  delete req.body.phone;
+
   const user = await User.create(req.body);
 
   const jwt = user.getJsonWebToken();
@@ -541,8 +541,8 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
 
   const resetToken = user.generatePasswordChangeToken();
 
-  await user.save();
-  // await user.save({ validateBeforeSave: false });
+  // await user.save();
+  await user.save({ validateBeforeSave: false });
 
   const message = `Сайн байна уу? Энэ таны баталгаажуулах код <br> <br> ${resetToken}<br> <br> өдрийг сайхан өнгөрүүлээрэй!`;
 

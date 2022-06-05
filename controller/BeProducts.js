@@ -34,7 +34,7 @@ exports.createBeProduct = asyncHandler(async (req, res) => {
 exports.getBeProducts = asyncHandler(async (req, res) => {
   // Эхлээд query - уудаа аваад хоосон үгүйг шалгаад утга олгох
   const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 24;
+  const limit = parseInt(req.query.limit) || 25;
   let sort = req.query.sort;
 
   // querys
@@ -56,14 +56,14 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   const trans = req.query.trans;
   const type = req.query.type;
 
-  const minPrice = req.query.minPrice;
-  const maxPrice = req.query.maxPrice;
-  const minEngcc = req.body.minEngcc;
-  const maxEngcc = req.body.maxEngcc;
-  const minYear = req.body.minYear;
-  const maxYear = req.body.maxYear;
-  const minMil = req.body.minMil;
-  const maxMil = req.body.maxMil;
+  const minPrice = parseInt(req.query.minPrice) || null;
+  const maxPrice = parseInt(req.query.maxPrice) || null;
+  const minEngcc = parseInt(req.query.minMotor) || null;
+  const maxEngcc = parseInt(req.query.maxMotor) || null;
+  const minYear = parseInt(req.query.minYear) || null;
+  const maxYear = parseInt(req.query.maxYear) || null;
+  const minMil = parseInt(req.query.minMil) || null;
+  const maxMil = parseInt(req.query.maxMil) || null;
 
   if (typeof sort === "string") {
     sort = JSON.parse("{" + req.query.sort + "}");
@@ -114,9 +114,10 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
 
   if (valueRequired(priceText)) query.where("price").equals(priceText);
 
-  if (valueRequired(fuel))
+  if (valueRequired(fuel)) {
+    console.log("end");
     query.find({ fuel: { $regex: ".*" + fuel + ".*", $options: "i" } });
-
+  }
   if (valueRequired(trans))
     query.find({ trans: { $regex: ".*" + trans + ".*", $options: "i" } });
 
@@ -128,24 +129,25 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
     });
   } else if (valueRequired(maxYear) && valueRequired(minYear) === false)
     query.find({
-      car_year: { $gte: maxYear },
+      car_year: { $lte: maxYear },
     });
-  else if (valueRequired(minYear) && valueRequired(maxYear) === false)
+  else if (valueRequired(minYear) && valueRequired(maxYear) === false) {
     query.find({
-      car_year: { $lte: minYear },
+      car_year: { $gte: minYear },
     });
+  }
 
-  if (valueRequired(minEngcc) && valueRequired(maxEngcc))
+  if (valueRequired(minEngcc) && valueRequired(maxEngcc)) {
     query.find({
       engine: { $gte: minEngcc, $lte: maxEngcc },
     });
-  else if (valueRequired(maxEngcc) && valueRequired(minEngcc) === false)
+  } else if (valueRequired(maxEngcc) && valueRequired(minEngcc) === false)
     query.find({
-      engine: { $gte: maxEngcc },
+      engine: { $lte: maxEngcc },
     });
-  else if (valueRequired(maxEngcc) && valueRequired(minEngcc) === false)
+  else if (valueRequired(maxEngcc) === false && valueRequired(minEngcc))
     query.find({
-      engine: { $lte: minEngcc },
+      engine: { $gte: minEngcc },
     });
 
   if (valueRequired(minMil) && valueRequired(maxMil))
@@ -154,11 +156,11 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
     });
   else if (valueRequired(maxMil) && valueRequired(minMil) === false)
     query.find({
-      mileage: { $gte: maxMil },
+      mileage: { $lte: maxMil },
     });
-  else if (valueRequired(maxMil) && valueRequired(minMil) === false)
+  else if (valueRequired(maxMil) === false && valueRequired(minMil))
     query.find({
-      mileage: { $lte: minMil },
+      mileage: { $gte: minMil },
     });
 
   if (valueRequired(minPrice) && valueRequired(maxPrice))
@@ -167,11 +169,11 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
     });
   else if (valueRequired(maxPrice) && valueRequired(minPrice) === false)
     query.find({
-      mileage: { $gte: maxPrice },
+      price: { $lte: maxPrice },
     });
-  else if (valueRequired(maxPrice) && valueRequired(minPrice) === false)
+  else if (valueRequired(maxPrice) === false && valueRequired(minPrice))
     query.find({
-      mileage: { $lte: minPrice },
+      price: { $gte: minPrice },
     });
 
   query.populate("createUser");
