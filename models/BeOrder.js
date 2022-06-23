@@ -1,21 +1,7 @@
 const mongoose = require("mongoose");
 
 const BeOrderSchema = new mongoose.Schema({
-  status: {
-    type: Boolean,
-    enum: [true, false],
-    default: true,
-  },
-
-  lastname: {
-    type: String,
-  },
-
-  phone: {
-    type: String,
-  },
-
-  email: {
+  orderNumber: {
     type: String,
   },
 
@@ -24,9 +10,14 @@ const BeOrderSchema = new mongoose.Schema({
     ref: "BeProducts",
   },
 
-  done: {
-    type: Boolean,
-    default: false,
+  orderType: {
+    type: mongoose.Schema.ObjectId,
+    ref: "OrderType",
+    default: null,
+  },
+
+  price: {
+    type: Number,
   },
 
   userId: {
@@ -35,11 +26,6 @@ const BeOrderSchema = new mongoose.Schema({
   },
 
   message: { type: [String] },
-
-  invoice: {
-    type: mongoose.Schema.ObjectId,
-    ref: "Invoice",
-  },
 
   createUser: {
     type: mongoose.Schema.ObjectId,

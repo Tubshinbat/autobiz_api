@@ -14,7 +14,7 @@ const {
 
 router
   .route("/")
-  .post(createOrder)
+  .post(protect, createOrder)
   .get(protect, authorize("admin", "operator"), getOrders);
 
 router.route("/user").get(protect, getOrderUser);
@@ -24,6 +24,7 @@ router
   .get(protect, authorize("admin", "operator"), getCounOrder);
 
 router.route("/delete").delete(protect, authorize("admin"), multDeleteOrder);
+
 router
   .route("/:id")
   .get(protect, authorize("admin", "operator"), getOrder)

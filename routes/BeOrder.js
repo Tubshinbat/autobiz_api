@@ -8,8 +8,8 @@ const {
   getBeOrders,
   multDeleteBeOrder,
   updateBeOrder,
-  getCounBeOrder,
   getBeOrderUser,
+  getCountBeOrder,
 } = require("../controller/BeOrder");
 
 router.route("/").post(createBeOrder).get(getBeOrders);
@@ -18,9 +18,10 @@ router.route("/user").get(protect, getBeOrderUser);
 
 router
   .route("/count")
-  .get(protect, authorize("admin", "operator"), getCounBeOrder);
+  .get(protect, authorize("admin", "operator"), getCountBeOrder);
 
 router.route("/delete").delete(protect, authorize("admin"), multDeleteBeOrder);
+
 router
   .route("/:id")
   .get(getBeOrder)

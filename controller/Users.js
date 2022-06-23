@@ -143,22 +143,20 @@ exports.loginUser = asyncHandler(async (req, res, next) => {
 });
 
 exports.getUseInfo = asyncHandler(async (req, res, next) => {
-  // const token = req.cookies.autobiztoken;
-  // const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
+  const token = req.cookies.autobiztoken;
+  const tokenObject = jwt.verify(token, process.env.JWT_SECRET);
 
-  // if (req.userId !== tokenObject.id) {
-  //   throw new MyError(
-  //     ` ${tokenObject.id} Уучлаарай хандах боломжгүй байна.. ${token}`,
-  //     400
-  //   );
-  // }
-
-  // const user = await User.findById(req.userId);
-
-  // if (user.status === false)
-  //   throw new MyError("Уучлаарай таны эрхийг хаасан байна..", 400);
+  if (req.userId !== tokenObject.id) {
+    throw new MyError(
+      ` ${tokenObject.id} Уучлаарай хандах боломжгүй байна.. ${token}`,
+      400
+    );
+  }
 
   const user = await User.findById(req.userId);
+
+  if (user.status === false)
+    throw new MyError("Уучлаарай таны эрхийг хаасан байна..", 400);
 
   res.status(200).json({
     success: true,
@@ -202,8 +200,7 @@ exports.getUseUpdate = asyncHandler(async (req, res, next) => {
   if (req.userId !== tokenObject.id) {
     throw new MyError("Уучлаарай хандах боломжгүй байна..", 400);
   }
-
-  req.body.email = req.body.email.toLowerCase();
+  if (req.body.email) req.body.email = req.body.email.toLowerCase();
   req.body.age = parseInt(req.body.age) || 0;
   req.body.phone = parseInt(req.body.phone) || null;
 

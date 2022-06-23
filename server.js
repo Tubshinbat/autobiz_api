@@ -36,6 +36,7 @@ const hybridRouters = require("./routes/Hybrid");
 const orderRouters = require("./routes/Order");
 const beorderRouters = require("./routes/BeOrder");
 const contactRouters = require("./routes/Contact");
+const orderTypeRouters = require("./routes/OrderType");
 const errorHandler = require("./middleware/error");
 
 const connectDB = require("./config/db");
@@ -48,17 +49,7 @@ const app = express();
 connectDB();
 
 // Манай рест апиг дуудах эрхтэй сайтуудын жагсаалт :
-var whitelist = [
-  "http://localhost:3000",
-  "http://localhost:3001",
-  "https://ua.vercel.app",
-  "http://192.168.10.25",
-  "http://localhost:3020",
-  "https://naog.lvg.mn",
-  "https://naog-admin.lvg.mn",
-  "https://admin.queenbella.mn",
-  "https://beta.queenbella.mn",
-];
+var whitelist = ["https://admin.autobiz.mn", "https://autobiz.mn"];
 
 // Өөр домэйн дээр байрлах клиент вэб аппуудаас шаардах шаардлагуудыг энд тодорхойлно
 var corsOptions = {
@@ -129,6 +120,7 @@ app.use("/api/v1/carcolors", carColorRouters);
 app.use("/api/v1/hybrids", hybridRouters);
 app.use("/api/v1/partners", partnerRouter);
 app.use("/api/v1/orders", orderRouters);
+app.use("/api/v1/typeorders", orderTypeRouters);
 app.use("/api/v1/beorders", beorderRouters);
 app.use(errorHandler);
 // Алдаа үүсэхэд барьж авч алдааны мэдээллийг клиент тал руу автоматаар мэдээлнэ
