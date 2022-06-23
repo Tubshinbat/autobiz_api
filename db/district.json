@@ -1,0 +1,136 @@
+{"_id":{"$oid":"6261960704dbadd0a39f7c44"},"id":"4","name":"Хан-Уул дүүрэг"}
+{"_id":{"$oid":"6261960704dbadd0a39f7c45"},"id":"2","name":"Баянзүрх дүүрэг"}
+{"_id":{"$oid":"6261960704dbadd0a39f7c46"},"id":"5","name":"Багахангай дүүрэг"}
+{"_id":{"$oid":"6261960704dbadd0a39f7c47"},"id":"6","name":"Багануур дүүрэг"}
+{"_id":{"$oid":"6261960704dbadd0a39f7c48"},"id":"8","name":"Сүхбаатар дүүрэг"}
+{"_id":{"$oid":"6261960704dbadd0a39f7c49"},"id":"9","name":"Налайх дүүрэг"}
+{"_id":{"$oid":"6261960704dbadd0a39f7c4a"},"id":"7","name":"Сонгинохайрхан дүүрэг"}
+{"_id":{"$oid":"6261960704dbadd0a39f7c4b"},"id":"3","name":"Чингэлтэй дүүрэг"}
+{"_id":{"$oid":"6261960704dbadd0a39f7c43"},"id":"1","name":"Баянгол дүүрэг"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c180"},"id":"2","auction_name":"JU TOKYO","fob_price":"61000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c181"},"id":"4","auction_name":"HONDA HOKKAIDO","fob_price":"79000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c182"},"id":"5","auction_name":"HONDA NAGOYA","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c183"},"id":"6","auction_name":"HONDA KANSAI","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c184"},"id":"7","auction_name":"NOAA","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c185"},"id":"8","auction_name":"HONDA KYUSHU","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c186"},"id":"9","auction_name":"JU SAITAMA","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c187"},"id":"12","auction_name":"NPS TOCHIGI","fob_price":"66000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c188"},"id":"3","auction_name":"HONDA SENDAI","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c189"},"id":"13","auction_name":"ARAI SENDAI","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c18a"},"id":"14","auction_name":"JU NAGANO","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c18b"},"id":"15","auction_name":"NPS SENDAI","fob_price":"71000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c18c"},"id":"16","auction_name":"ORIX SENDAI","fob_price":"71000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c18d"},"id":"17","auction_name":"SAA SAPPORO","fob_price":"74000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c18e"},"id":"10","auction_name":"USS YOKOHAMA","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c18f"},"id":"11","auction_name":"CAA TOKYO","fob_price":"64000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c190"},"id":"18","auction_name":"CAA TOHOKU","fob_price":"79000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c191"},"id":"21","auction_name":"USS R NAGOYA","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c17f"},"id":"1","auction_name":"HONDA TOKYO","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c192"},"id":"22","auction_name":"LUM NAGOYA","fob_price":"61000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c193"},"id":"23","auction_name":"JU MIE","fob_price":"64000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c194"},"id":"24","auction_name":"JU SHIZUOKA","fob_price":"64000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c196"},"id":"26","auction_name":"TAA KINKI","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c197"},"id":"20","auction_name":"CAA GIFU","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c198"},"id":"19","auction_name":"JU AOMORI","fob_price":"84000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c199"},"id":"29","auction_name":"TAA HIROSHIMA","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c19a"},"id":"30","auction_name":"TAA SHIKOKU","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c19b"},"id":"31","auction_name":"TAA KYUSHU","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c19c"},"id":"32","auction_name":"LUM KYUSHU","fob_price":"61000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c19d"},"id":"33","auction_name":"NPS FUKUOKA","fob_price":"61000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c19e"},"id":"34","auction_name":"ORIX FUKUOKA","fob_price":"61000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c19f"},"id":"27","auction_name":"NPS OSAKA","fob_price":"61000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1a0"},"id":"35","auction_name":"JU YAMAGUCHI","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1a1"},"id":"37","auction_name":"HERO","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1a2"},"id":"38","auction_name":"JAA TOKYO","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1a3"},"id":"39","auction_name":"JU IBARAKI","fob_price":"64000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1a4"},"id":"28","auction_name":"ORIX KOBE","fob_price":"61000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1a5"},"id":"40","auction_name":"MIRIVE","fob_price":"64000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1a6"},"id":"41","auction_name":"LUM TOKYO","fob_price":"66000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1a7"},"id":"42","auction_name":"ORIX ATSUGI","fob_price":"66000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c195"},"id":"25","auction_name":"JU FUKUI","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1a8"},"id":"36","auction_name":"TAA MINIAMIKYUSHU","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1a9"},"id":"43","auction_name":"USS NIIGATA","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1aa"},"id":"47","auction_name":"LUM TOKYO SENDAI","fob_price":"76000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1ac"},"id":"48","auction_name":"USS SAPPORO","fob_price":"79000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1ad"},"id":"49","auction_name":"JU AKITA","fob_price":"81000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1ae"},"id":"46","auction_name":"ISUZU MAKUHARI","fob_price":"74000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1af"},"id":"50","auction_name":"CAA CHUBU","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1b0"},"id":"51","auction_name":"JU ISHIKAWA","fob_price":"79000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1b1"},"id":"52","auction_name":"BAYAUC","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1b2"},"id":"55","auction_name":"KAA KYOTO","fob_price":"64000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1b3"},"id":"54","auction_name":"USS KOBE","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1b4"},"id":"56","auction_name":"LAA SHIKOKU","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1b5"},"id":"57","auction_name":"JU KUMAMOTO","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1b6"},"id":"58","auction_name":"USS FUKUOKA","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1b7"},"id":"59","auction_name":"JU OITA","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1b8"},"id":"45","auction_name":"ORIX ATSUGI OYAMA","fob_price":"71000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1b9"},"id":"60","auction_name":"KCAA MINAMI KYUSHU","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1ba"},"id":"53","auction_name":"IAA OSAKA","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1bb"},"id":"61","auction_name":"TAA KANTO","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1bc"},"id":"62","auction_name":"USS TOKYO","fob_price":"61000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1bd"},"id":"63","auction_name":"ARAI OYAMA","fob_price":"64000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1ab"},"id":"44","auction_name":"USS TOHOKU","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1be"},"id":"66","auction_name":"JU GUNMA","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1bf"},"id":"65","auction_name":"NICHIRIKU SHONAN","fob_price":"66000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1c0"},"id":"68","auction_name":"TAA TOHOKU","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1c2"},"id":"67","auction_name":"JU FUKUSHIMA","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1c3"},"id":"69","auction_name":"TAA HOKKAIDO","fob_price":"79000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1c4"},"id":"73","auction_name":"TAA CHUBU","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1c5"},"id":"74","auction_name":"NICHIRIKU CHUBU","fob_price":"61000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1c6"},"id":"64","auction_name":"JU KANAGAWA","fob_price":"64000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1c7"},"id":"75","auction_name":"JU TOYOMA","fob_price":"64000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1c8"},"id":"72","auction_name":"NAA NAGOYA","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1c9"},"id":"76","auction_name":"HANATEN OSAKA","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1ca"},"id":"78","auction_name":"LUM KOBE","fob_price":"61000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1cb"},"id":"77","auction_name":"LAA KANSAI","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1cc"},"id":"71","auction_name":"JU AICHI","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1cd"},"id":"79","auction_name":"NICHIRIKU OSAKA","fob_price":"61000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1ce"},"id":"80","auction_name":"ZIP OSAKA","fob_price":"61000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1cf"},"id":"83","auction_name":"NICHIRIKU OSAKA","fob_price":"71000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1d0"},"id":"84","auction_name":"KCAA FUKUOKA","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1d1"},"id":"85","auction_name":"ISUZU KYUSHU","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1d2"},"id":"86","auction_name":"LUM KOBE","fob_price":"76000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1d3"},"id":"87","auction_name":"JU MIYAZAKI","fob_price":"79000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1c1"},"id":"70","auction_name":"LUM HOKKAIDO","fob_price":"81000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1d4"},"id":"88","auction_name":"ARAI BAYSIDE","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1d5"},"id":"81","auction_name":"NAA OSAKA","fob_price":"64000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1d6"},"id":"91","auction_name":"NAA TOKYO","fob_price":"64000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1d8"},"id":"90","auction_name":"JU NIIGATA","fob_price":"64000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1d9"},"id":"92","auction_name":"USS SAITAMA","fob_price":"64000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1da"},"id":"94","auction_name":"JU MIYAGI","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1db"},"id":"93","auction_name":"NICHIRIKU CHIBA","fob_price":"66000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1dc"},"id":"95","auction_name":"JU TOCHIGI","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1dd"},"id":"96","auction_name":"NICHIRIKU SENDAI NIIGATA","fob_price":"71000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1de"},"id":"89","auction_name":"JU CHIBA","fob_price":"64000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1df"},"id":"99","auction_name":"NICHIRIKU HOKKAIDO","fob_price":"81000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1e0"},"id":"100","auction_name":"NICHIRIKU SENDAI","fob_price":"81000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1e1"},"id":"101","auction_name":"USS HOKURIKU","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1e2"},"id":"102","auction_name":"USS NAGOYA","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1e3"},"id":"97","auction_name":"NICHIRIKU SENDAI","fob_price":"76000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1e4"},"id":"103","auction_name":"USS OSAKA","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1e5"},"id":"104","auction_name":"JU OKAYAMA LAA","fob_price":"74000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1e6"},"id":"98","auction_name":"JU HOKKAIDO","fob_price":"79000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1e7"},"id":"107","auction_name":"NICHIRIKU HAKATA","fob_price":"61000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1e8"},"id":"105","auction_name":"ISUZU KOBE","fob_price":"79000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1e9"},"id":"108","auction_name":"KCAA YAMAGUCHI","fob_price":"64000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1d7"},"id":"82","auction_name":"JU HIROSHIMA","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1ea"},"id":"110","auction_name":"NICHIRIKU HAKATA KAWASHIMA","fob_price":"71000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1eb"},"id":"111","auction_name":"JU OKINAWA","fob_price":"86000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1ec"},"id":"109","auction_name":"JU FUKUOKA KAGOSHIMA","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1ee"},"id":"112","auction_name":"TAA YOKOHAMA","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1ef"},"id":"113","auction_name":"ARAI OYAMA VANTORA","fob_price":"64000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1f0"},"id":"115","auction_name":"USS GUNMA","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1f1"},"id":"116","auction_name":"JU YAMAGATA","fob_price":"79000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1f2"},"id":"117","auction_name":"JU GIFU","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1f3"},"id":"119","auction_name":"USS SHIZUOKA","fob_price":"64000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1f4"},"id":"118","auction_name":"NAA NAGOYA NYUSATSU","fob_price":"61000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1f5"},"id":"106","auction_name":"JU FUKUOKA","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1f6"},"id":"120","auction_name":"HAA KOBE","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1f7"},"id":"121","auction_name":"NAA OSAKA NYUSATSU","fob_price":"61000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1f8"},"id":"122","auction_name":"USS OKAYAMA","fob_price":"64000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1f9"},"id":"126","auction_name":"YANASE","fob_price":"71000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1fa"},"id":"123","auction_name":"JU NARA","fob_price":"64000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1fb"},"id":"127","auction_name":"AUCNET","fob_price":"71000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1fc"},"id":"124","auction_name":"USS KYUSHU","fob_price":"59000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1fd"},"id":"125","auction_name":"USS KYUSHU KAGOSHIMA","fob_price":"69000 JPY"}
+{"_id":{"$oid":"6261962fe31e705d8fe6c1ed"},"id":"114","auction_name":"JU YAMANASHI","fob_price":"69000 JPY"}

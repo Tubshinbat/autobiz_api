@@ -1,0 +1,50 @@
+{"_id":{"$oid":"62793d0076827fd7931b259a"},"zagvar_id":"4","name":"HARRIER HYBRID","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b259b"},"zagvar_id":"5","name":"PROBOX VAN ","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b259c"},"zagvar_id":"6","name":"PRIUS ALPHA 41","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b259d"},"zagvar_id":"7","name":"OUTLANDER","industry":[{"$oid":"6261931f1669527f1c1f927b"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b259e"},"zagvar_id":"8","name":"COROLLA FIELDER","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b259f"},"zagvar_id":"9","name":"RX450h","industry":[{"$oid":"6261931f1669527f1c1f9275"}],"image":"6aa32-1_108814_15879545195ea64357b3d8c.jpg","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25a0"},"zagvar_id":"10","name":"COROLLA RUMION","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25a1"},"zagvar_id":"11","name":"DELICA D5","industry":[{"$oid":"6261931f1669527f1c1f927b"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25a2"},"zagvar_id":"12","name":"SAI","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25a3"},"zagvar_id":"13","name":"VELLFIRE","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25a4"},"zagvar_id":"14","name":"PRADO 150","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25a5"},"zagvar_id":"15","name":"PRADO 120","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25a6"},"zagvar_id":"16","name":"RVR","industry":[{"$oid":"6261931f1669527f1c1f927b"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25a7"},"zagvar_id":"17","name":"IS 250H","industry":[{"$oid":"6261931f1669527f1c1f9275"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25a8"},"zagvar_id":"18","name":"ALPHARD","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25a9"},"zagvar_id":"19","name":"LEGACY","industry":[{"$oid":"6261931f1669527f1c1f9272"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25aa"},"zagvar_id":"20","name":"EXIGA","industry":[{"$oid":"6261931f1669527f1c1f9272"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25ab"},"zagvar_id":"21","name":"VANGUARD","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25ac"},"zagvar_id":"1","name":"PRIUS","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"uploads/img/2018/09/17/6d16eb505194119ea435acaedc8ab6e0.jpg","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25ad"},"zagvar_id":"2","name":"LAND CRUISER","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25ae"},"zagvar_id":"3","name":"FORESTER","industry":[{"$oid":"6261931f1669527f1c1f9272"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25af"},"zagvar_id":"22","name":"PAJERO","industry":[{"$oid":"6261931f1669527f1c1f927b"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25b0"},"zagvar_id":"23","name":"HS250H","industry":[{"$oid":"6261931f1669527f1c1f9275"}],"image":null,"status":true,"createAt":{"$date":"2022-05-09T16:32:10.505Z"}}
+{"_id":{"$oid":"62793d0076827fd7931b25b1"},"zagvar_id":"24","name":"X TRIAL","industry":[{"$oid":"6261931f1669527f1c1f9276"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25b2"},"zagvar_id":"25","name":"HARRIER","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25b3"},"zagvar_id":"26","name":"CT200h","industry":[{"$oid":"6261931f1669527f1c1f9275"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25b4"},"zagvar_id":"30","name":"COROLLA FIELDER HYBRID","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25b5"},"zagvar_id":"31","name":"AQUA","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"","is_active":"0"}
+{"_id":{"$oid":"62793d0076827fd7931b25b6"},"zagvar_id":"33","name":"AQUA","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"","is_active":"0"}
+{"_id":{"$oid":"62793d0076827fd7931b25b7"},"zagvar_id":"28","name":"OUTBACK","industry":[{"$oid":"6261931f1669527f1c1f9272"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25b8"},"zagvar_id":"34","name":"HILUX","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"","is_active":"0"}
+{"_id":{"$oid":"62793d0076827fd7931b25b9"},"zagvar_id":"36","name":"X1","industry":[{"$oid":"6261931f1669527f1c1f9277"}],"image":"1908c-1.jpg","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25ba"},"zagvar_id":"35","name":"RX270","industry":[{"$oid":"6261931f1669527f1c1f9275"}],"image":"cd3bb-3_109928_15902652625ec985ae26747.jpg","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25bb"},"zagvar_id":"27","name":"PRIUS 30","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25bc"},"zagvar_id":"39","name":"3 SERIES","industry":[{"$oid":"6261931f1669527f1c1f9277"}],"image":"532e1-3_109536_15897687655ec1f23dd73b9.jpg","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25bd"},"zagvar_id":"38","name":"E300","industry":[{"$oid":"6261931f1669527f1c1f9281"}],"image":"b012d-3_109536_15897687655ec1f23dd73b9.jpg","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25be"},"zagvar_id":"40","name":"B180","industry":[{"$oid":"6261931f1669527f1c1f9281"}],"image":"2a57b-3_109536_15897687655ec1f23dd73b9.jpg","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25bf"},"zagvar_id":"41","name":"7 SERIES","industry":[{"$oid":"6261931f1669527f1c1f9277"}],"image":"6f322-3_109976_15909876635ed48b8f6e060.jpg","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25c0"},"zagvar_id":"42","name":"5 SERIES","industry":[{"$oid":"6261931f1669527f1c1f9277"}],"image":"59b31-untitled-100.jpg","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25c1"},"zagvar_id":"43","name":"SAI","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"de447-57.jpg","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25c2"},"zagvar_id":"44","name":"Prius Alpha","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"a1f8b-3.jpg","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25c3"},"zagvar_id":"29","name":"PREMIO","industry":[{"$oid":"6261931f1669527f1c1f9285"}],"image":"","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25c4"},"zagvar_id":"37","name":"E350","industry":[{"$oid":"6261931f1669527f1c1f9281"}],"image":"6fd8d-3_109536_15897687655ec1f23dd73b9.jpg","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25c5"},"zagvar_id":"45","name":"E250","industry":[{"$oid":"6261931f1669527f1c1f9281"}],"image":"299f4-1.jpg","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25c6"},"zagvar_id":"48","name":"NX300h","industry":[{"$oid":"6261931f1669527f1c1f9275"}],"image":"88fa5-1.jpg","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25c7"},"zagvar_id":"50","name":"S Class","industry":[{"$oid":"6261931f1669527f1c1f9281"}],"image":"9e81b-1.jpg","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25c8"},"zagvar_id":"49","name":"C CLASS","industry":[{"$oid":"6261931f1669527f1c1f9281"}],"image":"8d293-bk441339_1.jpg","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25c9"},"zagvar_id":"51","name":"Compass","industry":[{"$oid":"6261931f1669527f1c1f927d"}],"image":"f0a08-bk571951_1.jpg","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25ca"},"zagvar_id":"46","name":"JUKE","industry":[{"$oid":"6261931f1669527f1c1f9276"}],"image":"75ba0-4_115152_16063388435fbec91bb2896.jpg","status":true}
+{"_id":{"$oid":"62793d0076827fd7931b25cb"},"zagvar_id":"47","name":"RX350","industry":[{"$oid":"6261931f1669527f1c1f9275"}],"image":"43494-3.jpg","status":true}

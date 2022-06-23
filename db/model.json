@@ -1,0 +1,1025 @@
+{"_id":{"$oid":"62619800ba11b09956eaf010"},"id":"4","name":"ALPHARD","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf011"},"id":"8","name":"ALTEZZA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf012"},"id":"9","name":"ALTEZZA WAGON","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf013"},"id":"10","name":"ARISTO","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf014"},"id":"11","name":"AURIS","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf015"},"id":"12","name":"AVALON","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf016"},"id":"3","name":"ALLION","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf017"},"id":"15","name":"AVENSIS WAGON","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf018"},"id":"16","name":"BB","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf019"},"id":"20","name":"BREVIS","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf01a"},"id":"21","name":"CALDINA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf01b"},"id":"17","name":"BELTA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf01c"},"id":"22","name":"CALDINA VAN","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf01d"},"id":"24","name":"CAMROAD","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf01e"},"id":"25","name":"CAMRY","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf01f"},"id":"1","name":"4RUNNER","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf020"},"id":"30","name":"CARINA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf021"},"id":"31","name":"CARINA ED","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf00f"},"id":"2","name":"ALLEX","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf022"},"id":"23","name":"CAMI","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf023"},"id":"14","name":"AVENSIS SEDAN","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf024"},"id":"35","name":"CELICA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf026"},"id":"36","name":"CELSIOR","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf027"},"id":"40","name":"COASTER","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf028"},"id":"38","name":"CHASER","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf029"},"id":"41","name":"COROLLA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf02a"},"id":"46","name":"COROLLA II","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf02b"},"id":"47","name":"COROLLA LEVIN","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf02c"},"id":"48","name":"COROLLA RUNX","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf02d"},"id":"49","name":"COROLLA SPACIO","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf02e"},"id":"42","name":"COROLLA AXIO","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf02f"},"id":"50","name":"COROLLA TOURING WAGON","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf030"},"id":"51","name":"COROLLA VAN","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf031"},"id":"44","name":"COROLLA FIELDER","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf032"},"id":"53","name":"CORONA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf033"},"id":"58","name":"CORSA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf034"},"id":"59","name":"CRESTA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf035"},"id":"60","name":"CROWN","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf036"},"id":"63","name":"CROWN ESTATE","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf037"},"id":"66","name":"CROWN WAGON","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf025"},"id":"37","name":"CENTURY","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf038"},"id":"68","name":"CYNOS","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf039"},"id":"54","name":"CORONA EXIV","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf03a"},"id":"72","name":"DYNA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf03c"},"id":"71","name":"DUET","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf03d"},"id":"74","name":"ESTIMA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf03e"},"id":"75","name":"ESTIMA HYBRID","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf03f"},"id":"79","name":"GAIA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf040"},"id":"78","name":"FUNCARGO","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf041"},"id":"81","name":"GRANVIA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf042"},"id":"69","name":"DELIBOY","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf043"},"id":"87","name":"HIACE TRUCK","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf044"},"id":"88","name":"HIACE VAN","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf045"},"id":"86","name":"HIACE REGIUS","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf046"},"id":"82","name":"HARRIER","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf047"},"id":"89","name":"HILUX","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf048"},"id":"96","name":"IPSUM","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf049"},"id":"97","name":"ISIS","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf04a"},"id":"98","name":"IST","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf04b"},"id":"84","name":"HIACE","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf04c"},"id":"109","name":"LITE ACE","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf04d"},"id":"99","name":"KLUGER","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf03b"},"id":"55","name":"PREMIO","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf04e"},"id":"106","name":"LAND CRUISER PRADO","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf04f"},"id":"110","name":"LITE ACE NOAH","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf050"},"id":"114","name":"LITE ACE VAN","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf052"},"id":"115","name":"LITE ACE WAGON","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf053"},"id":"102","name":"LAND CRUISER","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf054"},"id":"122","name":"MARK X","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf055"},"id":"119","name":"MARK II WAGON","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf056"},"id":"117","name":"MARK II","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf057"},"id":"126","name":"MR-S","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf058"},"id":"128","name":"NOAH","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf059"},"id":"127","name":"NADIA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf05a"},"id":"130","name":"OPA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf05b"},"id":"118","name":"MARK II VAN","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf05c"},"id":"132","name":"OTHER","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf05d"},"id":"137","name":"CORONA PREMIO","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf05e"},"id":"136","name":"PORTE","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf05f"},"id":"139","name":"PRIUS","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf060"},"id":"134","name":"PASSO","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf061"},"id":"140","name":"PROBOX","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf062"},"id":"141","name":"PROBOX VAN","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf063"},"id":"143","name":"PROGRES","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf051"},"id":"113","name":"LITE ACE TRUCK","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf064"},"id":"135","name":"PLATZ","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf065"},"id":"144","name":"PRONARD","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf066"},"id":"151","name":"RAV4 J","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf068"},"id":"152","name":"RAV4 L","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf069"},"id":"155","name":"REGIUS","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf06a"},"id":"156","name":"REGIUS ACE","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf06b"},"id":"157","name":"REGIUS VAN","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf06c"},"id":"149","name":"RAUM","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf06d"},"id":"169","name":"SIENTA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf06e"},"id":"170","name":"SOARER","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf06f"},"id":"165","name":"SCEPTER WAGON","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf070"},"id":"172","name":"SPRINTER","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf071"},"id":"174","name":"SPRINTER MARINO","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf072"},"id":"176","name":"SPRINTER VAN","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf073"},"id":"178","name":"STARLET","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf074"},"id":"171","name":"SPARKY","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf075"},"id":"159","name":"RUSH","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf076"},"id":"179","name":"SUCCEED","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf077"},"id":"182","name":"SUPRA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf078"},"id":"188","name":"TOWN ACE NOAH","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf079"},"id":"187","name":"TOWN ACE","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf067"},"id":"150","name":"RAV4","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf07a"},"id":"190","name":"TOWN ACE TRUCK","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf07b"},"id":"191","name":"TOWN ACE VAN","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf07c"},"id":"148","name":"RACTIS","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf07e"},"id":"202","name":"VISTA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf07f"},"id":"203","name":"VISTA ARDEO","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf080"},"id":"205","name":"VITZ","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf081"},"id":"206","name":"VOLTZ","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf082"},"id":"207","name":"VOXY","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf083"},"id":"208","name":"WILL","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf084"},"id":"201","name":"VEROSSA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf085"},"id":"210","name":"WILL VS","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf086"},"id":"211","name":"WINDOM","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf087"},"id":"180","name":"SUCCEED VAN","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf088"},"id":"225","name":"BLUEBIRD","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf089"},"id":"221","name":"AVENIR VAN","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf08a"},"id":"229","name":"CARAVAN","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf08b"},"id":"227","name":"BLUEBIRD SYLPHY","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf08c"},"id":"232","name":"CEDRIC","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf08d"},"id":"230","name":"CARAVAN BUS","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf08e"},"id":"219","name":"AVENIR","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf08f"},"id":"235","name":"CEDRIC WAGON","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf07d"},"id":"193","name":"TOYOACE","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf090"},"id":"212","name":"WISH","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf091"},"id":"240","name":"CLIPPER TRUCK","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf092"},"id":"236","name":"CEFIRO","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf094"},"id":"238","name":"CIMA","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf095"},"id":"243","name":"CONDOR","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf096"},"id":"245","name":"CREW","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf097"},"id":"246","name":"CUBE","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf098"},"id":"248","name":"DATSUN","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf099"},"id":"253","name":"EXPERT","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf09a"},"id":"256","name":"FIGARO","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf09b"},"id":"250","name":"ELGRAND","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf09c"},"id":"257","name":"FUGA","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf09d"},"id":"259","name":"GLORIA","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf09e"},"id":"261","name":"GLORIA VAN","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf09f"},"id":"262","name":"GLORIA WAGON","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0a0"},"id":"267","name":"HOMY VAN","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0a1"},"id":"273","name":"LARGO","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0a2"},"id":"239","name":"CLIPPER","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0a3"},"id":"271","name":"LAFESTA","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0a4"},"id":"275","name":"LAUREL","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0a5"},"id":"269","name":"INFINITI Q45","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf093"},"id":"241","name":"CLIPPER VAN","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0a6"},"id":"276","name":"LEOPARD","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0a7"},"id":"280","name":"LIBERTY","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0a8"},"id":"284","name":"MARCH","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0aa"},"id":"288","name":"MOCO","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0ab"},"id":"296","name":"NOTE","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0ac"},"id":"303","name":"PINO","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0ad"},"id":"289","name":"MURANO","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0ae"},"id":"301","name":"PAO","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0af"},"id":"306","name":"PRESAGE","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0b0"},"id":"308","name":"PRESIDENT","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0b1"},"id":"310","name":"PRIMERA","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0b2"},"id":"300","name":"OTTI","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0b3"},"id":"314","name":"PRIMERA WAGON","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0b4"},"id":"326","name":"SERENA","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0b5"},"id":"324","name":"SAFARI","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0b6"},"id":"316","name":"PULSAR","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0b7"},"id":"330","name":"SKYLINE","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0b8"},"id":"334","name":"STAGEA","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0b9"},"id":"328","name":"SILVIA","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0ba"},"id":"335","name":"SUNNY","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0bb"},"id":"337","name":"SUNNY TRUCK","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0a9"},"id":"287","name":"MISTRAL","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0bc"},"id":"321","name":"RASHEEN","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0bd"},"id":"338","name":"SUNNY VAN","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0be"},"id":"339","name":"TEANA","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0c0"},"id":"345","name":"TINO","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0c1"},"id":"341","name":"TERRANO REGULUS","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0c2"},"id":"347","name":"VANETTE","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0c3"},"id":"350","name":"VANETTE TRUCK","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0c4"},"id":"344","name":"TIIDA LATIO","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0c5"},"id":"351","name":"VANETTE VAN","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0c6"},"id":"340","name":"TERRANO","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0c7"},"id":"357","name":"ATENZA SEDAN","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0c8"},"id":"358","name":"ATENZA SPORT","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0c9"},"id":"355","name":"X-TRAIL","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0ca"},"id":"368","name":"AZ WAGON","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0cb"},"id":"369","name":"AZ-OFFROAD","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0cc"},"id":"366","name":"AXELA","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0cd"},"id":"371","name":"BONGO","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0ce"},"id":"354","name":"WINGROAD","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0cf"},"id":"373","name":"BONGO BRAWNY TRUCK","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0d0"},"id":"379","name":"BONGO VAN","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0d1"},"id":"380","name":"CAPELLA","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0bf"},"id":"343","name":"TIIDA","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf0d2"},"id":"385","name":"CAROL","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0d3"},"id":"384","name":"CAPELLA WAGON","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0d4"},"id":"389","name":"DEMIO","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0d6"},"id":"375","name":"BONGO BRAWNY VAN","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0d7"},"id":"401","name":"EUNOS ROADSTER","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0d8"},"id":"399","name":"EUNOS COSMO","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0d9"},"id":"409","name":"FAMILIA VAN","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0da"},"id":"404","name":"FAMILIA","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0db"},"id":"419","name":"LAPUTA","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0dc"},"id":"418","name":"LANTIS","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0dd"},"id":"377","name":"BONGO FRIENDEE","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0de"},"id":"438","name":"PREMACY","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0df"},"id":"432","name":"OTHER","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0e0"},"id":"440","name":"PROCEED LEVANTE","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0e1"},"id":"443","name":"ROADSTER","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0e2"},"id":"426","name":"MILLENIA","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0e3"},"id":"446","name":"RX-7","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0e4"},"id":"441","name":"PROCEED MARVIE","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0e5"},"id":"447","name":"RX-8","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0e6"},"id":"427","name":"MPV","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0e7"},"id":"453","name":"SPEED ATENZA","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0d5"},"id":"394","name":"EFINI RX-7","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0e8"},"id":"451","name":"SENTIA","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0e9"},"id":"450","name":"SCRUM TRUCK","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0ea"},"id":"454","name":"SPIANO","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0ec"},"id":"456","name":"TITAN","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0ed"},"id":"457","name":"TRIBUTE","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0ee"},"id":"449","name":"SCRUM","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0ef"},"id":"461","name":"ASPIRE","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf0f0"},"id":"468","name":"CHARIOT","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf0f1"},"id":"471","name":"COLT","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf0f2"},"id":"469","name":"CHARIOT GRANDIS","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf0f3"},"id":"472","name":"COLT PLUS","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf0f4"},"id":"475","name":"DELICA","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf0f5"},"id":"479","name":"DELICA TRUCK","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf0f6"},"id":"482","name":"DIAMANTE WAGON","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf0f7"},"id":"460","name":"AIRTREK","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf0f8"},"id":"463","name":"BRAVO","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf0f9"},"id":"481","name":"DIAMANTE","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf0fa"},"id":"499","name":"GALANT","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf0fb"},"id":"497","name":"FTO","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf0fc"},"id":"502","name":"GRANDIS","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf0fd"},"id":"503","name":"GREAT","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf0eb"},"id":"458","name":"VERISA","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf0fe"},"id":"484","name":"DINGO","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf0ff"},"id":"504","name":"GTO","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf100"},"id":"505","name":"I","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf102"},"id":"511","name":"LANCER EVOLUTION","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf103"},"id":"512","name":"LANCER VAN","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf104"},"id":"515","name":"LIBERO","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf105"},"id":"517","name":"MINICA","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf106"},"id":"514","name":"LEGNUM","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf107"},"id":"507","name":"LANCER","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf108"},"id":"521","name":"MINICAB","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf109"},"id":"485","name":"DION","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf10a"},"id":"523","name":"MINICAB TRUCK","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf10b"},"id":"524","name":"MINICAB VAN","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf10c"},"id":"534","name":"OUTLANDER","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf10d"},"id":"535","name":"PAJERO","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf10e"},"id":"536","name":"PAJERO IO","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf10f"},"id":"538","name":"PAJERO MINI","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf110"},"id":"540","name":"PROUDIA","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf111"},"id":"541","name":"ROSA","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf112"},"id":"526","name":"MIRAGE","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf113"},"id":"525","name":"MINIYON","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf101"},"id":"506","name":"JEEP","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf114"},"id":"550","name":"TRITON","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf115"},"id":"546","name":"TOPPO BJ","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf116"},"id":"551","name":"ACCORD","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf118"},"id":"555","name":"ACTY","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf119"},"id":"554","name":"ACCORD WAGON","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf11a"},"id":"560","name":"AIRWAVE","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf11b"},"id":"557","name":"ACTY VAN","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf11c"},"id":"542","name":"RVR","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf11d"},"id":"563","name":"AVANCIER","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf117"},"id":"553","name":"ACCORD INSPIRE","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf11e"},"id":"565","name":"CAPA","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf11f"},"id":"567","name":"CIVIC","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf121"},"id":"569","name":"CIVIC HYBRID","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf120"},"id":"564","name":"BEAT","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf122"},"id":"577","name":"CROSSROAD","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf123"},"id":"575","name":"CR-X","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf124"},"id":"578","name":"DOMANI","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf126"},"id":"580","name":"ELEMENT","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf125"},"id":"579","name":"EDIX","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf128"},"id":"582","name":"FIT","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf127"},"id":"581","name":"ELYSION","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf129"},"id":"574","name":"CR-V","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf12b"},"id":"586","name":"HR-V","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf12a"},"id":"556","name":"ACTY TRUCK","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf12c"},"id":"589","name":"INTEGRA","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf12d"},"id":"588","name":"INSPIRE","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf12e"},"id":"593","name":"LAGREAT","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf130"},"id":"596","name":"LIFE","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf131"},"id":"597","name":"LIFE DUNK","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf132"},"id":"598","name":"LOGO","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf133"},"id":"587","name":"INSIGHT","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf134"},"id":"599","name":"MDX","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf135"},"id":"605","name":"ODYSSEY","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf136"},"id":"600","name":"MOBILIO","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf137"},"id":"611","name":"PARTNER","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf138"},"id":"612","name":"PRELUDE","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf139"},"id":"607","name":"ORTHIA","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf13a"},"id":"616","name":"S-MX","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf13b"},"id":"617","name":"S2000","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf13c"},"id":"601","name":"MOBILIO SPIKE","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf13d"},"id":"621","name":"STEP WAGON","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf13e"},"id":"620","name":"SPIKE","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf13f"},"id":"623","name":"STREAM","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf140"},"id":"629","name":"TORNEO","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf141"},"id":"626","name":"THATS","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf12f"},"id":"594","name":"LEGEND","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf142"},"id":"627","name":"TODAY","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf143"},"id":"630","name":"VAMOS","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf144"},"id":"619","name":"SABER","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf146"},"id":"637","name":"ALTO","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf147"},"id":"646","name":"CARRY TRUCK","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf148"},"id":"648","name":"CERVO","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf149"},"id":"652","name":"CHEVROLET MW","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf14a"},"id":"659","name":"ESCUDO","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf14b"},"id":"633","name":"Z","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf14c"},"id":"634","name":"ZEST","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf14d"},"id":"665","name":"EVERY WAGON","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf14e"},"id":"662","name":"EVERY LANDY","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf14f"},"id":"669","name":"JIMNY","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf150"},"id":"672","name":"JIMNY WIDE","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf151"},"id":"671","name":"JIMNY SIERRA","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf152"},"id":"679","name":"OTHER","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf153"},"id":"673","name":"KEI","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf154"},"id":"661","name":"EVERY","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf155"},"id":"683","name":"SOLIO","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf156"},"id":"691","name":"WAGON R","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf157"},"id":"700","name":"DIAS WAGON","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf145"},"id":"635","name":"AERIO SEDAN","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf158"},"id":"703","name":"FORESTER","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf159"},"id":"689","name":"TWIN","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf15a"},"id":"705","name":"IMPREZA","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf15c"},"id":"711","name":"LEGACY","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf15d"},"id":"687","name":"SWIFT","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf15e"},"id":"724","name":"R1","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf15f"},"id":"721","name":"PLEO","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf160"},"id":"725","name":"R2","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf161"},"id":"733","name":"STELLA","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf162"},"id":"728","name":"SAMBAR","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf163"},"id":"739","name":"VIVIO","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf164"},"id":"738","name":"TRAVIQ","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf165"},"id":"712","name":"LEGACY B4","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf166"},"id":"720","name":"OUTBACK","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf167"},"id":"743","name":"ASKA","marka_id":"8","marka_name":"ISUZU"}
+{"_id":{"$oid":"62619800ba11b09956eaf168"},"id":"745","name":"BIGHORN","marka_id":"8","marka_name":"ISUZU"}
+{"_id":{"$oid":"62619800ba11b09956eaf169"},"id":"759","name":"FARGO VAN","marka_id":"8","marka_name":"ISUZU"}
+{"_id":{"$oid":"62619800ba11b09956eaf16a"},"id":"764","name":"FORWARD","marka_id":"8","marka_name":"ISUZU"}
+{"_id":{"$oid":"62619800ba11b09956eaf16b"},"id":"765","name":"GEMINI","marka_id":"8","marka_name":"ISUZU"}
+{"_id":{"$oid":"62619800ba11b09956eaf16c"},"id":"766","name":"GIGA","marka_id":"8","marka_name":"ISUZU"}
+{"_id":{"$oid":"62619800ba11b09956eaf16d"},"id":"770","name":"JUSTON","marka_id":"8","marka_name":"ISUZU"}
+{"_id":{"$oid":"62619800ba11b09956eaf15b"},"id":"707","name":"IMPREZA SPORT WAGON","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf16e"},"id":"758","name":"FARGO TRUCK","marka_id":"8","marka_name":"ISUZU"}
+{"_id":{"$oid":"62619800ba11b09956eaf16f"},"id":"773","name":"OTHER","marka_id":"8","marka_name":"ISUZU"}
+{"_id":{"$oid":"62619800ba11b09956eaf170"},"id":"776","name":"PIAZZA","marka_id":"8","marka_name":"ISUZU"}
+{"_id":{"$oid":"62619800ba11b09956eaf172"},"id":"782","name":"ALTIS","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf173"},"id":"748","name":"COMO","marka_id":"8","marka_name":"ISUZU"}
+{"_id":{"$oid":"62619800ba11b09956eaf174"},"id":"789","name":"BOON","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf175"},"id":"785","name":"ATRAI","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf176"},"id":"790","name":"CHARADE","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf177"},"id":"794","name":"COO","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf178"},"id":"799","name":"DELTA WAGON","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf179"},"id":"797","name":"DELTA TRUCK","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf17a"},"id":"795","name":"COPEN","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf17b"},"id":"786","name":"ATRAI WAGON","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf17c"},"id":"801","name":"ESSE","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf17d"},"id":"803","name":"HIJET","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf17e"},"id":"805","name":"HIJET VAN","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf17f"},"id":"804","name":"HIJET TRUCK","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf180"},"id":"808","name":"MAX","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf181"},"id":"810","name":"MIDGET II","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf182"},"id":"818","name":"MOVE","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf183"},"id":"811","name":"MIRA","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf171"},"id":"780","name":"VEHICROSS","marka_id":"8","marka_name":"ISUZU"}
+{"_id":{"$oid":"62619800ba11b09956eaf184"},"id":"819","name":"MOVE LATTE","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf185"},"id":"820","name":"NAKED","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf186"},"id":"821","name":"OPTI","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf188"},"id":"828","name":"SONICA","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf189"},"id":"832","name":"TERIOS","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf18a"},"id":"833","name":"TERIOS KID","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf18b"},"id":"836","name":"YRV","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf18c"},"id":"852","name":"A3","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf18d"},"id":"829","name":"STORIA","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf18e"},"id":"854","name":"A6","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf18f"},"id":"853","name":"A4","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf190"},"id":"831","name":"TANTO","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf191"},"id":"855","name":"A8","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf192"},"id":"885","name":"DODGE","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf193"},"id":"859","name":"S4","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf194"},"id":"857","name":"RS4","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf195"},"id":"889","name":"JEEP CHEROKEE","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf196"},"id":"890","name":"JEEP GRAND CHEROKEE","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf197"},"id":"891","name":"JEEP GRAND WAGONEER","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf198"},"id":"892","name":"JEEP WRANGLER","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf199"},"id":"858","name":"RS6","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf187"},"id":"825","name":"ROCKY","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf19a"},"id":"931","name":"FREDA","marka_id":"19","marka_name":"FORD"}
+{"_id":{"$oid":"62619800ba11b09956eaf19b"},"id":"933","name":"IXION","marka_id":"19","marka_name":"FORD"}
+{"_id":{"$oid":"62619800ba11b09956eaf19c"},"id":"946","name":"SPECTRON","marka_id":"19","marka_name":"FORD"}
+{"_id":{"$oid":"62619800ba11b09956eaf19e"},"id":"917","name":"FESTIVA MINI WAGON","marka_id":"19","marka_name":"FORD"}
+{"_id":{"$oid":"62619800ba11b09956eaf19f"},"id":"960","name":"CHEVROLET ASTRO","marka_id":"20","marka_name":"GM"}
+{"_id":{"$oid":"62619800ba11b09956eaf1a0"},"id":"955","name":"CADILLAC DEVILLE","marka_id":"20","marka_name":"GM"}
+{"_id":{"$oid":"62619800ba11b09956eaf1a1"},"id":"962","name":"CHEVROLET C1500","marka_id":"20","marka_name":"GM"}
+{"_id":{"$oid":"62619800ba11b09956eaf1a2"},"id":"954","name":"CADILLAC CONCOURS","marka_id":"20","marka_name":"GM"}
+{"_id":{"$oid":"62619800ba11b09956eaf1a3"},"id":"966","name":"CHEVROLET CORVETTE","marka_id":"20","marka_name":"GM"}
+{"_id":{"$oid":"62619800ba11b09956eaf1a4"},"id":"914","name":"ESCAPE","marka_id":"19","marka_name":"FORD"}
+{"_id":{"$oid":"62619800ba11b09956eaf1a5"},"id":"976","name":"GMC YUKON","marka_id":"20","marka_name":"GM"}
+{"_id":{"$oid":"62619800ba11b09956eaf1a6"},"id":"971","name":"CHEVROLET TRAIL BLAZER","marka_id":"20","marka_name":"GM"}
+{"_id":{"$oid":"62619800ba11b09956eaf1a7"},"id":"1028","name":"DEFENDER","marka_id":"34","marka_name":"LAND ROVER"}
+{"_id":{"$oid":"62619800ba11b09956eaf1a8"},"id":"1030","name":"FREELANDER","marka_id":"34","marka_name":"LAND ROVER"}
+{"_id":{"$oid":"62619800ba11b09956eaf1a9"},"id":"1031","name":"RANGE ROVER","marka_id":"34","marka_name":"LAND ROVER"}
+{"_id":{"$oid":"62619800ba11b09956eaf1aa"},"id":"1053","name":"GOLF","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf1ab"},"id":"1029","name":"DISCOVERY","marka_id":"34","marka_name":"LAND ROVER"}
+{"_id":{"$oid":"62619800ba11b09956eaf1ac"},"id":"1144","name":"F360","marka_id":"126","marka_name":"FERRARI"}
+{"_id":{"$oid":"62619800ba11b09956eaf1ad"},"id":"1163","name":"TB","marka_id":"130","marka_name":"HYUNDAI"}
+{"_id":{"$oid":"62619800ba11b09956eaf1ae"},"id":"1159","name":"HITACHI","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf1af"},"id":"1165","name":"XG","marka_id":"130","marka_name":"HYUNDAI"}
+{"_id":{"$oid":"62619800ba11b09956eaf19d"},"id":"936","name":"J100 TRUCK","marka_id":"19","marka_name":"FORD"}
+{"_id":{"$oid":"62619800ba11b09956eaf1b0"},"id":"1168","name":"X TYPE","marka_id":"132","marka_name":"JAGUAR"}
+{"_id":{"$oid":"62619800ba11b09956eaf1b1"},"id":"1167","name":"S TYPE","marka_id":"132","marka_name":"JAGUAR"}
+{"_id":{"$oid":"62619800ba11b09956eaf1b2"},"id":"1201","name":"OTHER","marka_id":"12","marka_name":"ALFAROMEO"}
+{"_id":{"$oid":"62619800ba11b09956eaf1b4"},"id":"1158","name":"HINO RANGER","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf1b5"},"id":"1278","name":"AERO MIDI","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf1b6"},"id":"969","name":"CHEVROLET SUBURBAN","marka_id":"20","marka_name":"GM"}
+{"_id":{"$oid":"62619800ba11b09956eaf1b7"},"id":"1251","name":"S8","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf1b8"},"id":"1279","name":"KOBELCO","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf1b9"},"id":"1291","name":"BLADE","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf1ba"},"id":"1295","name":"S3","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf1bb"},"id":"1311","name":"CARRY","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf1bc"},"id":"1212","name":"BOXSTER","marka_id":"148","marka_name":"PORSCHE"}
+{"_id":{"$oid":"62619800ba11b09956eaf1bd"},"id":"1320","name":"BELLETT","marka_id":"8","marka_name":"ISUZU"}
+{"_id":{"$oid":"62619800ba11b09956eaf1be"},"id":"1312","name":"TACOMA","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf1bf"},"id":"1362","name":"SIENTA","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf1c0"},"id":"1328","name":"FUSO TRUCK","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf1c1"},"id":"1392","name":"TOPPO","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf1c2"},"id":"1431","name":"IHI","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf1c3"},"id":"1459","name":"CHERRY","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf1c4"},"id":"1473","name":"DISCOVERY","marka_id":"28","marka_name":"ROVER"}
+{"_id":{"$oid":"62619800ba11b09956eaf1c5"},"id":"1476","name":"RANGE ROVER","marka_id":"28","marka_name":"ROVER"}
+{"_id":{"$oid":"62619800ba11b09956eaf1b3"},"id":"1207","name":"911","marka_id":"148","marka_name":"PORSCHE"}
+{"_id":{"$oid":"62619800ba11b09956eaf1c6"},"id":"1479","name":"LINCOLN NAVIGATOR","marka_id":"19","marka_name":"FORD"}
+{"_id":{"$oid":"62619800ba11b09956eaf1c7"},"id":"1501","name":"Q7","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf1c8"},"id":"1505","name":"TT","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf1ca"},"id":"1550","name":"6 SERIES","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf1cb"},"id":"1572","name":"M3","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf1cc"},"id":"1554","name":"7 SERIES","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf1cd"},"id":"1574","name":"M6","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf1ce"},"id":"1573","name":"M5","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf1cf"},"id":"1530","name":"5 SERIES","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf1d0"},"id":"1576","name":"X3","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf1d1"},"id":"1586","name":"CROSSFIRE","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf1d2"},"id":"1580","name":"Z4","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf1d3"},"id":"1463","name":"DUALIS","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf1d4"},"id":"1610","name":"EXPLORER","marka_id":"19","marka_name":"FORD"}
+{"_id":{"$oid":"62619800ba11b09956eaf1d5"},"id":"1597","name":"VOYAGER","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf1d6"},"id":"1625","name":"MUSTANG","marka_id":"19","marka_name":"FORD"}
+{"_id":{"$oid":"62619800ba11b09956eaf1d7"},"id":"1620","name":"FOCUS","marka_id":"19","marka_name":"FORD"}
+{"_id":{"$oid":"62619800ba11b09956eaf1d8"},"id":"1582","name":"300","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf1d9"},"id":"1594","name":"PT CRUISER","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf1da"},"id":"1628","name":"TAURUS","marka_id":"19","marka_name":"FORD"}
+{"_id":{"$oid":"62619800ba11b09956eaf1db"},"id":"1744","name":"FJ CRUISER","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf1c9"},"id":"1506","name":"3 SERIES","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf1dc"},"id":"1747","name":"MR2","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf1dd"},"id":"1753","name":"BEETLE","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf1de"},"id":"1755","name":"EOS","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf1e0"},"id":"1759","name":"PASSAT","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf1e1"},"id":"1630","name":"THUNDERBIRD","marka_id":"19","marka_name":"FORD"}
+{"_id":{"$oid":"62619800ba11b09956eaf1e2"},"id":"1729","name":"UD SERIES","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf1e3"},"id":"1772","name":"S70","marka_id":"32","marka_name":"VOLVO"}
+{"_id":{"$oid":"62619800ba11b09956eaf1e4"},"id":"1771","name":"S60","marka_id":"32","marka_name":"VOLVO"}
+{"_id":{"$oid":"62619800ba11b09956eaf1e5"},"id":"1773","name":"S80","marka_id":"32","marka_name":"VOLVO"}
+{"_id":{"$oid":"62619800ba11b09956eaf1e6"},"id":"1775","name":"V40","marka_id":"32","marka_name":"VOLVO"}
+{"_id":{"$oid":"62619800ba11b09956eaf1e7"},"id":"1774","name":"S90","marka_id":"32","marka_name":"VOLVO"}
+{"_id":{"$oid":"62619800ba11b09956eaf1e8"},"id":"1776","name":"V50","marka_id":"32","marka_name":"VOLVO"}
+{"_id":{"$oid":"62619800ba11b09956eaf1e9"},"id":"1777","name":"V70","marka_id":"32","marka_name":"VOLVO"}
+{"_id":{"$oid":"62619800ba11b09956eaf1ea"},"id":"1788","name":"M ROADSTER","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf1eb"},"id":"1853","name":"VANGUARD","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf1ec"},"id":"1897","name":"AZ-1","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf1ed"},"id":"1762","name":"TOUAREG","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf1ee"},"id":"1902","name":"SX-4","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf1ef"},"id":"1910","name":"PORTER-CAB","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf1f0"},"id":"1915","name":"CONDOR","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf1f1"},"id":"1770","name":"S40","marka_id":"32","marka_name":"VOLVO"}
+{"_id":{"$oid":"62619800ba11b09956eaf1df"},"id":"1758","name":"JETTA","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf1f2"},"id":"1778","name":"XC90","marka_id":"32","marka_name":"VOLVO"}
+{"_id":{"$oid":"62619800ba11b09956eaf1f3"},"id":"1951","name":"MARK X ZIO","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf1f4"},"id":"1926","name":"GALANT FORTIS","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf1f6"},"id":"2001","name":"GT-R","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf1f7"},"id":"2010","name":"MARKX","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf1f8"},"id":"2015","name":"DELICA D5","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf1f9"},"id":"2012","name":"MICRA","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf1fa"},"id":"2025","name":"BONGO BRAWNY AFT","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf1fb"},"id":"2024","name":"ATENZA WAGON","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf1fc"},"id":"2040","name":"EK ACTIVE","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf1fd"},"id":"2042","name":"LANDY","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf1fe"},"id":"2053","name":"CADILLAC ESCALADE","marka_id":"20","marka_name":"GM"}
+{"_id":{"$oid":"62619800ba11b09956eaf1ff"},"id":"2077","name":"DODGE MAGNUM","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf200"},"id":"1919","name":"AD","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf201"},"id":"1922","name":"COROLLA RUMION","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf202"},"id":"2043","name":"BEGO","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf203"},"id":"2088","name":"BLUEBIRD SYLPHY","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf204"},"id":"2107","name":"HIJET TRUCK","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf205"},"id":"2102","name":"LINCOLN LS","marka_id":"19","marka_name":"FORD"}
+{"_id":{"$oid":"62619800ba11b09956eaf206"},"id":"2112","name":"FJ CURISER","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf207"},"id":"2089","name":"REGIUS ACE COMMUTER","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf1f5"},"id":"1959","name":"MOVE","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf208"},"id":"2119","name":"CAYENNE","marka_id":"148","marka_name":"PORSCHE"}
+{"_id":{"$oid":"62619800ba11b09956eaf209"},"id":"2093","name":"CLIPPER RIO","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf20a"},"id":"2120","name":"CAYMAN","marka_id":"148","marka_name":"PORSCHE"}
+{"_id":{"$oid":"62619800ba11b09956eaf20c"},"id":"2159","name":"R8","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf20d"},"id":"2185","name":"CROWN COMFORT","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf20e"},"id":"2196","name":"HILUX SURF","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf20f"},"id":"2208","name":"QUICK DELIVERY","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf210"},"id":"2210","name":"SPRINTER CARIB","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf211"},"id":"2175","name":"CHRYSLER 300C","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf212"},"id":"2219","name":"AVENIR CARGO","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf213"},"id":"2220","name":"BASSARA","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf214"},"id":"2181","name":"PALETTE","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf215"},"id":"2231","name":"RNESSA","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf216"},"id":"2234","name":"CANTER","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf217"},"id":"2272","name":"WIZARD","marka_id":"8","marka_name":"ISUZU"}
+{"_id":{"$oid":"62619800ba11b09956eaf218"},"id":"2251","name":"FAMILIA S WAGON","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf219"},"id":"2281","name":"ALTO LAPIN","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf21a"},"id":"2456","name":"H3","marka_id":"129","marka_name":"HUMMER"}
+{"_id":{"$oid":"62619800ba11b09956eaf21b"},"id":"2457","name":"GRANDEUR","marka_id":"130","marka_name":"HYUNDAI"}
+{"_id":{"$oid":"62619800ba11b09956eaf21c"},"id":"2377","name":"CHEVROLET ASTRO","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf21d"},"id":"2530","name":"SEQUOIA","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf20b"},"id":"2133","name":"CHEVROLET AVALANCHE","marka_id":"20","marka_name":"GM"}
+{"_id":{"$oid":"62619800ba11b09956eaf21e"},"id":"2236","name":"FUSO FIGHTER","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf21f"},"id":"2858","name":"A5","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf221"},"id":"2855","name":"VELLFIRE","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf222"},"id":"2930","name":"FREED","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf223"},"id":"2983","name":"KOMATSU","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf224"},"id":"3006","name":"VIEWT","marka_id":"10","marka_name":"MITSUOKA"}
+{"_id":{"$oid":"62619800ba11b09956eaf225"},"id":"3101","name":"DISCOVERY 3","marka_id":"34","marka_name":"LAND ROVER"}
+{"_id":{"$oid":"62619800ba11b09956eaf226"},"id":"3084","name":"RANGE ROVER SPORT","marka_id":"34","marka_name":"LAND ROVER"}
+{"_id":{"$oid":"62619800ba11b09956eaf227"},"id":"3163","name":"RYOGA","marka_id":"10","marka_name":"MITSUOKA"}
+{"_id":{"$oid":"62619800ba11b09956eaf228"},"id":"2997","name":"DUTRO","marka_id":"21","marka_name":"HINO"}
+{"_id":{"$oid":"62619800ba11b09956eaf229"},"id":"2838","name":"FUSO BUS","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf22a"},"id":"3200","name":"NOUERA","marka_id":"10","marka_name":"MITSUOKA"}
+{"_id":{"$oid":"62619800ba11b09956eaf22b"},"id":"3224","name":"FREELANDER 2","marka_id":"34","marka_name":"LAND ROVER"}
+{"_id":{"$oid":"62619800ba11b09956eaf22c"},"id":"3189","name":"PROFIA","marka_id":"21","marka_name":"HINO"}
+{"_id":{"$oid":"62619800ba11b09956eaf22d"},"id":"3239","name":"KATO","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf22e"},"id":"3225","name":"RANGE ROVER VOGUE","marka_id":"34","marka_name":"LAND ROVER"}
+{"_id":{"$oid":"62619800ba11b09956eaf22f"},"id":"3481","name":"SERENA","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf230"},"id":"3472","name":"PINO","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf231"},"id":"3599","name":"MOBILIO","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf232"},"id":"3746","name":"AZ WAGON","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf233"},"id":"3802","name":"COLT","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf234"},"id":"3824","name":"DEMIO","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf235"},"id":"3809","name":"CUBE","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf236"},"id":"3904","name":"LAFESTA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf237"},"id":"3963","name":"MOCO","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf238"},"id":"3991","name":"PREMACY","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf239"},"id":"3936","name":"MARCH","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf23a"},"id":"3996","name":"PRIMERA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf23b"},"id":"4144","name":"FIT","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf23c"},"id":"4167","name":"LIFE","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf23d"},"id":"4031","name":"SERENA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf23e"},"id":"3508","name":"WINGROAD","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf23f"},"id":"4257","name":"MOVE","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf240"},"id":"4446","name":"C2","marka_id":"16","marka_name":"CITROEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf241"},"id":"4341","name":"SUPER GREAT","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf242"},"id":"4447","name":"C3","marka_id":"16","marka_name":"CITROEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf243"},"id":"4448","name":"C4","marka_id":"16","marka_name":"CITROEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf244"},"id":"4449","name":"C5","marka_id":"16","marka_name":"CITROEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf245"},"id":"4658","name":"BALENO","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf246"},"id":"4706","name":"SCIROCCO","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf247"},"id":"4267","name":"TANTO","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf248"},"id":"4340","name":"YAMAHA","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf249"},"id":"4739","name":"XC70","marka_id":"32","marka_name":"VOLVO"}
+{"_id":{"$oid":"62619800ba11b09956eaf24a"},"id":"4714","name":"C30","marka_id":"32","marka_name":"VOLVO"}
+{"_id":{"$oid":"62619800ba11b09956eaf24b"},"id":"4765","name":"DELICA WAGON","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf24c"},"id":"4777","name":"ATRAI VAN","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf24d"},"id":"4770","name":"EK WAGON","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf24e"},"id":"4852","name":"COMFORT","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf24f"},"id":"4778","name":"GS","marka_id":"23","marka_name":"LEXUS"}
+{"_id":{"$oid":"62619800ba11b09956eaf250"},"id":"4708","name":"VANAGON","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf251"},"id":"4928","name":"MOVE CONTE","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf252"},"id":"4880","name":"180 SX","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf253"},"id":"4932","name":"GALA","marka_id":"8","marka_name":"ISUZU"}
+{"_id":{"$oid":"62619800ba11b09956eaf254"},"id":"4893","name":"BIANTE","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf255"},"id":"4938","name":"DODGE NITRO","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf220"},"id":"2927","name":"MG","marka_id":"28","marka_name":"ROVER"}
+{"_id":{"$oid":"62619800ba11b09956eaf256"},"id":"5053","name":"IQ","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf257"},"id":"5054","name":"DODGE CHALLENGER","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf258"},"id":"5017","name":"AZ WAGON","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf25a"},"id":"5063","name":"OTHER","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf25b"},"id":"5062","name":"OTHER","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf25c"},"id":"5076","name":"SPLASH","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf259"},"id":"4888","name":"EXIGA","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf25d"},"id":"5083","name":"XF SERIES","marka_id":"132","marka_name":"JAGUAR"}
+{"_id":{"$oid":"62619800ba11b09956eaf25f"},"id":"5060","name":"KIX","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf260"},"id":"5106","name":"DEX","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf25e"},"id":"5086","name":"S5","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf261"},"id":"5061","name":"TCM","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf262"},"id":"5340","name":"JAGUAR XJ","marka_id":"132","marka_name":"JAGUAR"}
+{"_id":{"$oid":"62619800ba11b09956eaf264"},"id":"5473","name":"DODGE CHARGER","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf263"},"id":"5468","name":"PASSO SETTE","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf265"},"id":"5570","name":"MELPHA","marka_id":"21","marka_name":"HINO"}
+{"_id":{"$oid":"62619800ba11b09956eaf266"},"id":"5588","name":"TTS COUPE","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf267"},"id":"5698","name":"Q5","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf268"},"id":"5626","name":"LEXUS IS","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf26a"},"id":"5741","name":"SKYLINE CROSSOVER","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf26b"},"id":"5518","name":"300C","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf26c"},"id":"5801","name":"LINCOLN MKX","marka_id":"19","marka_name":"FORD"}
+{"_id":{"$oid":"62619800ba11b09956eaf269"},"id":"5709","name":"NV200","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf26e"},"id":"5827","name":"1 SERIES","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf26d"},"id":"5820","name":"CONTINENTAL","marka_id":"115","marka_name":"BENTLEY"}
+{"_id":{"$oid":"62619800ba11b09956eaf26f"},"id":"5746","name":"MW","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf271"},"id":"5836","name":"X6","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf270"},"id":"5847","name":"REGAL","marka_id":"118","marka_name":"BUICK"}
+{"_id":{"$oid":"62619800ba11b09956eaf273"},"id":"5788","name":"ALTO VAN","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf274"},"id":"5864","name":"ESCALADE","marka_id":"119","marka_name":"CADILLAC"}
+{"_id":{"$oid":"62619800ba11b09956eaf272"},"id":"5861","name":"DEVILLE","marka_id":"119","marka_name":"CADILLAC"}
+{"_id":{"$oid":"62619800ba11b09956eaf275"},"id":"5871","name":"STS","marka_id":"119","marka_name":"CADILLAC"}
+{"_id":{"$oid":"62619800ba11b09956eaf276"},"id":"5881","name":"BLAZER","marka_id":"121","marka_name":"CHEVROLET"}
+{"_id":{"$oid":"62619800ba11b09956eaf277"},"id":"5862","name":"DTS","marka_id":"119","marka_name":"CADILLAC"}
+{"_id":{"$oid":"62619800ba11b09956eaf279"},"id":"5895","name":"CAMARO","marka_id":"121","marka_name":"CHEVROLET"}
+{"_id":{"$oid":"62619800ba11b09956eaf27a"},"id":"5906","name":"CORVETTE","marka_id":"121","marka_name":"CHEVROLET"}
+{"_id":{"$oid":"62619800ba11b09956eaf278"},"id":"5876","name":"ASTRO","marka_id":"121","marka_name":"CHEVROLET"}
+{"_id":{"$oid":"62619800ba11b09956eaf27c"},"id":"5870","name":"SRX","marka_id":"119","marka_name":"CADILLAC"}
+{"_id":{"$oid":"62619800ba11b09956eaf27b"},"id":"5923","name":"HHR","marka_id":"121","marka_name":"CHEVROLET"}
+{"_id":{"$oid":"62619800ba11b09956eaf27e"},"id":"6005","name":"MAGNUM","marka_id":"124","marka_name":"DODGE"}
+{"_id":{"$oid":"62619800ba11b09956eaf27d"},"id":"5951","name":"SUBURBAN","marka_id":"121","marka_name":"CHEVROLET"}
+{"_id":{"$oid":"62619800ba11b09956eaf280"},"id":"5986","name":"CALIBER","marka_id":"124","marka_name":"DODGE"}
+{"_id":{"$oid":"62619800ba11b09956eaf27f"},"id":"6033","name":"456","marka_id":"126","marka_name":"FERRARI"}
+{"_id":{"$oid":"62619800ba11b09956eaf281"},"id":"6157","name":"XJ6","marka_id":"132","marka_name":"JAGUAR"}
+{"_id":{"$oid":"62619800ba11b09956eaf283"},"id":"6336","name":"ROUTAN","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf282"},"id":"6126","name":"YUKON","marka_id":"128","marka_name":"GMC"}
+{"_id":{"$oid":"62619800ba11b09956eaf284"},"id":"6182","name":"QUATTROPORTE","marka_id":"137","marka_name":"MASERATI"}
+{"_id":{"$oid":"62619800ba11b09956eaf286"},"id":"6349","name":"LS","marka_id":"23","marka_name":"LEXUS"}
+{"_id":{"$oid":"62619800ba11b09956eaf285"},"id":"5989","name":"CHARGER","marka_id":"124","marka_name":"DODGE"}
+{"_id":{"$oid":"62619800ba11b09956eaf288"},"id":"6346","name":"HS","marka_id":"23","marka_name":"LEXUS"}
+{"_id":{"$oid":"62619800ba11b09956eaf287"},"id":"6347","name":"IS","marka_id":"23","marka_name":"LEXUS"}
+{"_id":{"$oid":"62619800ba11b09956eaf28a"},"id":"6351","name":"SC","marka_id":"23","marka_name":"LEXUS"}
+{"_id":{"$oid":"62619800ba11b09956eaf289"},"id":"6350","name":"RX","marka_id":"23","marka_name":"LEXUS"}
+{"_id":{"$oid":"62619800ba11b09956eaf28b"},"id":"6353","name":"CROWN VAN","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf28c"},"id":"6355","name":"REGIUS ACE VAN","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf28d"},"id":"6337","name":"TIGUAN","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf28e"},"id":"6356","name":"SAI","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf290"},"id":"6363","name":"PAJERO JR","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf28f"},"id":"6358","name":"ROOX","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf291"},"id":"6378","name":"KANGOO","marka_id":"27","marka_name":"RENAULT"}
+{"_id":{"$oid":"62619800ba11b09956eaf292"},"id":"6379","name":"KOLEOS","marka_id":"27","marka_name":"RENAULT"}
+{"_id":{"$oid":"62619800ba11b09956eaf293"},"id":"6381","name":"LUTECIA","marka_id":"27","marka_name":"RENAULT"}
+{"_id":{"$oid":"62619800ba11b09956eaf294"},"id":"6382","name":"MEGANE","marka_id":"27","marka_name":"RENAULT"}
+{"_id":{"$oid":"62619800ba11b09956eaf295"},"id":"6386","name":"SCENIC","marka_id":"27","marka_name":"RENAULT"}
+{"_id":{"$oid":"62619800ba11b09956eaf297"},"id":"6364","name":"KIZASHI","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf298"},"id":"6389","name":"1007","marka_id":"26","marka_name":"PEUGEOT"}
+{"_id":{"$oid":"62619800ba11b09956eaf299"},"id":"6393","name":"207","marka_id":"26","marka_name":"PEUGEOT"}
+{"_id":{"$oid":"62619800ba11b09956eaf29a"},"id":"6390","name":"106","marka_id":"26","marka_name":"PEUGEOT"}
+{"_id":{"$oid":"62619800ba11b09956eaf29b"},"id":"6394","name":"306","marka_id":"26","marka_name":"PEUGEOT"}
+{"_id":{"$oid":"62619800ba11b09956eaf29c"},"id":"6395","name":"307","marka_id":"26","marka_name":"PEUGEOT"}
+{"_id":{"$oid":"62619800ba11b09956eaf29d"},"id":"6396","name":"308","marka_id":"26","marka_name":"PEUGEOT"}
+{"_id":{"$oid":"62619800ba11b09956eaf29e"},"id":"6399","name":"407","marka_id":"26","marka_name":"PEUGEOT"}
+{"_id":{"$oid":"62619800ba11b09956eaf29f"},"id":"6402","name":"BX","marka_id":"16","marka_name":"CITROEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf2a0"},"id":"6392","name":"206","marka_id":"26","marka_name":"PEUGEOT"}
+{"_id":{"$oid":"62619800ba11b09956eaf2a1"},"id":"6442","name":"VANEO","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf2a2"},"id":"6432","name":"MEDIUM CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf2a3"},"id":"6443","name":"VIANO","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf2a4"},"id":"6466","name":"B7","marka_id":"117","marka_name":"BMW ALPINA"}
+{"_id":{"$oid":"62619800ba11b09956eaf2a5"},"id":"6458","name":"Z3 ROADSTER","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf2a6"},"id":"6404","name":"C4 PICASSO","marka_id":"16","marka_name":"CITROEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf2a7"},"id":"6486","name":"CROSS GOLF","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf2a8"},"id":"6419","name":"C CLASS SPORTS COUPE","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf296"},"id":"6388","name":"TWINGO","marka_id":"27","marka_name":"RENAULT"}
+{"_id":{"$oid":"62619800ba11b09956eaf2a9"},"id":"6484","name":"BORA","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf2aa"},"id":"6491","name":"GOLF PLUS","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf2ab"},"id":"6490","name":"GOLF CABRIOLET","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf2ad"},"id":"6493","name":"GOLF VARIANT","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf2ae"},"id":"6496","name":"LUPO","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf2af"},"id":"6494","name":"GOLF WAGON","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf2b0"},"id":"6498","name":"NEW BEETLE CABRIOLET","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf2b1"},"id":"6499","name":"PASSAT CC","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf2b2"},"id":"6500","name":"PASSAT VARIANT","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf2b3"},"id":"6497","name":"NEW BEETLE","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf2b4"},"id":"6501","name":"PASSAT WAGON","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf2b5"},"id":"6502","name":"POLO","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf2b6"},"id":"6503","name":"SHARAN","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf2b7"},"id":"6508","name":"ASTRA","marka_id":"25","marka_name":"OPEL"}
+{"_id":{"$oid":"62619800ba11b09956eaf2b8"},"id":"6488","name":"EURO VAN","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf2b9"},"id":"6515","name":"TIGRA","marka_id":"25","marka_name":"OPEL"}
+{"_id":{"$oid":"62619800ba11b09956eaf2ba"},"id":"6524","name":"PANAMERA","marka_id":"148","marka_name":"PORSCHE"}
+{"_id":{"$oid":"62619800ba11b09956eaf2bb"},"id":"6546","name":"960 ESTATE","marka_id":"32","marka_name":"VOLVO"}
+{"_id":{"$oid":"62619800ba11b09956eaf2bc"},"id":"6548","name":"CROSS COUNTRY","marka_id":"32","marka_name":"VOLVO"}
+{"_id":{"$oid":"62619800ba11b09956eaf2bd"},"id":"6550","name":"9-3 SERIES","marka_id":"150","marka_name":"SAAB"}
+{"_id":{"$oid":"62619800ba11b09956eaf2be"},"id":"6578","name":"MINI","marka_id":"28","marka_name":"ROVER"}
+{"_id":{"$oid":"62619800ba11b09956eaf2bf"},"id":"6586","name":"CHIMAERA","marka_id":"155","marka_name":"TVR"}
+{"_id":{"$oid":"62619800ba11b09956eaf2c0"},"id":"6544","name":"940 ESTATE","marka_id":"32","marka_name":"VOLVO"}
+{"_id":{"$oid":"62619800ba11b09956eaf2c1"},"id":"6608","name":"500","marka_id":"18","marka_name":"FIAT"}
+{"_id":{"$oid":"62619800ba11b09956eaf2c2"},"id":"6614","name":"GRANDE PUNTO","marka_id":"18","marka_name":"FIAT"}
+{"_id":{"$oid":"62619800ba11b09956eaf2c3"},"id":"6615","name":"MULTIPLA","marka_id":"18","marka_name":"FIAT"}
+{"_id":{"$oid":"62619800ba11b09956eaf2c4"},"id":"6618","name":"NEW PANDA","marka_id":"18","marka_name":"FIAT"}
+{"_id":{"$oid":"62619800ba11b09956eaf2c5"},"id":"6619","name":"PANDA","marka_id":"18","marka_name":"FIAT"}
+{"_id":{"$oid":"62619800ba11b09956eaf2c6"},"id":"6620","name":"PUNTO","marka_id":"18","marka_name":"FIAT"}
+{"_id":{"$oid":"62619800ba11b09956eaf2c7"},"id":"6551","name":"9-5 SERIES","marka_id":"150","marka_name":"SAAB"}
+{"_id":{"$oid":"62619800ba11b09956eaf2c8"},"id":"6609","name":"500C","marka_id":"18","marka_name":"FIAT"}
+{"_id":{"$oid":"62619800ba11b09956eaf2c9"},"id":"6640","name":"DELTA","marka_id":"135","marka_name":"LANCIA"}
+{"_id":{"$oid":"62619800ba11b09956eaf2ca"},"id":"6737","name":"HANTA","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2cb"},"id":"6668","name":"GHIBLI","marka_id":"137","marka_name":"MASERATI"}
+{"_id":{"$oid":"62619800ba11b09956eaf2cc"},"id":"6667","name":"3200GT","marka_id":"137","marka_name":"MASERATI"}
+{"_id":{"$oid":"62619800ba11b09956eaf2cd"},"id":"6748","name":"TANTO EXE","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf2ce"},"id":"6797","name":"CAT","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2cf"},"id":"6817","name":"HIJET VAN","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf2d0"},"id":"6796","name":"BOMAG","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2d1"},"id":"6805","name":"KUBOTA","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2d2"},"id":"6727","name":"XC60","marka_id":"32","marka_name":"VOLVO"}
+{"_id":{"$oid":"62619800ba11b09956eaf2d3"},"id":"6832","name":"CR-Z","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf2d4"},"id":"6882","name":"HANIX","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2d5"},"id":"7715","name":"ISEKI","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2d6"},"id":"6848","name":"NPK","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2d7"},"id":"7189","name":"LUCRA","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf2d8"},"id":"7716","name":"KOMATSU FORKLIFT","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2d9"},"id":"7717","name":"TCM FORKLIFT","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2da"},"id":"7722","name":"FURUKAWA","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2db"},"id":"6851","name":"CC","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf2dc"},"id":"7729","name":"SUMITOMO","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2dd"},"id":"7727","name":"SAKAI","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2de"},"id":"7730","name":"SUMITOMO FORKLIFT","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2df"},"id":"7731","name":"YANMAR","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2e0"},"id":"7732","name":"DENYO","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2e1"},"id":"7734","name":"KOMATSU WHEELLOADER","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2e2"},"id":"7736","name":"TCM WHEELLOADER","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2e3"},"id":"7724","name":"KAWASAKI","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2e4"},"id":"7742","name":"FURUKAWA WHEELLOADER","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2e5"},"id":"7725","name":"NICHIYU","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2e6"},"id":"7746","name":"NIGATA","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2e7"},"id":"7747","name":"NIPPON SHARYO","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2e8"},"id":"7752","name":"DS3","marka_id":"16","marka_name":"CITROEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf2e9"},"id":"7754","name":"IWAFUJI WHEELLOADER","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2ea"},"id":"7749","name":"CAT WHEELLOADER","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2eb"},"id":"7755","name":"KUBOTA WHEELLOADER","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2ec"},"id":"7744","name":"KOBELCO WHEELLOADER","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2ed"},"id":"7759","name":"NICHIYU FORKLIFT","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2ee"},"id":"7765","name":"HOKUETSU","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2ef"},"id":"7769","name":"KOUBE WHEELLOADER","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2f0"},"id":"7772","name":"KAWASAKI WHEELLOADER","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2f1"},"id":"7760","name":"AICHI","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2f2"},"id":"7790","name":"MOROOKA","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2f3"},"id":"7797","name":"YUTANI","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2f4"},"id":"7808","name":"QUON","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf2f5"},"id":"7764","name":"FORKLIFT","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf2f6"},"id":"7812","name":"FORKLIFT","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf2f7"},"id":"7885","name":"CL CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf2f8"},"id":"7858","name":"C CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf2f9"},"id":"7894","name":"CLK CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf2fa"},"id":"7907","name":"CLS CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf2fb"},"id":"7913","name":"E CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf2fc"},"id":"7937","name":"G CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf2fd"},"id":"7941","name":"GL CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf2fe"},"id":"7944","name":"GLK CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf2ff"},"id":"7958","name":"R CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf300"},"id":"7949","name":"ML CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf301"},"id":"7961","name":"S CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf302"},"id":"8000","name":"SLK CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf303"},"id":"7855","name":"B CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf304"},"id":"8446","name":"GRAND CHEROKEE","marka_id":"234","marka_name":"JEEP"}
+{"_id":{"$oid":"62619800ba11b09956eaf305"},"id":"8451","name":"WRANGLER","marka_id":"234","marka_name":"JEEP"}
+{"_id":{"$oid":"62619800ba11b09956eaf306"},"id":"8830","name":"JUKE","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf307"},"id":"8442","name":"CHEROKEE","marka_id":"234","marka_name":"JEEP"}
+{"_id":{"$oid":"62619800ba11b09956eaf308"},"id":"8858","name":"A5 SPORTBACK","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf309"},"id":"7948","name":"M CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf30a"},"id":"8358","name":"FX35","marka_id":"229","marka_name":"INFINITI"}
+{"_id":{"$oid":"62619800ba11b09956eaf30b"},"id":"8881","name":"FREED SPIKE","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf30c"},"id":"8906","name":"FREED","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf30d"},"id":"9052","name":"TOYOTA FORKLIFT","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf30e"},"id":"8882","name":"FORKLIFT","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf30f"},"id":"9094","name":"HINOMOTO WHEELLOADER","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf310"},"id":"9173","name":"DEMIO","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf311"},"id":"9105","name":"TREZIA","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf312"},"id":"9111","name":"FUGA HYBRID","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf313"},"id":"9206","name":"A1","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf314"},"id":"9241","name":"DELICA D2","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf315"},"id":"9209","name":"LEAF","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf316"},"id":"9245","name":"PRIUS ALPHA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf317"},"id":"9251","name":"FIT SHUTTLE","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf318"},"id":"9164","name":"I-MIEV","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf319"},"id":"9327","name":"MINI","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf31a"},"id":"9351","name":"FORKLIFT","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf31b"},"id":"9315","name":"A7 SPORTBACK","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf31c"},"id":"9499","name":"PIXIS SPACE","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf31d"},"id":"9255","name":"CORONA MARK2","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf31e"},"id":"9533","name":"A7","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf31f"},"id":"9561","name":"VELLFIRE HYBRID","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf320"},"id":"9535","name":"KUGA","marka_id":"19","marka_name":"FORD"}
+{"_id":{"$oid":"62619800ba11b09956eaf321"},"id":"9534","name":"159","marka_id":"12","marka_name":"ALFAROMEO"}
+{"_id":{"$oid":"62619800ba11b09956eaf322"},"id":"9260","name":"FIESTA","marka_id":"19","marka_name":"FORD"}
+{"_id":{"$oid":"62619800ba11b09956eaf323"},"id":"9617","name":"FREED HYBRID","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf324"},"id":"9587","name":"DELICA D3","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf325"},"id":"9580","name":"AQUA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf326"},"id":"9630","name":"FREED SPIKE HYBRID","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf327"},"id":"9618","name":"N BOX CUSTOM","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf328"},"id":"9637","name":"KLUGER HYBRID","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf329"},"id":"9644","name":"CX-7","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf32a"},"id":"9586","name":"N BOX","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf32b"},"id":"9645","name":"SPEED AXELA","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf32c"},"id":"9675","name":"GRAND VOYAGER","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf32d"},"id":"9650","name":"MIRA E S","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf32e"},"id":"9668","name":"X1","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf32f"},"id":"9676","name":"RAM","marka_id":"124","marka_name":"DODGE"}
+{"_id":{"$oid":"62619800ba11b09956eaf330"},"id":"9679","name":"RAINBOW","marka_id":"21","marka_name":"HINO"}
+{"_id":{"$oid":"62619800ba11b09956eaf331"},"id":"9678","name":"OTHER","marka_id":"21","marka_name":"HINO"}
+{"_id":{"$oid":"62619800ba11b09956eaf332"},"id":"9688","name":"COUPE","marka_id":"291","marka_name":"SMART"}
+{"_id":{"$oid":"62619800ba11b09956eaf333"},"id":"9680","name":"RANGER","marka_id":"21","marka_name":"HINO"}
+{"_id":{"$oid":"62619800ba11b09956eaf334"},"id":"9649","name":"TRUCK","marka_id":"8","marka_name":"ISUZU"}
+{"_id":{"$oid":"62619800ba11b09956eaf335"},"id":"9700","name":"OTHER","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf336"},"id":"9694","name":"BE-1","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf337"},"id":"9712","name":"RCZ","marka_id":"26","marka_name":"PEUGEOT"}
+{"_id":{"$oid":"62619800ba11b09956eaf338"},"id":"9690","name":"FORTWO COUPE","marka_id":"291","marka_name":"SMART"}
+{"_id":{"$oid":"62619800ba11b09956eaf339"},"id":"9714","name":"MITO","marka_id":"12","marka_name":"ALFAROMEO"}
+{"_id":{"$oid":"62619800ba11b09956eaf33a"},"id":"9717","name":"300C TOURING","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf33b"},"id":"9719","name":"TRUCK","marka_id":"21","marka_name":"HINO"}
+{"_id":{"$oid":"62619800ba11b09956eaf33c"},"id":"9724","name":"FORTWO CABRIO","marka_id":"291","marka_name":"SMART"}
+{"_id":{"$oid":"62619800ba11b09956eaf33d"},"id":"9727","name":"OTHER","marka_id":"19","marka_name":"FORD"}
+{"_id":{"$oid":"62619800ba11b09956eaf33e"},"id":"9692","name":"K","marka_id":"291","marka_name":"SMART"}
+{"_id":{"$oid":"62619800ba11b09956eaf33f"},"id":"9742","name":"ALTO ECO","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf340"},"id":"9769","name":"OTHER","marka_id":"148","marka_name":"PORSCHE"}
+{"_id":{"$oid":"62619800ba11b09956eaf341"},"id":"9736","name":"3008","marka_id":"26","marka_name":"PEUGEOT"}
+{"_id":{"$oid":"62619800ba11b09956eaf342"},"id":"9776","name":"INSIGHT EXCLUSIVE","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf343"},"id":"9744","name":"OTHER","marka_id":"28","marka_name":"ROVER"}
+{"_id":{"$oid":"62619800ba11b09956eaf344"},"id":"9787","name":"OTHER","marka_id":"135","marka_name":"LANCIA"}
+{"_id":{"$oid":"62619800ba11b09956eaf345"},"id":"9784","name":"PRIUS PHV","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf346"},"id":"9805","name":"ATLAS","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf347"},"id":"9737","name":"JEEP PATRIOT","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf348"},"id":"9808","name":"CARAVAN VAN","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf349"},"id":"9810","name":"CIVILIAN","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf34a"},"id":"9812","name":"CUBECUBIC","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf34b"},"id":"9814","name":"FAIRLADYZ","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf34c"},"id":"9806","name":"BIGTHUMB","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf34d"},"id":"9817","name":"LATIO","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf34e"},"id":"9835","name":"EK SPORTS","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf34f"},"id":"9846","name":"ALTO VAN","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf350"},"id":"9839","name":"TOWNBOX","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf351"},"id":"9801","name":"MARK2 QUALIS","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf352"},"id":"9877","name":"PIXIS VAN","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf353"},"id":"9858","name":"JOURNEY","marka_id":"8","marka_name":"ISUZU"}
+{"_id":{"$oid":"62619800ba11b09956eaf354"},"id":"9900","name":"CT","marka_id":"23","marka_name":"LEXUS"}
+{"_id":{"$oid":"62619800ba11b09956eaf355"},"id":"9924","name":"SRX CROSSOVER","marka_id":"119","marka_name":"CADILLAC"}
+{"_id":{"$oid":"62619800ba11b09956eaf356"},"id":"9938","name":"PIXIS TRUCK","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf357"},"id":"9947","name":"CHEVROLET CAPTIVA","marka_id":"20","marka_name":"GM"}
+{"_id":{"$oid":"62619800ba11b09956eaf358"},"id":"9939","name":"V60","marka_id":"32","marka_name":"VOLVO"}
+{"_id":{"$oid":"62619800ba11b09956eaf359"},"id":"9958","name":"CX-5","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf35a"},"id":"9984","name":"NOUERA 6-02 WAGON","marka_id":"10","marka_name":"MITSUOKA"}
+{"_id":{"$oid":"62619800ba11b09956eaf35b"},"id":"9948","name":"86","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf35c"},"id":"9997","name":"IMPREZA G4","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf35d"},"id":"9994","name":"BRZ","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf35e"},"id":"10005","name":"DS4","marka_id":"16","marka_name":"CITROEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf35f"},"id":"10008","name":"OTHER","marka_id":"112","marka_name":"ASTON MARTIN"}
+{"_id":{"$oid":"62619800ba11b09956eaf360"},"id":"9847","name":"CRUZE","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf361"},"id":"9856","name":"ELF","marka_id":"8","marka_name":"ISUZU"}
+{"_id":{"$oid":"62619800ba11b09956eaf362"},"id":"10016","name":"THE BEETLE","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf363"},"id":"10168","name":"508","marka_id":"26","marka_name":"PEUGEOT"}
+{"_id":{"$oid":"62619800ba11b09956eaf364"},"id":"10199","name":"N BOX PLUS","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf365"},"id":"10203","name":"PIXIS EPOCH","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf366"},"id":"10211","name":"SPADE","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf367"},"id":"10198","name":"NV350 CARAVAN","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf368"},"id":"10236","name":"FLAIR WAGON","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf369"},"id":"10161","name":"OTHER","marka_id":"26","marka_name":"PEUGEOT"}
+{"_id":{"$oid":"62619800ba11b09956eaf36a"},"id":"10296","name":"N ONE","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf36b"},"id":"10238","name":"WRX","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf36c"},"id":"10302","name":"FLAIR","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf36d"},"id":"10297","name":"JEEP COMPASS","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf36e"},"id":"10325","name":"CHEVROLET SONIC","marka_id":"20","marka_name":"GM"}
+{"_id":{"$oid":"62619800ba11b09956eaf36f"},"id":"10330","name":"MPV","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf370"},"id":"10333","name":"ELYSION","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf371"},"id":"10260","name":"147","marka_id":"12","marka_name":"ALFAROMEO"}
+{"_id":{"$oid":"62619800ba11b09956eaf372"},"id":"10027","name":"NV100 CLIPPER","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf373"},"id":"10353","name":"FREELANDER2","marka_id":"28","marka_name":"ROVER"}
+{"_id":{"$oid":"62619800ba11b09956eaf374"},"id":"10384","name":"SONIC","marka_id":"121","marka_name":"CHEVROLET"}
+{"_id":{"$oid":"62619800ba11b09956eaf375"},"id":"10385","name":"RANGE ROVER EVOQUE","marka_id":"34","marka_name":"LAND ROVER"}
+{"_id":{"$oid":"62619800ba11b09956eaf376"},"id":"10413","name":"PLEO PLUS","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf377"},"id":"10358","name":"MINICAB MIEV","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf378"},"id":"10533","name":"SEREGA","marka_id":"21","marka_name":"HINO"}
+{"_id":{"$oid":"62619800ba11b09956eaf379"},"id":"10535","name":"Q3","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf37a"},"id":"10423","name":"XV","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf37b"},"id":"10371","name":"MOCO","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf37c"},"id":"10565","name":"DAYZ","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf37d"},"id":"10560","name":"SPACIA","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf37e"},"id":"10547","name":"DATSUN PICKUP","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf37f"},"id":"10605","name":"TADANO","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf380"},"id":"10567","name":"WRANGLER UNLIMITED","marka_id":"234","marka_name":"JEEP"}
+{"_id":{"$oid":"62619800ba11b09956eaf381"},"id":"10675","name":"NT100 CLIPPER","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf382"},"id":"10702","name":"N BOX +","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf383"},"id":"10769","name":"PEUGEOT 208","marka_id":"98","marka_name":"OTHERS"}
+{"_id":{"$oid":"62619800ba11b09956eaf384"},"id":"10559","name":"EK CUSTOM","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf385"},"id":"10841","name":"156","marka_id":"12","marka_name":"ALFAROMEO"}
+{"_id":{"$oid":"62619800ba11b09956eaf386"},"id":"10851","name":"OUTLANDER PHEV","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf387"},"id":"10830","name":"HUSTLER","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf388"},"id":"10771","name":"MEBIUS","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf389"},"id":"10899","name":"CADILLAC ATS","marka_id":"20","marka_name":"GM"}
+{"_id":{"$oid":"62619800ba11b09956eaf38a"},"id":"10853","name":"VEZEL","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf38b"},"id":"10860","name":"DAYZ ROOX","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf38c"},"id":"10936","name":"MMC","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf38d"},"id":"10791","name":"N WGN","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf38e"},"id":"10939","name":"EK SPACE","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf38f"},"id":"10962","name":"ATS","marka_id":"119","marka_name":"CADILLAC"}
+{"_id":{"$oid":"62619800ba11b09956eaf390"},"id":"11172","name":"AXELA HYBRID","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf391"},"id":"11164","name":"ACCORD HYBRID","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf392"},"id":"11197","name":"EK SPACE CUSTOM","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf393"},"id":"11199","name":"LEVORG","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf394"},"id":"11203","name":"SPACIA CUSTOM","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf395"},"id":"11204","name":"SOLIO BANDIT","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf396"},"id":"11213","name":"CAPTUR","marka_id":"27","marka_name":"RENAULT"}
+{"_id":{"$oid":"62619800ba11b09956eaf397"},"id":"11214","name":"MEGANE ESTATE","marka_id":"27","marka_name":"RENAULT"}
+{"_id":{"$oid":"62619800ba11b09956eaf398"},"id":"11216","name":"2008","marka_id":"26","marka_name":"PEUGEOT"}
+{"_id":{"$oid":"62619800ba11b09956eaf399"},"id":"11217","name":"208","marka_id":"26","marka_name":"PEUGEOT"}
+{"_id":{"$oid":"62619800ba11b09956eaf39a"},"id":"11218","name":"5008","marka_id":"26","marka_name":"PEUGEOT"}
+{"_id":{"$oid":"62619800ba11b09956eaf39b"},"id":"11221","name":"DS5","marka_id":"16","marka_name":"CITROEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf39c"},"id":"11235","name":"A1 SPORTBACK","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf39d"},"id":"10979","name":"WRX STI","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf39e"},"id":"11247","name":"SQ5","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf39f"},"id":"11242","name":"RS Q3","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf3a0"},"id":"11320","name":"2 SERIES","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf3a1"},"id":"11321","name":"4 SERIES","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf3a2"},"id":"10947","name":"WAGON R","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf3a3"},"id":"11236","name":"A3 SEDAN","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf3a4"},"id":"11322","name":"i3","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf3a5"},"id":"11348","name":"PASSAT ALLTRACK","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf3a6"},"id":"11349","name":"THE BEETLE CABRIOLET","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf3a7"},"id":"11393","name":"YPSILON","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf3a8"},"id":"11350","name":"UP","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf3a9"},"id":"11412","name":"500S","marka_id":"18","marka_name":"FIAT"}
+{"_id":{"$oid":"62619800ba11b09956eaf3aa"},"id":"11453","name":"SPACIA","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf3ab"},"id":"11544","name":"MOVE CONTE","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3ac"},"id":"11630","name":"S6 SERIES","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf3ad"},"id":"11808","name":"M4","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf3ae"},"id":"11894","name":"X5 SERIES","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf3af"},"id":"11898","name":"Z3 SERIES","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf3b0"},"id":"13084","name":"MONDEO","marka_id":"19","marka_name":"FORD"}
+{"_id":{"$oid":"62619800ba11b09956eaf3b1"},"id":"11454","name":"SWIFT","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf3b2"},"id":"20474","name":"C70 SERIES","marka_id":"32","marka_name":"VOLVO"}
+{"_id":{"$oid":"62619800ba11b09956eaf3b3"},"id":"20353","name":"COROLLA SPORT","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3b4"},"id":"20633","name":"CLA CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf3b5"},"id":"20656","name":"GLA CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf3b6"},"id":"20686","name":"SL SERIES","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf3b7"},"id":"17588","name":"TRUCK","marka_id":"2","marka_name":"NISSAN"}
+{"_id":{"$oid":"62619800ba11b09956eaf3b8"},"id":"21432","name":"RENEGADE","marka_id":"234","marka_name":"JEEP"}
+{"_id":{"$oid":"62619800ba11b09956eaf3b9"},"id":"22202","name":"I8","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf3ba"},"id":"11488","name":"ALTO LAPIN","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf3bb"},"id":"22225","name":"RC F","marka_id":"23","marka_name":"LEXUS"}
+{"_id":{"$oid":"62619800ba11b09956eaf3bc"},"id":"22585","name":"GRACE","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3bd"},"id":"22500","name":"ESQUIRE","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3be"},"id":"22705","name":"AERO ACE","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf3bf"},"id":"22859","name":"N BOX SLASH","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3c0"},"id":"23241","name":"500X","marka_id":"18","marka_name":"FIAT"}
+{"_id":{"$oid":"62619800ba11b09956eaf3c1"},"id":"23323","name":"JADE","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3c2"},"id":"23398","name":"CX-3","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3c3"},"id":"22579","name":"WAKE","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf3c4"},"id":"24846","name":"GLE CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf3c5"},"id":"24767","name":"S1","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf3c6"},"id":"23718","name":"S660","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3c7"},"id":"25400","name":"GLC CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf3c8"},"id":"25432","name":"PIXIS MEGA","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3c9"},"id":"25757","name":"CAST","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf3ca"},"id":"25826","name":"GS F","marka_id":"23","marka_name":"LEXUS"}
+{"_id":{"$oid":"62619800ba11b09956eaf3cb"},"id":"25837","name":"SHUTTLE","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3cc"},"id":"24572","name":"WRX S4","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf3cd"},"id":"26313","name":"TTCOUPE","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf3ce"},"id":"26320","name":"TRAIL BLAZER","marka_id":"121","marka_name":"CHEVROLET"}
+{"_id":{"$oid":"62619800ba11b09956eaf3cf"},"id":"26308","name":"A4 AVANTE","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf3d0"},"id":"26335","name":"N BOX+CUSTOM","marka_id":"5","marka_name":"HONDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3d1"},"id":"26351","name":"LX","marka_id":"23","marka_name":"LEXUS"}
+{"_id":{"$oid":"62619800ba11b09956eaf3d2"},"id":"26352","name":"NX","marka_id":"23","marka_name":"LEXUS"}
+{"_id":{"$oid":"62619800ba11b09956eaf3d3"},"id":"26353","name":"RC","marka_id":"23","marka_name":"LEXUS"}
+{"_id":{"$oid":"62619800ba11b09956eaf3d4"},"id":"26310","name":"A6 AVANTE","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf3d5"},"id":"26360","name":"E CLASS STATION WAGON","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf3d6"},"id":"26363","name":"V CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf3d7"},"id":"26371","name":"ZERO ONE","marka_id":"10","marka_name":"MITSUOKA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3d8"},"id":"26552","name":"FOURFOUR","marka_id":"291","marka_name":"SMART"}
+{"_id":{"$oid":"62619800ba11b09956eaf3d9"},"id":"26356","name":"A CLASS","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf3da"},"id":"26553","name":"IMPREZA SPORT","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf3db"},"id":"26558","name":"MRWAGON","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf3dc"},"id":"26358","name":"C CLASS STATION WAGON","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf3dd"},"id":"26559","name":"SWIFT SPORTS","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf3de"},"id":"26799","name":"HINO DUTORO","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf3df"},"id":"26569","name":"MARK II BLIT","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3e0"},"id":"26850","name":"C CLASS WAGON","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf3e1"},"id":"27641","name":"DUTORO","marka_id":"21","marka_name":"HINO"}
+{"_id":{"$oid":"62619800ba11b09956eaf3e2"},"id":"27958","name":"IGNIS","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf3e3"},"id":"26851","name":"E CLASS WAGON","marka_id":"24","marka_name":"MERCEDES BENZ"}
+{"_id":{"$oid":"62619800ba11b09956eaf3e4"},"id":"27966","name":"S1 SPORTBACK","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf3e5"},"id":"26570","name":"MARK II QUALIS","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3e6"},"id":"27983","name":"B4","marka_id":"117","marka_name":"BMW ALPINA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3e7"},"id":"27982","name":"POLO GTI","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf3e8"},"id":"28898","name":"HIJET CADDIE","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf3e9"},"id":"28327","name":"LEVANTE","marka_id":"137","marka_name":"MASERATI"}
+{"_id":{"$oid":"62619800ba11b09956eaf3ea"},"id":"30156","name":"ALPINA","marka_id":"14","marka_name":"BMW"}
+{"_id":{"$oid":"62619800ba11b09956eaf3eb"},"id":"30555","name":"JEEP RENEGADE","marka_id":"15","marka_name":"CHRYSLER"}
+{"_id":{"$oid":"62619800ba11b09956eaf3ec"},"id":"30165","name":"MOVE CANBUS","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf3ed"},"id":"27967","name":"GRAND C4 PICASSO","marka_id":"16","marka_name":"CITROEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf3ee"},"id":"31073","name":"TANK","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3ef"},"id":"30928","name":"718 CAYMAN","marka_id":"148","marka_name":"PORSCHE"}
+{"_id":{"$oid":"62619800ba11b09956eaf3f0"},"id":"31417","name":"LC","marka_id":"23","marka_name":"LEXUS"}
+{"_id":{"$oid":"62619800ba11b09956eaf3f1"},"id":"31455","name":"THOR","marka_id":"9","marka_name":"DAIHATSU"}
+{"_id":{"$oid":"62619800ba11b09956eaf3f2"},"id":"31464","name":"PIXIS JOY","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3f3"},"id":"31827","name":"CHIFFON","marka_id":"7","marka_name":"SUBARU"}
+{"_id":{"$oid":"62619800ba11b09956eaf3f4"},"id":"32032","name":"MODEL S","marka_id":"348","marka_name":"TESLA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3f5"},"id":"30771","name":"C-HR","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3f6"},"id":"30887","name":"ROOMY","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3f7"},"id":"33918","name":"ROADSTER RF","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3f8"},"id":"32222","name":"RUPO","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf3f9"},"id":"33930","name":"C4 CACTUS","marka_id":"16","marka_name":"CITROEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf3fa"},"id":"32998","name":"LEXUS LC","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3fb"},"id":"34203","name":"ECLIPSE CROSS","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf3fc"},"id":"34576","name":"XBEE","marka_id":"6","marka_name":"SUZUKI"}
+{"_id":{"$oid":"62619800ba11b09956eaf3fd"},"id":"33944","name":"Q2","marka_id":"13","marka_name":"AUDI"}
+{"_id":{"$oid":"62619800ba11b09956eaf3fe"},"id":"34601","name":"CX-8","marka_id":"3","marka_name":"MAZDA"}
+{"_id":{"$oid":"62619800ba11b09956eaf3ff"},"id":"32223","name":"CROSS POLO","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf400"},"id":"34956","name":"JPN TAXI","marka_id":"1","marka_name":"TOYOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf401"},"id":"35058","name":"ASTRA WAGON","marka_id":"25","marka_name":"OPEL"}
+{"_id":{"$oid":"62619800ba11b09956eaf402"},"id":"35057","name":"OTHER","marka_id":"139","marka_name":"MINI"}
+{"_id":{"$oid":"62619800ba11b09956eaf2ac"},"id":"6492","name":"GOLF TOURAN","marka_id":"31","marka_name":"VOLKSWAGEN"}
+{"_id":{"$oid":"62619800ba11b09956eaf403"},"id":"35059","name":"LIESSE","marka_id":"21","marka_name":"HINO"}
+{"_id":{"$oid":"62619800ba11b09956eaf404"},"id":"35066","name":"GIULIETTA","marka_id":"12","marka_name":"ALFAROMEO"}
+{"_id":{"$oid":"62619800ba11b09956eaf405"},"id":"35067","name":"GT","marka_id":"12","marka_name":"ALFAROMEO"}
+{"_id":{"$oid":"62619800ba11b09956eaf406"},"id":"35072","name":"145","marka_id":"12","marka_name":"ALFAROMEO"}
+{"_id":{"$oid":"62619800ba11b09956eaf407"},"id":"35069","name":"SPORTWAGON","marka_id":"12","marka_name":"ALFAROMEO"}
+{"_id":{"$oid":"62619800ba11b09956eaf408"},"id":"35055","name":"OTHER","marka_id":"344","marka_name":"KUBOTA"}
+{"_id":{"$oid":"62619800ba11b09956eaf409"},"id":"35074","name":"155","marka_id":"12","marka_name":"ALFAROMEO"}
+{"_id":{"$oid":"62619800ba11b09956eaf40a"},"id":"35056","name":"OTHER","marka_id":"115","marka_name":"BENTLEY"}
+{"_id":{"$oid":"62619800ba11b09956eaf40b"},"id":"35080","name":"960 WAGON","marka_id":"32","marka_name":"VOLVO"}
+{"_id":{"$oid":"62619800ba11b09956eaf40c"},"id":"35085","name":"GTV","marka_id":"12","marka_name":"ALFAROMEO"}
+{"_id":{"$oid":"62619800ba11b09956eaf40e"},"id":"35105","name":"WHEELLOADER","marka_id":"4","marka_name":"MITSUBISHI"}
+{"_id":{"$oid":"62619800ba11b09956eaf40f"},"id":"35078","name":"850 WAGON","marka_id":"32","marka_name":"VOLVO"}
+{"_id":{"$oid":"62619800ba11b09956eaf40d"},"id":"35104","name":"YUMBO","marka_id":"4","marka_name":"MITSUBISHI"}

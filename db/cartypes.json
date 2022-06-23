@@ -1,0 +1,5 @@
+{"_id":{"$oid":"62619303368b56af3a5bf56f"},"name":"Жийп (SUV)","image":"","createAt":{"$date":"2022-05-09T08:44:27.62Z"},"status":true}
+{"_id":{"$oid":"62619303368b56af3a5bf570"},"name":"Хосолсон (Hybrid)","image":"","createAt":{"$date":"2022-05-09T08:52:30.667Z"},"status":true}
+{"_id":{"$oid":"62619303368b56af3a5bf571"},"name":"Гэр бүлийн (Family)","image":"","createAt":{"$date":"2022-05-09T08:52:38.575Z"},"status":true}
+{"_id":{"$oid":"62619303368b56af3a5bf572"},"name":"Суудлын (Sedan)","image":"","createAt":{"$date":"2022-05-09T08:52:45.659Z"},"status":true}
+{"_id":{"$oid":"62619303368b56af3a5bf56e"},"name":"Ачааны (Truck)"}

@@ -1,0 +1,2 @@
+{"_id":{"$oid":"62813cf92bcd4d91ec11b9ea"},"status":true,"name":"test","createAt":{"$date":"2022-05-15T17:48:41.01Z"},"updateAt":{"$date":"2022-05-15T17:48:41.011Z"},"slug":"test","__v":0}
+{"_id":{"$oid":"62813cfe2bcd4d91ec11b9ef"},"status":true,"name":"aaaaaa","createAt":{"$date":"2022-05-15T17:48:46.477Z"},"updateAt":{"$date":"2022-05-15T17:48:46.477Z"},"slug":"aaaaa","__v":0}
