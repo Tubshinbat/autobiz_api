@@ -77,8 +77,7 @@ const MenuSchema = new mongoose.Schema({
 });
 
 MenuSchema.pre("save", function (next) {
-  const date = Date.now();
-  this.slug = slugify(this.name) + date;
+  this.slug = slugify(this.name);
   next();
 });
 

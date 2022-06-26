@@ -63,8 +63,7 @@ const FooterMenuSchema = new mongoose.Schema({
 });
 
 FooterMenuSchema.pre("save", function (next) {
-  const date = Date.now();
-  this.slug = slugify(this.name) + date;
+  this.slug = slugify(this.name);
   next();
 });
 
