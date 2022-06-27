@@ -4,7 +4,7 @@ module.exports = async function (page, limit, model, getTotal) {
     total = await model.countDocuments();
   }
   if (getTotal) {
-    total = getTota;
+    total = getTotal;
   }
   const pageCount = Math.ceil(total / limit);
   const start = (page - 1) * limit + 1;
