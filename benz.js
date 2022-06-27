@@ -77,6 +77,7 @@ gogo();
 
 async function fetchData(url, page) {
   console.log("Crawling data...");
+  console.log(url);
 
   // make http call to url
   let response = await axios(url, {
