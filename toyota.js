@@ -41,7 +41,7 @@ const mainFunc = async (url, start_page) => {
 };
 
 const gogo = async (page = null) => {
-  let start_page = 1378;
+  let start_page = 1331;
   if (page !== null) {
     start_page = page;
   }
