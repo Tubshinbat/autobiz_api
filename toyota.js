@@ -40,7 +40,7 @@ const mainFunc = async (url, start_page) => {
   return dataArr;
 };
 
-cconst gogo = async (page = null) => {
+const gogo = async (page = null) => {
   let start_page = 1378;
   if (page !== null) {
     start_page = page;
