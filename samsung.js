@@ -14,7 +14,7 @@ let workDir = __dirname + "/dbWorker.js";
 
 const mainFunc = async (url, start_page) => {
   let res = await fetchData(url, start_page);
- if (!res.data) {
+  if (!res.data) {
     gogo(start_page);
     console.log("Invalid data Obj");
     return;
@@ -89,6 +89,7 @@ async function fetchData(url, page) {
   }).catch((err) => {
     console.log(err);
     gogo(page);
+  });
   if (response)
     if (response.status !== 200) {
       console.log("Error occurred while fetching data");
