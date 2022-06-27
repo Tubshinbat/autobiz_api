@@ -75,4 +75,4 @@ const sendEmail = async (options) => {
 //   return info;
 // };
 
-module.exports = sendEmail;
+module.exports = sendEmai;

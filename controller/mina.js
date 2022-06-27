@@ -79,10 +79,10 @@ const gogo = async (page = null) => {
           .replace(/^\s+|\s+$|\n|\t|,/gm, "");
 
         const carYearArray = car_year.split("/");
-        const mount = parseInt(carYearArray[1]) || null;
-        car_year = carYearArray[0] || null;
+        const mount = parseInt(carYearArray[1]) || nul
+        car_year = carYearArray[0] || nul
 
-        if (typeof mount === "string") mount = null;
+        if (typeof mount === "string") mount = nul
 
         console.log(mount);
         const engine = $(

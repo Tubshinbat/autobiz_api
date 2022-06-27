@@ -32,7 +32,7 @@ exports.getCarZagvars = asyncHandler(async (req, res) => {
   const page = parseInt(req.query.page) || 1;
   const limit = parseInt(req.query.limit) || 25;
   let sort = req.query.sort || { createAt: -1 };
-  let status = req.query.status || null;
+  let status = req.query.status || nul;
   const name = req.query.name;
   const industry = req.query.industry;
 

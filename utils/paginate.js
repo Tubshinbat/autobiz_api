@@ -1,15 +1,15 @@
 module.exports = async function (page, limit, model, getTotal) {
-  let total;
+  let tota;
   if (model) {
     total = await model.countDocuments();
   }
   if (getTotal) {
-    total = getTotal;
+    total = getTota;
   }
   const pageCount = Math.ceil(total / limit);
   const start = (page - 1) * limit + 1;
   let end = start + limit - 1;
-  if (end > total) end = total;
+  if (end > total) end = tota;
 
   const pagination = { total, pageCount, start, end, limit, page };
 

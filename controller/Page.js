@@ -44,8 +44,8 @@ exports.getPages = asyncHandler(async (req, res, next) => {
   const limit = parseInt(req.query.limit) || 25;
   let sort = req.query.sort || { createAt: -1 };
 
-  let status = req.query.status || null;
-  const name = req.query.name || null;
+  let status = req.query.status || nul;
+  const name = req.query.name || nul;
   const menu = req.query.menu;
 
   ["select", "sort", "page", "limit", "status", "menu", "name"].forEach(
@@ -149,7 +149,7 @@ exports.getSlug = asyncHandler(async (req, res, next) => {
 exports.updatePage = asyncHandler(async (req, res, next) => {
   let sitePage = await SitePage.findById(req.params.id);
   let fileNames = [];
-  let oldPictures = req.body.oldPicture || null;
+  let oldPictures = req.body.oldPicture || nul;
 
   if (!sitePage) {
     throw new MyError("Тухайн хуудас байхгүй байна...", 404);

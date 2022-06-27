@@ -38,12 +38,12 @@ exports.getNews = asyncHandler(async (req, res, next) => {
   const limit = parseInt(req.query.limit) || 25;
   let sort = req.query.sort || { createAt: -1 };
   const select = req.query.select;
-  let category = req.query.category || null;
-  let status = req.query.status || null;
+  let category = req.query.category || nul;
+  let status = req.query.status || nul;
   const name = req.query.name;
 
   if (!valueRequired(status)) {
-    status = null;
+    status = nul;
   }
 
   ["select", "sort", "page", "limit", "category", "status", "name"].forEach(
@@ -177,17 +177,17 @@ exports.getAllNews = asyncHandler(async (req, res, next) => {
 
   let sort = req.query.sort || { createAt: -1 };
   let category = req.query.category;
-  let status = req.query.status || null;
+  let status = req.query.status || nul;
 
   if (typeof sort === "string") {
     sort = JSON.parse("{" + req.query.sort + "}");
   }
 
   if (category === "*") {
-    category = null;
+    category = nul;
   }
   if (valueRequired(status)) {
-    status = null;
+    status = nul;
   }
 
   ["select", "sort", "page", "limit", "category", "status", "name"].forEach(

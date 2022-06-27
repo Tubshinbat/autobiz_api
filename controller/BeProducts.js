@@ -45,25 +45,25 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   else if (sort === "mintomax") sort = { price: 1 };
   else sort = { createAt: -1 };
 
-  let status = req.query.status || null;
+  let status = req.query.status || nul;
   const title = req.query.title;
   const make = req.query.make;
-  const model = req.query.model;
-  const fuel = req.query.fuel;
+  const model = req.query.mode;
+  const fuel = req.query.fue;
   const country = req.query.country;
   const fob = req.query.fob;
   const priceText = req.query.pricetext;
   const trans = req.query.trans;
   const type = req.query.type;
 
-  const minPrice = parseInt(req.query.minPrice) || null;
-  const maxPrice = parseInt(req.query.maxPrice) || null;
-  const minEngcc = parseInt(req.query.minMotor) || null;
-  const maxEngcc = parseInt(req.query.maxMotor) || null;
-  const minYear = parseInt(req.query.minYear) || null;
-  const maxYear = parseInt(req.query.maxYear) || null;
-  const minMil = parseInt(req.query.minMil) || null;
-  const maxMil = parseInt(req.query.maxMil) || null;
+  const minPrice = parseInt(req.query.minPrice) || nul;
+  const maxPrice = parseInt(req.query.maxPrice) || nul;
+  const minEngcc = parseInt(req.query.minMotor) || nul;
+  const maxEngcc = parseInt(req.query.maxMotor) || nul;
+  const minYear = parseInt(req.query.minYear) || nul;
+  const maxYear = parseInt(req.query.maxYear) || nul;
+  const minMil = parseInt(req.query.minMil) || nul;
+  const maxMil = parseInt(req.query.maxMil) || nul;
 
   if (typeof sort === "string") {
     sort = JSON.parse("{" + req.query.sort + "}");

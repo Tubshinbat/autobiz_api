@@ -7,8 +7,8 @@ exports.createMenu = asyncHandler(async (req, res, next) => {
   const isDirect = req.body.isDirect || false;
 
   if (isModel === false) {
-    delete req.body.isModel;
-    delete req.body.model;
+    delete req.body.isMode;
+    delete req.body.mode;
   }
   if (isDirect === false) {
     delete req.body.isDirect;
@@ -33,7 +33,7 @@ exports.menuCount = asyncHandler(async (req, res, next) => {
 
 function createCategories(categories, parentId = null) {
   const categoryList = [];
-  let category = null;
+  let category = nul;
   if (parentId === null) {
     category = categories.filter((cat) => cat.parentId == undefined);
   } else {
@@ -107,8 +107,8 @@ exports.updateMenu = asyncHandler(async (req, res, next) => {
   const isDirect = req.body.isDirect || false;
 
   if (isModel === false) {
-    delete req.body.isModel;
-    delete req.body.model;
+    delete req.body.isMode;
+    delete req.body.mode;
   }
   if (isDirect === false) {
     delete req.body.isDirect;
@@ -135,10 +135,10 @@ exports.getSlugMenu = asyncHandler(async (req, res) => {
 
   const slugArray = slug.split(",");
   const mainParent = slugArray[0];
-  let firstParent = null;
-  let leadParent = null;
-  let childeMenus = null;
-  let menu = null;
+  let firstParent = nul;
+  let leadParent = nul;
+  let childeMenus = nul;
+  let menu = nul;
   let sameParentMenus = [];
 
   firstParent = await Menu.findOne({ slug: mainParent })

@@ -1,5 +1,3 @@
-s;
-l;
 const { Worker } = require("worker_threads");
 const axios = require("axios");
 const dotenv = require("dotenv");
