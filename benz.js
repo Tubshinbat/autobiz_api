@@ -10,9 +10,10 @@ connectDB();
 
 let workDir = __dirname + "/dbWorker.js";
 
-const mainFunc = async (url) => {
-  let res = await fetchData(url);
-  if (!res.data) {
+const mainFunc = async (url, start_page) => {
+  let res = await fetchData(url, start_page);
+ if (!res.data) {
+    gogo(start_page);
     console.log("Invalid data Obj");
     return;
   }
@@ -39,14 +40,17 @@ const mainFunc = async (url) => {
   return dataArr;
 };
 
-const gogo = async () => {
+const gogo = async (page = null) => {
   let start_page = 309;
+  if (page !== null) {
+    start_page = page;
+  }
   while (start_page >= 1) {
     const url =
       "https://www.beforward.jp/stocklist/make=106/sortkey=n/page=" +
       start_page +
       "/sortkey=n/view_cnt=25";
-    await mainFunc(url).then(async (res) => {
+    await mainFunc(url, start_page).then(async (res) => {
       // start worker
 
       res.map(async (r) => {
@@ -71,7 +75,7 @@ const gogo = async () => {
 
 gogo();
 
-async function fetchData(url) {
+async function fetchData(url, page) {
   console.log("Crawling data...");
 
   // make http call to url
@@ -80,10 +84,13 @@ async function fetchData(url) {
       Cookie:
         "wwwbf[country_code_to_display]=mn; wwwbf[SelectedCurrency]=JPY; wwwbf[country_code]=mn;",
     },
-  }).catch((err) => console.log(err));
+  }).catch((err) => {
+    console.log(err);
+    gogo(page);
   if (response)
     if (response.status !== 200) {
       console.log("Error occurred while fetching data");
+      gogo(page);
       return;
     }
   return response;
