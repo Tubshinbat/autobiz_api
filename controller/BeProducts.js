@@ -45,7 +45,7 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   else if (sort === "mintomax") sort = { price: 1 };
   else sort = { createAt: -1 };
 
-  let status = req.query.status || nul;
+  let status = req.query.status || null;
   const title = req.query.title;
   const make = req.query.make;
   const model = req.query.mode;
@@ -56,14 +56,14 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   const trans = req.query.trans;
   const type = req.query.type;
 
-  const minPrice = parseInt(req.query.minPrice) || nul;
-  const maxPrice = parseInt(req.query.maxPrice) || nul;
-  const minEngcc = parseInt(req.query.minMotor) || nul;
-  const maxEngcc = parseInt(req.query.maxMotor) || nul;
-  const minYear = parseInt(req.query.minYear) || nul;
-  const maxYear = parseInt(req.query.maxYear) || nul;
-  const minMil = parseInt(req.query.minMil) || nul;
-  const maxMil = parseInt(req.query.maxMil) || nul;
+  const minPrice = parseInt(req.query.minPrice) || null;
+  const maxPrice = parseInt(req.query.maxPrice) || null;
+  const minEngcc = parseInt(req.query.minMotor) || null;
+  const maxEngcc = parseInt(req.query.maxMotor) || null;
+  const minYear = parseInt(req.query.minYear) || null;
+  const maxYear = parseInt(req.query.maxYear) || null;
+  const minMil = parseInt(req.query.minMil) || null;
+  const maxMil = parseInt(req.query.maxMil) || null;
 
   if (typeof sort === "string") {
     sort = JSON.parse("{" + req.query.sort + "}");

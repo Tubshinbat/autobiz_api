@@ -202,7 +202,7 @@ exports.getUseUpdate = asyncHandler(async (req, res, next) => {
   }
   if (req.body.email) req.body.email = req.body.email.toLowerCase();
   req.body.age = parseInt(req.body.age) || 0;
-  req.body.phone = parseInt(req.body.phone) || nul;
+  req.body.phone = parseInt(req.body.phone) || null;
 
   delete req.body.status;
   delete req.body.wallet;
@@ -321,9 +321,9 @@ exports.getUsers = asyncHandler(async (req, res, next) => {
   const limit = parseInt(req.query.limit) || 25;
   let sort = req.query.sort || { createAt: -1 };
   const select = req.query.select;
-  let status = req.query.status || nul;
+  let status = req.query.status || null;
   const name = req.query.name;
-  const phone = parseInt(req.query.phone) || nul;
+  const phone = parseInt(req.query.phone) || null;
 
   if (typeof sort === "string") {
     sort = JSON.parse("{" + req.query.sort + "}");
@@ -398,7 +398,7 @@ exports.createUser = asyncHandler(async (req, res, next) => {
   req.body.email = req.body.email.toLowerCase();
   req.body.createUser = req.userId;
   req.body.age = parseInt(req.body.age) || 0;
-  req.body.phone = parseInt(req.body.phone) || nul;
+  req.body.phone = parseInt(req.body.phone) || null;
   req.body.wallet = parseInt(req.body.wallet) || 0;
 
   const file = req.files;
@@ -428,7 +428,7 @@ exports.updateUser = asyncHandler(async (req, res, next) => {
   req.body.email = req.body.email.toLowerCase();
   req.body.updateUser = req.userId;
   req.body.age = parseInt(req.body.age) || 0;
-  req.body.phone = parseInt(req.body.phone) || nul;
+  req.body.phone = parseInt(req.body.phone) || null;
   req.body.wallet = parseInt(req.body.wallet) || 0;
   if (valueRequired(req.body.gender) === false) req.body.gender = "other";
 

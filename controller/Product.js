@@ -62,8 +62,8 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     (el) => delete req.query[el]
   );
 
-  const minYear = parseInt(req.query.minYear) || nul;
-  const maxYear = parseInt(req.query.maxYear) || nul;
+  const minYear = parseInt(req.query.minYear) || null;
+  const maxYear = parseInt(req.query.maxYear) || null;
 
   const query = Product.find();
   query.populate("car_industry");

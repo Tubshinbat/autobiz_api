@@ -55,12 +55,12 @@ exports.getBeOrders = asyncHandler(async (req, res) => {
   const page = parseInt(req.query.page) || 1;
   const limit = parseInt(req.query.limit) || 25;
   let sort = req.query.sort || { createAt: -1 };
-  let status = req.query.status || nul;
+  let status = req.query.status || null;
 
   const name = req.query.name;
   const orderNumber = req.query.ordernumber;
   const user = req.query.user;
-  const orderType = req.query.ordertype || nul;
+  const orderType = req.query.ordertype || null;
 
   if (sort)
     if (typeof sort === "string") {
@@ -175,7 +175,7 @@ exports.getBeOrderUser = asyncHandler(async (req, res, next) => {
   const page = parseInt(req.query.page) || 1;
   const limit = parseInt(req.query.limit) || 15;
   let sort = req.query.sort || { createAt: -1 };
-  let orderType = req.query.ordertype || nul;
+  let orderType = req.query.ordertype || null;
   const orderNumber = req.query.ordernumber;
 
   if (sort)

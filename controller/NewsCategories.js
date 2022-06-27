@@ -13,7 +13,7 @@ exports.createNewsCategory = asyncHandler(async (req, res, next) => {
 
 function createCategories(categories, parentId = null) {
   const categoryList = [];
-  let category = nul;
+  let category = null;
   if (parentId === null) {
     category = categories.filter((cat) => cat.parentId == undefined);
   } else {

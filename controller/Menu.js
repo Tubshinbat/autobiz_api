@@ -36,7 +36,7 @@ exports.menuCount = asyncHandler(async (req, res, next) => {
 
 function createCategories(categories, parentId = null) {
   const categoryList = [];
-  let category = nul;
+  let category = null;
   if (parentId === null) {
     category = categories.filter((cat) => cat.parentId == undefined);
   } else {
@@ -175,10 +175,10 @@ exports.getSlugMenu = asyncHandler(async (req, res) => {
 
   const slugArray = slug.split(",");
   const mainParent = slugArray[0];
-  let firstParent = nul;
-  let leadParent = nul;
-  let childeMenus = nul;
-  let menu = nul;
+  let firstParent = null;
+  let leadParent = null;
+  let childeMenus = null;
+  let menu = null;
   let sameParentMenus = [];
 
   firstParent = await Menu.findOne({ slug: mainParent })
