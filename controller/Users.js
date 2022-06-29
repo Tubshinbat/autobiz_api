@@ -260,7 +260,7 @@ exports.logout = asyncHandler(async (req, res, next) => {
 });
 
 exports.emailCheck = asyncHandler(async (req, res) => {
-  const email = req.body.emai;
+  const email = req.body.email;
   const user = await User.findOne({ status: true })
     .where("email")
     .equals(email);

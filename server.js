@@ -41,7 +41,7 @@ const errorHandler = require("./middleware/error");
 
 const connectDB = require("./config/db");
 
-//ROUTER IMPORT a
+//ROUTER IMPORT
 
 dotenv.config({ path: "./config/config.env" });
 const app = express();

@@ -19,7 +19,7 @@ connectDB();
 
 // const query = util.promisify(con.query).bind(con);
 
-const gogo = async (page = null) => {
+const gogo = async () => {
   try {
     const rows = await query(
       "select id,href from cars where is_load=0 limit 10"
@@ -136,18 +136,14 @@ const gogo = async (page = null) => {
 };
 gogo();
 
-async function fetchData(url, page) {
+async function fetchData(url) {
   console.log("Crawling data...");
-console.log(url);
 
   // make http call to url
-  let response = await axios(url).catch((err) => {
-    console.log(err);
-    gogo(page);
+  let response = await axios(url).catch((err) => console.log(err));
 
   if (response.status !== 200) {
     console.log("Error occurred while fetching data");
-    gogo(page);
     return;
   }
   return response;

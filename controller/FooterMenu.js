@@ -7,8 +7,8 @@ exports.createMenu = asyncHandler(async (req, res, next) => {
   const isDirect = req.body.isDirect || false;
 
   if (isModel === false) {
-    delete req.body.isMode;
-    delete req.body.mode;
+    delete req.body.isModel;
+    delete req.body.model;
   }
   if (isDirect === false) {
     delete req.body.isDirect;
@@ -107,8 +107,8 @@ exports.updateMenu = asyncHandler(async (req, res, next) => {
   const isDirect = req.body.isDirect || false;
 
   if (isModel === false) {
-    delete req.body.isMode;
-    delete req.body.mode;
+    delete req.body.isModel;
+    delete req.body.model;
   }
   if (isDirect === false) {
     delete req.body.isDirect;

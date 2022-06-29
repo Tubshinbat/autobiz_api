@@ -9,10 +9,9 @@ connectDB();
 
 let workDir = __dirname + "/dbWorker.js";
 
-const mainFunc = async (url, start_page) => {
-  let res = await fetchData(url, start_page);
- if (!res.data) {
-    gogo(start_page);
+const mainFunc = async (url) => {
+  let res = await fetchData(url);
+  if (!res.data) {
     console.log("Invalid data Obj");
     return;
   }
@@ -39,13 +38,13 @@ const mainFunc = async (url, start_page) => {
   return dataArr;
 };
 
-const gogo = async (page = null) => {
+const gogo = async () => {
   let start_page = 1;
   while (start_page < 3) {
     const url =
       "https://www.beforward.jp/stocklist/make=/model=/mfg_year_from=/mfg_year_to=/showmore=/veh_type=/steering=/sortkey=n/keyword=/kmode=and/page=" +
       start_page;
-    await mainFunc(url, start_page).then(async (res) => {
+    await mainFunc(url).then(async (res) => {
       // start worker
       //   const worker = new Worker(workDir);
       let insertData = [];
@@ -83,18 +82,14 @@ const gogo = async (page = null) => {
 
 gogo();
 
-async function fetchData(url, page) {
+async function fetchData(url) {
   console.log("Crawling data...");
-console.log(url);
 
   // make http call to url
-  let response = await axios(url).catch((err) => {
-    console.log(err);
-    gogo(page);
+  let response = await axios(url).catch((err) => console.log(err));
 
   if (response.status !== 200) {
     console.log("Error occurred while fetching data");
-    gogo(page);
     return;
   }
   return response;
