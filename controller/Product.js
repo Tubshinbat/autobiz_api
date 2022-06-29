@@ -212,11 +212,13 @@ exports.updateProduct = asyncHandler(async (req, res, next) => {
   let product = await Product.findById(req.params.id);
 
   let fileNames = [];
-  let oldFiles = req.body.oldPicture || null;
-
-  ["car_motor", "car_km", "price", "make_date", "import_date"].map((el) => {
-    if (valueRequired(req.body[el])) req.body[el] = parseInt(req.body[el]);
-  });
+  let oldFiles =
+    req.body.oldPicture ||
+    nul[("car_motor", "car_km", "price", "make_date", "import_date")].map(
+      (el) => {
+        if (valueRequired(req.body[el])) req.body[el] = parseInt(req.body[el]);
+      }
+    );
 
   if (!product) {
     throw new MyError("Тухайн машин байхгүй байна. ", 404);

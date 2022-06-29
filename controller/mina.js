@@ -9,7 +9,7 @@ const connectDB = require("./config/db");
 dotenv.config({ path: "./config/config.env" });
 connectDB();
 
-const gogo = async () => {
+const gogo = async (page = null) => {
   try {
     const rows = await BeProducts.find({})
       .select("id href")
@@ -79,10 +79,10 @@ const gogo = async () => {
           .replace(/^\s+|\s+$|\n|\t|,/gm, "");
 
         const carYearArray = car_year.split("/");
-        const mount = parseInt(carYearArray[1]) || null;
-        car_year = carYearArray[0] || null;
+        const mount = parseInt(carYearArray[1]) || nul
+        car_year = carYearArray[0] || nul
 
-        if (typeof mount === "string") mount = null;
+        if (typeof mount === "string") mount = nul
 
         console.log(mount);
         const engine = $(
@@ -146,13 +146,17 @@ const gogo = async () => {
 };
 gogo();
 
-async function fetchData(url) {
+async function fetchData(url, page) {
   console.log("Crawling data...");
+console.log(url);
   // make http call to url
-  let response = await axios(url).catch((err) => console.log(err));
+  let response = await axios(url).catch((err) => {
+    console.log(err);
+    gogo(page);
 
   if (response.status !== 200) {
     console.log("Error occurred while fetching data");
+    gogo(page);
     return;
   }
 

@@ -48,8 +48,8 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   let status = req.query.status || null;
   const title = req.query.title;
   const make = req.query.make;
-  const model = req.query.model;
-  const fuel = req.query.fuel;
+  const model = req.query.mode;
+  const fuel = req.query.fue;
   const country = req.query.country;
   const fob = req.query.fob;
   const priceText = req.query.pricetext;

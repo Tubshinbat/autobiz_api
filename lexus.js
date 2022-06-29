@@ -1,17 +1,18 @@
 const { Worker } = require("worker_threads");
 const axios = require("axios");
+const dotenv = require("dotenv");
 const cheerio = require("cheerio");
-const BeProducts = require("../models/BeProducts");
+const BeProducts = require("./models/BeProducts");
 
-const connectDB = require("../config/db");
-dotenv.config({ path: "../config/config.env" });
+const connectDB = require("./config/db");
+dotenv.config({ path: "./config/config.env" });
 connectDB();
 
 let workDir = __dirname + "/dbWorker.js";
 
 const mainFunc = async (url, start_page) => {
   let res = await fetchData(url, start_page);
- if (!res.data) {
+  if (!res.data) {
     gogo(start_page);
     console.log("Invalid data Obj");
     return;
@@ -40,42 +41,33 @@ const mainFunc = async (url, start_page) => {
 };
 
 const gogo = async (page = null) => {
-  let start_page = 1;
-  while (start_page < 3) {
+  let start_page = 111;
+  if (page !== null) {
+    start_page = page;
+  }
+  while (start_page >= 1) {
     const url =
-      "https://www.beforward.jp/stocklist/make=/model=/mfg_year_from=/mfg_year_to=/showmore=/veh_type=/steering=/sortkey=n/keyword=/kmode=and/page=" +
-      start_page;
+      "https://www.beforward.jp/stocklist/make=68/sortkey=n/page=" +
+      start_page +
+      "/sortkey=n/view_cnt=25";
     await mainFunc(url, start_page).then(async (res) => {
       // start worker
-      //   const worker = new Worker(workDir);
-      let insertData = [];
+
       res.map(async (r) => {
-        insertData.push({
-          id: r.id,
-          title: r.title,
-          href: r.href,
-        });
+        const id = r.id.toString();
+        const checkId = await BeProducts.find({ id: id });
+        if (checkId.length === 0) {
+          await BeProducts.create({
+            id: r.id,
+            title: r.title,
+            href: r.href,
+          })
+            .then((res) => console.log(res + "Success"))
+            .catch((error) => console.log(error + "Error"));
+        }
       });
-
-      await BeProducts.insertMany(data)
-        .then((res) => console.log(res + "Success"))
-        .catch((error) => console.log(error + "Error"));
-
-      //   let insert_sql = `INSERT IGNORE INTO cars (id, title, href) VALUES `;
-      //   insert_sql =
-      //     insert_sql +
-      //     res.map((r) => `(${r.id}, '${r.title}', '${r.href}')`).join(",") +
-      //     ";";
-
-      // send formatted data to worker thread
-      //   worker.postMessage(insert_sql);
-
-      // listen to message from worker thread
-      //   worker.on("message", (message) => {
-      //     console.log(message);
-      //   });
     });
-    start_page++;
+    start_page--;
     await timer(5000);
   }
   return;
@@ -85,18 +77,24 @@ gogo();
 
 async function fetchData(url, page) {
   console.log("Crawling data...");
-console.log(url);
+  console.log(url);
 
   // make http call to url
-  let response = await axios(url).catch((err) => {
+  let response = await axios(url, {
+    headers: {
+      Cookie:
+        "wwwbf[country_code_to_display]=mn; wwwbf[SelectedCurrency]=JPY; wwwbf[country_code]=mn;",
+    },
+  }).catch((err) => {
     console.log(err);
     gogo(page);
-
-  if (response.status !== 200) {
-    console.log("Error occurred while fetching data");
-    gogo(page);
-    return;
-  }
+  });
+  if (response)
+    if (response.status !== 200) {
+      console.log("Error occurred while fetching data");
+      gogo(page);
+      return;
+    }
   return response;
 }
 
