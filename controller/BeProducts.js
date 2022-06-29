@@ -55,6 +55,7 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   const priceText = req.query.pricetext;
   const trans = req.query.trans;
   const type = req.query.type;
+  const steering = req.query.steering;
 
   const minPrice = parseInt(req.query.minPrice) || null;
   const maxPrice = parseInt(req.query.maxPrice) || null;
@@ -102,7 +103,8 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
 
   if (valueRequired(model))
     query.find({ model: { $regex: ".*" + model + ".*", $options: "i" } });
-
+  if (valueRequired(steering))
+    query.find({ steering: { $regex: ".*" + steering + ".*", $options: "i" } });
   if (valueRequired(type))
     query.find({ type_txt: { $regex: ".*" + type + ".*", $options: "i" } });
 
@@ -115,8 +117,7 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   if (valueRequired(priceText)) query.where("price").equals(priceText);
 
   if (valueRequired(fuel)) {
-    console.log("end");
-    query.find({ fuel: { $regex: ".*" + fuel + ".*", $options: "i" } });
+    query.where(fuel).equals(fuel);
   }
   if (valueRequired(trans))
     query.find({ trans: { $regex: ".*" + trans + ".*", $options: "i" } });

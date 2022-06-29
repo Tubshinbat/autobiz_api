@@ -568,7 +568,6 @@ exports.resetPassword = asyncHandler(async (req, res, next) => {
 
   const user = await User.findOne({
     resetPasswordToken: req.body.otp,
-    resetPasswordExpire: { $gt: Date.now() },
   });
 
   console.log(user + " =======> " + user.resetPasswordExpire);
