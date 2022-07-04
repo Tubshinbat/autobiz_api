@@ -49,7 +49,11 @@ const app = express();
 connectDB();
 
 // Манай рест апиг дуудах эрхтэй сайтуудын жагсаалт :
-var whitelist = ["https://admin.autobiz.mn", "https://autobiz.mn"];
+var whitelist = [
+  "https://admin.autobiz.mn",
+  "https://autobiz.mn",
+  "http://localhost:3000",
+];
 
 // Өөр домэйн дээр байрлах клиент вэб аппуудаас шаардах шаардлагуудыг энд тодорхойлно
 var corsOptions = {
