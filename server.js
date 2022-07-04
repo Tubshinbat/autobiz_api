@@ -37,6 +37,7 @@ const orderRouters = require("./routes/Order");
 const beorderRouters = require("./routes/BeOrder");
 const contactRouters = require("./routes/Contact");
 const orderTypeRouters = require("./routes/OrderType");
+const freemodRouters = require("./routes/Freemod");
 const errorHandler = require("./middleware/error");
 
 const connectDB = require("./config/db");
@@ -126,6 +127,7 @@ app.use("/api/v1/partners", partnerRouter);
 app.use("/api/v1/orders", orderRouters);
 app.use("/api/v1/typeorders", orderTypeRouters);
 app.use("/api/v1/beorders", beorderRouters);
+app.use("/api/v1/freemods", freemodRouters);
 app.use(errorHandler);
 // Алдаа үүсэхэд барьж авч алдааны мэдээллийг клиент тал руу автоматаар мэдээлнэ
 
