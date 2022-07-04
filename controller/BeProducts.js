@@ -117,8 +117,8 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   if (valueRequired(priceText)) query.where("price").equals(priceText);
 
   if (valueRequired(fuel)) {
-    if (fuel === "Hybrid(Petrol)") fuel = "Hybrid Petrol";
-    if (fuel === "Hybrid(Diesel)") fuel = "Hybrid Diesel";
+    if (fuel === "Hybrid(Petrol)") fuel = "Hybrid";
+    if (fuel === "Hybrid(Diesel)") fuel = "Hybrid";
     console.log(fuel);
 
     query.find({ fuel: { $regex: ".*" + fuel + ".*", $options: "i" } });
