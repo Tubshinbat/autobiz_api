@@ -53,6 +53,8 @@ connectDB();
 var whitelist = [
   "https://admin.autobiz.mn",
   "https://autobiz.mn",
+  "https://www.admin.autobiz.mn",
+  "https://www.autobiz.mn",
   "http://localhost:3000",
 ];
 
