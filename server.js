@@ -38,7 +38,10 @@ const beorderRouters = require("./routes/BeOrder");
 const contactRouters = require("./routes/Contact");
 const orderTypeRouters = require("./routes/OrderType");
 const freemodRouters = require("./routes/Freemod");
+const priceRouters = require("./routes/Price");
+const homeCarsRouters = require("./routes/HomeCars");
 const errorHandler = require("./middleware/error");
+
 
 const connectDB = require("./config/db");
 
@@ -56,6 +59,7 @@ var whitelist = [
   "https://www.admin.autobiz.mn",
   "https://www.autobiz.mn",
   "http://localhost:3000",
+  "http://localhost:3001",
 ];
 
 // Өөр домэйн дээр байрлах клиент вэб аппуудаас шаардах шаардлагуудыг энд тодорхойлно
@@ -125,11 +129,13 @@ app.use("/api/v1/carindustrys", carIndustryRouters);
 app.use("/api/v1/carzagvars", carZagvarRouters);
 app.use("/api/v1/carcolors", carColorRouters);
 app.use("/api/v1/hybrids", hybridRouters);
+app.use("/api/v1/prices", priceRouters);
 app.use("/api/v1/partners", partnerRouter);
 app.use("/api/v1/orders", orderRouters);
 app.use("/api/v1/typeorders", orderTypeRouters);
 app.use("/api/v1/beorders", beorderRouters);
 app.use("/api/v1/freemods", freemodRouters);
+app.use("/api/v1/homecars",homeCarsRouters);
 app.use(errorHandler);
 // Алдаа үүсэхэд барьж авч алдааны мэдээллийг клиент тал руу автоматаар мэдээлнэ
 
