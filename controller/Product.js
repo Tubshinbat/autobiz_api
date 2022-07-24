@@ -50,13 +50,21 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
   const name = req.query.name;
   const markName = req.query.mark_name;
   const zagvarName = req.query.zagvar_name;
+  const import_date = req.query.import_year;
 
   if (valueRequired(sort) === false || sort === "new") {
     sort = { createAt: -1 };
   } else if (sort === "old") sort = { createAt: 1 };
   else if (sort === "maxtomin") sort = { price: -1 };
   else if (sort === "mintomax") sort = { price: 1 };
-  else sort = { createAt: -1 };
+  else if (valueRequired(sort)) {
+    sort.toString().replace(/(\w+:)|(\w+ :)/g, function (matchedStr) {
+      return '"' + matchedStr.substring(0, matchedStr.length - 1) + '":';
+    });
+    if (typeof sort === "string") {
+      sort = JSON.parse(`{ ${sort} }`);
+    }
+  } else sort = { createAt: -1 };
 
   [("select", "sort", "page", "limit", "status", "name")].forEach(
     (el) => delete req.query[el]
@@ -90,6 +98,11 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     });
   }
 
+  if (valueRequired(import_date)) {
+    query.where({
+      import_date: import_date,
+    });
+  }
   if (valueRequired(zagvarName)) {
     let regZagvar = new RegExp(zagvarName, "i");
 
@@ -122,7 +135,8 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
     query.where("car_speed_box").equals(req.query.car_speed_box);
   if (valueRequired(req.query.lizing))
     query.where("lizing").equals(req.query.lizing);
-
+  if (valueRequired(req.query.zagvar))
+    query.where("car_zagvar").equals(req.query.zagvar);
   if (valueRequired(minYear) && valueRequired(maxYear)) {
     query.find({
       make_date: { $gte: minYear, $lte: maxYear },

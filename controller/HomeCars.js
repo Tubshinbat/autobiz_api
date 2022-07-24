@@ -22,10 +22,19 @@ exports.getHomeCars = asyncHandler(async (req, res) => {
   // Эхлээд query - уудаа аваад хоосон үгүйг шалгаад утга олгох
   const page = parseInt(req.query.page) || 1;
   const limit = parseInt(req.query.limit) || 25;
-  let sort = req.query.sort || { createAt: -1 };
+  let sort = req.query.sort || { createAt: 1 };
   let status = req.query.status || null;
-  const name = req.query.name;
-  console.log(sort);
+  const {
+    mark_txt,
+    model,
+    type_txt,
+    minPrice,
+    maxPrice,
+    minDate,
+    maxDate,
+    createDate,
+  } = req.query;
+
   if (sort) {
     sort.toString().replace(/(\w+:)|(\w+ :)/g, function (matchedStr) {
       return '"' + matchedStr.substring(0, matchedStr.length - 1) + '":';
@@ -35,15 +44,45 @@ exports.getHomeCars = asyncHandler(async (req, res) => {
     }
   }
 
-  console.log(sort);
-
   [("select", "sort", "page", "limit", "status", "name")].forEach(
     (el) => delete req.query[el]
   );
 
   const query = HomeCars.find();
-  if (valueRequired(name))
-    query.find({ name: { $regex: ".*" + name + ".*", $options: "i" } });
+
+  if (valueRequired(mark_txt))
+    query.find({ mark_txt: { $regex: ".*" + mark_txt + ".*", $options: "i" } });
+
+  if (valueRequired(model))
+    query.find({ model: { $regex: ".*" + model + ".*", $options: "i" } });
+
+  if (valueRequired(type_txt))
+    query.find({ type_txt: { $regex: ".*" + type_txt + ".*", $options: "i" } });
+
+  if (valueRequired(minDate))
+    query.where({
+      minDate: minDate,
+    });
+
+  if (valueRequired(maxDate))
+    query.where({
+      maxDate: maxDate,
+    });
+
+  if (valueRequired(minPrice))
+    query.where({
+      minPrice: minPrice,
+    });
+
+  if (valueRequired(maxPrice))
+    query.where({
+      maxPrice: maxPrice,
+    });
+
+  // if (valueRequired(createDate))
+  //   query.find({
+  //     createDate: { $regex: ".*" + createDate + ".*", $options: "i" },
+  //   });
 
   query.populate("createUser");
   query.sort(sort);

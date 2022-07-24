@@ -325,8 +325,13 @@ exports.getUsers = asyncHandler(async (req, res, next) => {
   const name = req.query.name;
   const phone = parseInt(req.query.phone) || null;
 
-  if (typeof sort === "string") {
-    sort = JSON.parse("{" + req.query.sort + "}");
+  if (valueRequired(sort)) {
+    sort.toString().replace(/(\w+:)|(\w+ :)/g, function (matchedStr) {
+      return '"' + matchedStr.substring(0, matchedStr.length - 1) + '":';
+    });
+    if (typeof sort === "string") {
+      sort = JSON.parse(`{ ${sort} }`);
+    }
   }
 
   ["select", "sort", "page", "limit", "status", "name"].forEach(
@@ -334,19 +339,29 @@ exports.getUsers = asyncHandler(async (req, res, next) => {
   );
 
   const query = User.find();
-  if (valueRequired(name)) {
-    query.find({
-      $or: [
-        { username: { $regex: ".*" + name + ".*", $options: "i" } },
-        { lastname: { $regex: ".*" + name + ".*", $options: "i" } },
-        { email: { $regex: ".*" + name + ".*", $options: "i" } },
-      ],
-    });
-  }
 
-  if (valueRequired(phone)) {
-    query.where("phone").equals(phone);
-  }
+  if (valueRequired(req.query.firstname))
+    query.find({
+      firstname: { $regex: ".*" + req.query.firstname + ".*", $options: "i" },
+    });
+
+  if (valueRequired(req.query.email))
+    query.find({
+      email: {
+        $regex: ".*" + req.query.email + ".*",
+        $options: "i",
+      },
+    });
+
+  if (valueRequired(req.query.phone))
+    query.where({
+      phone: req.query.phone,
+    });
+
+  if (valueRequired(req.query.role))
+    query.where({
+      phone: req.query.role,
+    });
 
   query.select(select);
   query.sort(sort);

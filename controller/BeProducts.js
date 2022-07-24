@@ -1,4 +1,5 @@
 const BeProducts = require("../models/BeProducts");
+const HomeCars = require("../models/HomeCars");
 const MyError = require("../utils/myError");
 const asyncHandler = require("express-async-handler");
 const paginate = require("../utils/paginate");
@@ -43,7 +44,14 @@ exports.getBeProducts = asyncHandler(async (req, res) => {
   } else if (sort === "old") sort = { createAt: 1 };
   else if (sort === "maxtomin") sort = { price: -1 };
   else if (sort === "mintomax") sort = { price: 1 };
-  else sort = { createAt: -1 };
+  else if (valueRequired(sort)) {
+    sort.toString().replace(/(\w+:)|(\w+ :)/g, function (matchedStr) {
+      return '"' + matchedStr.substring(0, matchedStr.length - 1) + '":';
+    });
+    if (typeof sort === "string") {
+      sort = JSON.parse(`{ ${sort} }`);
+    }
+  } else sort = { createAt: -1 };
 
   let status = req.query.status || null;
   const title = req.query.title;
@@ -212,6 +220,45 @@ exports.getBeProduct = asyncHandler(async (req, res, next) => {
   res.status(200).json({
     success: true,
     data: beProduct,
+  });
+});
+
+exports.getHomeCars = asyncHandler(async (req, res) => {
+  const homeCars = await HomeCars.find();
+  const sendDatas = [];
+
+  await Promise.all(
+    homeCars.map(async (car) => {
+      var rand = Math.floor(Math.random() * 10);
+      sendDatas.push(
+        ...(oneCar = await BeProducts.find({
+          type_txt: { $regex: ".*" + car.type_txt + ".*", $options: "i" },
+        })
+          .find({
+            mark_txt: { $regex: ".*" + car.mark_txt + ".*", $options: "i" },
+          })
+          .find({
+            model: { $regex: ".*" + car.model + ".*", $options: "i" },
+          })
+          .find({
+            price: { $gte: car.minPrice, $lte: car.maxPrice },
+          })
+          .find({
+            car_year: { $gte: car.minDate, $lte: car.maxDate },
+          })
+          .limit(1)
+          .skip(rand))
+      );
+    })
+  );
+
+  if (!oneCar) {
+    throw new MyError("Мэдээлэл олдсонгүй. ", 404);
+  }
+
+  res.status(200).json({
+    success: true,
+    data: sendDatas,
   });
 });
 

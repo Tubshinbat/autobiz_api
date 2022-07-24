@@ -30,14 +30,9 @@ const HomeCarsSchema = new mongoose.Schema({
     required: [true, "Доод үйлдвэрлэгдсэн огноо оруулна уу"],
   },
 
- maxDate: {
+  maxDate: {
     type: String,
     required: [true, "Дээд үйлдвэрлэгдсэн огноо оруулна уу"],
-  },
-
-  qty:{
-    type:Number,
-    required:[true, 'Нийт харуулах тоо'],
   },
 
   createUser: {

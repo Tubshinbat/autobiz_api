@@ -11,12 +11,15 @@ const {
   updateProduct,
   groupFileds,
   groupAndfilter,
+  getHomeCars,
 } = require("../controller/BeProducts");
 
 router
   .route("/")
   .post(protect, authorize("admin", "operator"), createBeProduct)
   .get(getBeProducts);
+
+router.route("/homecar").get(getHomeCars);
 
 router
   .route("/count")
